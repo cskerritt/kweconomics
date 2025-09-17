@@ -43,7 +43,7 @@ const Header = () => {
               <img 
                 src="/src/assets/kw-economics-logo.png" 
                 alt="KW Economics Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
           </div>
