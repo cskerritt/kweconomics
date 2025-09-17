@@ -147,7 +147,7 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Case Studies - Expert Economic Analysis Success Stories | KW Economics"
+        title="Case Studies - Expert Economic Analysis Success Stories | Kincaid Wolstein Economics"
         description="Explore real-world case studies showcasing expert forensic economic analysis, life care planning, and vocational rehabilitation by Christopher Skerritt, M.Ed., MBA. Proven results in personal injury, commercial litigation, and employment law."
         canonical={currentUrl}
         keywords={["case studies", "forensic economics", "expert testimony", "economic analysis", "life care planning", "vocational rehabilitation", "personal injury economics", "business valuation", "employment discrimination", "workers compensation"]}

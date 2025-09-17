@@ -126,12 +126,12 @@ const Contact = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact Expert Economics - Forensic Economic Analysis Consultation",
-    "description": "Contact KW Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation.",
+    "name": "Contact Kincaid Wolstein Economics - Forensic Economic Analysis Consultation",
+    "description": "Contact Kincaid Wolstein Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation.",
     "url": currentUrl,
     "mainEntity": {
       "@type": "Organization",
-      "name": "KW Economics",
+      "name": "Kincaid Wolstein Economics",
       "telephone": "(203) 605-2814",
       "email": "chris@kweconomics.com",
       "address": {
@@ -151,7 +151,7 @@ const Contact = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://skerritteconomics.com"
+          "item": "https://kweconomics.com"
         },
         {
           "@type": "ListItem",
@@ -166,8 +166,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Contact Expert Economics - Forensic Economic Analysis Consultation"
-        description="Contact Skerritt Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation. Prompt response time. Rush cases welcome. Call (203) 605-2814."
+        title="Contact Kincaid Wolstein Economics - Forensic Economic Analysis Consultation"
+        description="Contact Kincaid Wolstein Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation. Prompt response time. Rush cases welcome. Call (203) 605-2814."
         canonical={currentUrl}
         keywords={["contact expert economist", "forensic economics consultation", "expert witness contact", "economic analysis consultation", "litigation support contact", "rush cases", "expert testimony", "economic damages"]}
         schema={structuredData}
@@ -183,7 +183,7 @@ const Contact = () => {
               Get Expert Economic Analysis
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Contact Skerritt Economics & Consulting for confidential consultation 
+              Contact Kincaid Wolstein Economics for confidential consultation 
               about your forensic economics, vocational rehabilitation, or life care planning needs.
             </p>
             <Button variant="hero" size="lg" className="group" asChild>
@@ -418,7 +418,7 @@ const Contact = () => {
                   <div className="flex items-start">
                     <Mail className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-medium text-foreground">chris@skerritteconomics.com</div>
+                      <div className="font-medium text-foreground">chris@kweconomics.com</div>
                       <div className="text-sm text-muted-foreground">Primary Email</div>
                     </div>
                   </div>

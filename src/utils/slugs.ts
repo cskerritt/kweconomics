@@ -61,7 +61,7 @@ export function generateSEOTitle(
   serviceName: string,
   cityName: string,
   stateAbbr: string,
-  companyName = "Skerritt Economics"
+  companyName = "Kincaid Wolstein Economics"
 ): string {
   return `${serviceName} in ${cityName}, ${stateAbbr} | ${companyName}`;
 }

@@ -118,7 +118,7 @@ const Footer = () => {
           <div className="flex items-center space-x-6 text-sm text-primary-foreground/60">
             <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a>
-            <span>© 2025 KW Economics. All rights reserved.</span>
+            <span>© 2025 Kincaid Wolstein Economics. All rights reserved.</span>
           </div>
         </div>
       </div>

@@ -39,15 +39,15 @@ const LocationServicesPage = () => {
     return <Navigate to="/404" replace />;
   }
   const services = getAllServices();
-  const seoTitle = `Economic Analysis Services in ${city.name}, ${state.abbreviation} | Skerritt Economics`;
+  const seoTitle = `Economic Analysis Services in ${city.name}, ${state.abbreviation} | Kincaid Wolstein Economics`;
   const seoDescription = `Professional economic analysis, forensic economics, and expert witness services in ${city.name}, ${state.name}. Comprehensive litigation support and business consulting.`;
-  const canonical = `https://skerritteconomics.com/${state.slug}/${city.slug}`;
+  const canonical = `https://kweconomics.com/${state.slug}/${city.slug}`;
   const breadcrumbs = generateBreadcrumbs(undefined, state.name, city.name, undefined, state.slug, city.slug);
   const keywords = [`economic analysis ${city.name.toLowerCase()}`, `forensic economics ${city.name.toLowerCase()}`, `expert witness ${city.name.toLowerCase()}`, `business consulting ${city.name.toLowerCase()}`, `economic services ${state.name.toLowerCase()}`];
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Skerritt Economics",
+    "name": "Kincaid Wolstein Economics",
     "description": seoDescription,
     "areaServed": {
       "@type": "City",

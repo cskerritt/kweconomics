@@ -55,7 +55,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
     "description": `Professional ${serviceName?.toLowerCase()} services ${cityName && stateName ? `in ${cityName}, ${stateAbbr}` : 'nationwide'}`,
     "provider": {
       "@type": "Organization",
-      "name": "KW Economics",
+      "name": "Kincaid Wolstein Economics",
       "url": "https://kweconomics.com"
     },
     "serviceType": serviceName,
@@ -90,7 +90,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
   const generateLocalBusinessSchema = () => ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "KW Economics",
+    "name": "Kincaid Wolstein Economics",
     "description": `Professional economic analysis and expert witness services ${cityName ? `in ${cityName}, ${stateAbbr}` : 'nationwide'}`,
     "url": "https://kweconomics.com",
     "telephone": "(203) 605-2814",
@@ -127,8 +127,8 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
   const generateOrganizationSchema = () => ({
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "KW Economics",
-    "alternateName": "Expert Economics",
+    "name": "Kincaid Wolstein Economics",
+    "alternateName": "KW Economics",
     "url": "https://kweconomics.com",
     "logo": "https://kweconomics.com/favicon.ico",
     "description": "Leading provider of forensic economic analysis, expert witness testimony, and litigation support services",
@@ -153,7 +153,8 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
       "email": "chris@kweconomics.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/skerritt-economics"
+      "https://www.linkedin.com/company/kweconomics",
+      "https://www.linkedin.com/in/christopherskerritt"
     ],
     "memberOf": {
       "@type": "Organization",

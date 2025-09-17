@@ -40,9 +40,9 @@ const StatePage = () => {
     return <Navigate to="/404" replace />;
   }
 
-  const seoTitle = `Economic Analysis Services in ${state.name} | Skerritt Economics`;
+  const seoTitle = `Economic Analysis Services in ${state.name} | Kincaid Wolstein Economics`;
   const seoDescription = `Professional economic analysis, forensic economics, and expert witness services throughout ${state.name}. Serving major cities with comprehensive litigation support.`;
-  const canonical = `https://skerritteconomics.com/${state.slug}`;
+  const canonical = `https://kweconomics.com/${state.slug}`;
   
   const breadcrumbs = generateBreadcrumbs(
     undefined,
@@ -63,7 +63,7 @@ const StatePage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Skerritt Economics",
+    "name": "Kincaid Wolstein Economics",
     "description": seoDescription,
     "areaServed": {
       "@type": "State",

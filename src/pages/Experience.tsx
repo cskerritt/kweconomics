@@ -24,7 +24,7 @@ const Experience = () => {
   const currentPositions = [
     {
       title: "Principal Economist",
-      company: "Skerritt Economics and Consulting",
+      company: "Kincaid Wolstein Economics",
       period: "August 2022 – Present",
       location: "Smithfield, Rhode Island",
       description: "Lead forensic economist providing expert economic analysis and testimony for litigation matters.",

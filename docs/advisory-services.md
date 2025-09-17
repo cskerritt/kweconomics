@@ -1,6 +1,6 @@
 # Advisory Services Overview
 
-This document summarizes the advisory offerings, deliverables, methods, data/standards, and key references integrated into Skerritt Economics & Consulting’s work.
+This document summarizes the advisory offerings, deliverables, methods, data/standards, and key references integrated into Kincaid Wolstein Economics’s work.
 
 ## 3.1 Business & Industry Services
 

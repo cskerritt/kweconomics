@@ -80,7 +80,7 @@ const CaseTypeIndex = () => {
         "description": caseType.description,
         "provider": {
           "@type": "Organization",
-          "name": "KW Economics"
+          "name": "Kincaid Wolstein Economics"
         }
       }))
     }
@@ -89,7 +89,7 @@ const CaseTypeIndex = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Case Types - Economic Analysis & Expert Testimony | KW Economics"
+        title="Case Types - Economic Analysis & Expert Testimony | Kincaid Wolstein Economics"
         description="Comprehensive economic analysis and expert testimony services across various case types including personal injury, wrongful death, disability evaluation, business valuation, and more."
         canonical={currentUrl}
         keywords={["case types", "economic analysis", "expert testimony", "litigation support", "disability evaluation", "business valuation", "forensic economics", "vocational assessment"]}

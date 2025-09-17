@@ -47,7 +47,7 @@ const CaseTypePage = () => {
     .filter(ct => ct.slug !== caseType.slug && ct.category === caseType.category)
     .slice(0, 6);
 
-  const seoTitle = `${caseType.name} Economic Analysis & Expert Testimony | Skerritt Economics`;
+  const seoTitle = `${caseType.name} Economic Analysis & Expert Testimony | Kincaid Wolstein Economics`;
   const seoDescription = `Expert ${caseType.name.toLowerCase()} economic analysis and testimony services. ${caseType.description}`;
   const canonical = `${window.location.origin}/case-types/${caseType.slug}`;
 
@@ -73,7 +73,7 @@ const CaseTypePage = () => {
     "description": seoDescription,
     "provider": {
       "@type": "Organization",
-      "name": "KW Economics",
+      "name": "Kincaid Wolstein Economics",
       "url": window.location.origin
     },
     "serviceType": caseType.name,

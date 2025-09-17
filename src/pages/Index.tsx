@@ -20,8 +20,8 @@ const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "KW Economics",
-    "alternateName": "Expert Economics",
+    "name": "Kincaid Wolstein Economics",
+    "alternateName": ["KW Economics"],
     "description": "Expert forensic economic analysis, vocational rehabilitation, and life care planning services. 25+ years experience providing litigation support and expert testimony.",
     "url": currentUrl,
     "telephone": "(203) 605-2814",
@@ -129,7 +129,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Expert Economics - Forensic Economic Analysis & Expert Testimony"
+        title="Kincaid Wolstein Economics | Forensic Economic Analysis & Expert Testimony"
         description="Professional forensic economic analysis and expert testimony for litigation support. 25+ years experience in damages calculation, lost profits analysis, and business valuation. Serving attorneys nationwide."
         canonical={currentUrl}
         keywords={["forensic economics", "expert witness", "economic damages", "litigation support", "lost profits", "business valuation", "vocational rehabilitation", "life care planning", "personal injury economics", "wrongful death analysis"]}

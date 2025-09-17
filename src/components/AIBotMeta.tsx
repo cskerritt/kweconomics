@@ -90,7 +90,7 @@ const AIBotMeta = () => {
       },
       "provider": {
         "@type": "Organization",
-        "name": "Skerritt Economics & Consulting"
+        "name": "Kincaid Wolstein Economics"
       },
       "spatialCoverage": {
         "@type": "Place",
@@ -100,7 +100,7 @@ const AIBotMeta = () => {
       "distribution": {
         "@type": "DataDownload",
         "encodingFormat": "application/ld+json",
-        "contentUrl": "https://skerritteconomics.com"
+        "contentUrl": "https://kweconomics.com"
       }
     };
 

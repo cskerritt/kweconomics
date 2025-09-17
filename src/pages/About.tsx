@@ -94,7 +94,7 @@ const About = () => {
     "url": currentUrl,
     "worksFor": {
       "@type": "Organization",
-      "name": "KW Economics"
+      "name": "Kincaid Wolstein Economics"
     },
     "hasCredential": qualifications,
     "alumniOf": [
@@ -201,11 +201,11 @@ const About = () => {
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Christopher Skerritt is a distinguished forensic economist and vocational rehabilitation specialist 
                 with over a decade of experience providing expert analysis and testimony. As Principal Economist 
-                at Skerritt Economics & Consulting, he has established himself as a leading authority in economic 
+                at Kincaid Wolstein Economics, he has established himself as a leading authority in economic 
                 loss assessment, vocational evaluation, and life care planning.
               </p>
               <div className="p-4 rounded-md bg-primary/5 text-sm text-muted-foreground mb-8">
-                Skerritt Economics & Consulting operates in association with
+                Kincaid Wolstein Economics operates in association with
                 {" "}
                 <a
                   href="https://kwvrs.com"

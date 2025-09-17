@@ -3,7 +3,7 @@
 1. Deploy the updated site to production (ensure public/sitemap.xml & public/sitemap-index.xml are live).
 2. Verify property in Google Search Console (domain property preferred).
 3. Submit sitemap:
-   - Add https://skerritteconomics.com/sitemap-index.xml.
+   - Add https://kweconomics.com/sitemap-index.xml.
    - Confirm it references sitemap.xml (current single-file mode) and/or parts.
 4. Inspect a few representative URLs:
    - State page (e.g., /california)

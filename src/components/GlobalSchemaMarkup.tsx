@@ -6,8 +6,8 @@ const GlobalSchemaMarkup = () => {
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "KW Economics",
-      "alternateName": ["Expert Economics", "KW Economics"],
+      "name": "Kincaid Wolstein Economics",
+      "alternateName": ["KW Economics", "Kincaid Wolstein Economics"],
       "url": "https://kweconomics.com",
       "logo": "https://kweconomics.com/favicon.ico",
       "description": "Expert forensic economic analysis, vocational rehabilitation, and life care planning services for litigation support and expert testimony.",
@@ -77,7 +77,8 @@ const GlobalSchemaMarkup = () => {
         "Certified Vocational Evaluator (CVE)"
       ],
       "sameAs": [
-        "https://www.linkedin.com/in/christopherskerritt"
+        "https://www.linkedin.com/in/christopherskerritt",
+        "https://www.linkedin.com/company/kweconomics"
       ]
     };
 
@@ -85,15 +86,15 @@ const GlobalSchemaMarkup = () => {
     const websiteSchema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "KW Economics",
-      "alternateName": "Expert Economics",
+      "name": "Kincaid Wolstein Economics",
+      "alternateName": "KW Economics",
       "url": "https://kweconomics.com",
       "description": "Expert forensic economic analysis and litigation support services",
       "inLanguage": "en-US",
       "copyrightYear": "2025",
       "copyrightHolder": {
         "@type": "Organization",
-        "name": "KW Economics"
+        "name": "Kincaid Wolstein Economics"
       },
       "potentialAction": {
         "@type": "SearchAction",
@@ -116,7 +117,7 @@ const GlobalSchemaMarkup = () => {
       "serviceType": "Forensic Economics",
       "provider": {
         "@type": "Organization",
-        "name": "KW Economics"
+        "name": "Kincaid Wolstein Economics"
       },
       "areaServed": {
         "@type": "Country", 
@@ -175,7 +176,7 @@ const GlobalSchemaMarkup = () => {
     const localBusinessSchema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "KW Economics",
+      "name": "Kincaid Wolstein Economics",
       "description": "Expert forensic economic analysis and litigation support services",
       "url": "https://kweconomics.com",
       "telephone": "+1-203-605-2814",

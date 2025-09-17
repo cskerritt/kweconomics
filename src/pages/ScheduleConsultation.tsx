@@ -45,7 +45,7 @@ const ScheduleConsultation = () => {
     setIsSubmitting(false);
   };
   return <div className="min-h-screen">
-      <SEOHead title="Schedule Consultation - Expert Economic Analysis | Skerritt Economics" description="Schedule a confidential consultation with Christopher Skerritt for forensic economics, life care planning, and vocational rehabilitation analysis." keywords={["schedule consultation", "economic analysis", "expert testimony", "forensic economics", "life care planning"]} />
+      <SEOHead title="Schedule Consultation - Expert Economic Analysis | Kincaid Wolstein Economics" description="Schedule a confidential consultation with Christopher Skerritt for forensic economics, life care planning, and vocational rehabilitation analysis." keywords={["schedule consultation", "economic analysis", "expert testimony", "forensic economics", "life care planning"]} />
       <Header />
       
       {/* Hero Section */}
@@ -242,7 +242,7 @@ const ScheduleConsultation = () => {
                     </div>
                     <div>
                       <div className="font-medium">Email</div>
-                      <div className="text-muted-foreground">chris@skerritteconomics.com</div>
+                      <div className="text-muted-foreground">chris@kweconomics.com</div>
                     </div>
                     <div>
                       <div className="font-medium">Business Hours</div>

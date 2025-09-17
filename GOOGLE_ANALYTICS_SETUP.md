@@ -4,11 +4,11 @@
 
 1. Go to https://analytics.google.com
 2. Click "Start measuring"
-3. Create an account name (e.g., "Skerritt Economics")
-4. Set up a property name (e.g., "Skerritt Economics Website")
+3. Create an account name (e.g., "Kincaid Wolstein Economics")
+4. Set up a property name (e.g., "Kincaid Wolstein Economics Website")
 5. Choose your business details
 6. Select "Web" as platform
-7. Enter your website URL: https://skerritteconomics.com
+7. Enter your website URL: https://kweconomics.com
 8. Name your stream: "Main Website"
 
 ## Step 2: Get Your Measurement ID
