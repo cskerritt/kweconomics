@@ -18,7 +18,7 @@ const Hero = () => {
             
             <p className="text-xl mb-8 text-primary-foreground/90 leading-relaxed">
               Strategic economic advisory services and expert damages analysis. 
-              Christopher Skerritt delivers comprehensive economic consulting for business strategy, 
+              Kincaid Wolstein Economics delivers comprehensive economic consulting for business strategy, 
               litigation support, and complex damages assessment nationwide.
             </p>
             
