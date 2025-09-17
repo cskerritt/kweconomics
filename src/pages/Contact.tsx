@@ -79,7 +79,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email Inquiry",
       description: "Detailed case information and documents",
-      contact: "chris@skerritteconomics.com",
+      contact: "chris@kweconomics.com",
       availability: "Prompt response time"
     },
   ];
@@ -121,19 +121,19 @@ const Contact = () => {
     }
   ];
 
-  const currentUrl = "https://skerritteconomics.com/contact";
+  const currentUrl = "https://kweconomics.com/contact";
   
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Expert Economics - Forensic Economic Analysis Consultation",
-    "description": "Contact Skerritt Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation.",
+    "description": "Contact KW Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation.",
     "url": currentUrl,
     "mainEntity": {
       "@type": "Organization",
-      "name": "Skerritt Economics & Consulting",
+      "name": "KW Economics",
       "telephone": "(203) 605-2814",
-      "email": "chris@skerritteconomics.com",
+      "email": "chris@kweconomics.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "400 Putnam Pike Ste J",

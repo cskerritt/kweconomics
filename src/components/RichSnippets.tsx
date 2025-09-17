@@ -55,8 +55,8 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
     "description": `Professional ${serviceName?.toLowerCase()} services ${cityName && stateName ? `in ${cityName}, ${stateAbbr}` : 'nationwide'}`,
     "provider": {
       "@type": "Organization",
-      "name": "Skerritt Economics & Consulting",
-      "url": "https://skerritteconomics.com"
+      "name": "KW Economics",
+      "url": "https://kweconomics.com"
     },
     "serviceType": serviceName,
     "areaServed": cityName && stateName ? {
@@ -90,11 +90,11 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
   const generateLocalBusinessSchema = () => ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Skerritt Economics & Consulting",
+    "name": "KW Economics",
     "description": `Professional economic analysis and expert witness services ${cityName ? `in ${cityName}, ${stateAbbr}` : 'nationwide'}`,
-    "url": "https://skerritteconomics.com",
+    "url": "https://kweconomics.com",
     "telephone": "(203) 605-2814",
-    "email": "chris@skerritteconomics.com",
+    "email": "chris@kweconomics.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "400 Putnam Pike Ste J",
@@ -127,10 +127,10 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
   const generateOrganizationSchema = () => ({
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Skerritt Economics & Consulting",
+    "name": "KW Economics",
     "alternateName": "Expert Economics",
-    "url": "https://skerritteconomics.com",
-    "logo": "https://skerritteconomics.com/favicon.ico",
+    "url": "https://kweconomics.com",
+    "logo": "https://kweconomics.com/favicon.ico",
     "description": "Leading provider of forensic economic analysis, expert witness testimony, and litigation support services",
     "foundingDate": "1999",
     "founder": {
@@ -150,7 +150,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
       "@type": "ContactPoint",
       "telephone": "(203) 605-2814",
       "contactType": "customer service",
-      "email": "chris@skerritteconomics.com"
+      "email": "chris@kweconomics.com"
     },
     "sameAs": [
       "https://www.linkedin.com/company/skerritt-economics"

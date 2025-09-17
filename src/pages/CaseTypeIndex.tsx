@@ -61,7 +61,7 @@ const CaseTypeIndex = () => {
     }
   };
 
-  const currentUrl = "https://skerritteconomics.com/case-types";
+  const currentUrl = "https://kweconomics.com/case-types";
   
   const structuredData = {
     "@context": "https://schema.org",
@@ -80,7 +80,7 @@ const CaseTypeIndex = () => {
         "description": caseType.description,
         "provider": {
           "@type": "Organization",
-          "name": "Skerritt Economics & Consulting"
+          "name": "KW Economics"
         }
       }))
     }
@@ -89,7 +89,7 @@ const CaseTypeIndex = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Case Types - Economic Analysis & Expert Testimony | Skerritt Economics"
+        title="Case Types - Economic Analysis & Expert Testimony | KW Economics"
         description="Comprehensive economic analysis and expert testimony services across various case types including personal injury, wrongful death, disability evaluation, business valuation, and more."
         canonical={currentUrl}
         keywords={["case types", "economic analysis", "expert testimony", "litigation support", "disability evaluation", "business valuation", "forensic economics", "vocational assessment"]}

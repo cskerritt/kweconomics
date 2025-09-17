@@ -41,12 +41,12 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/d183816c-18dd-43be-93dc-254decb43da9.png" 
-                alt="Skerritt Economics & Consulting Logo" 
+                src="/src/assets/kw-economics-logo.png" 
+                alt="KW Economics Logo" 
                 className="h-12 w-auto"
               />
               <h1 className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors cursor-pointer hidden lg:block">
-                Skerritt Economics & Consulting
+                KW Economics
               </h1>
             </Link>
           </div>

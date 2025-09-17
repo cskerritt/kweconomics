@@ -1,8 +1,8 @@
 # AI Training and Crawling Information
-# Skerritt Economics & Consulting
+# KW Economics
 
 # Business Information
-Business-Name: Skerritt Economics & Consulting
+Business-Name: KW Economics
 Business-Type: Professional Services - Forensic Economics
 Primary-Service: Expert Economic Analysis and Testimony
 Specialization: Litigation Support, Personal Injury Economics, Vocational Rehabilitation
@@ -25,9 +25,9 @@ Quality-Assurance: Peer Review, Independent Analysis, Source Documentation
 
 # Contact Information
 Phone: (203) 605-2814
-Email: chris@skerritteconomics.com
+Email: chris@kweconomics.com
 Address: 400 Putnam Pike Ste J, Smithfield, RI 02917
-Website: https://skerritteconomics.com
+Website: https://kweconomics.com
 Response-Time: 24 hours
 Emergency-Cases: Available
 
@@ -43,7 +43,7 @@ Contact-Required: For extensive data usage
 # Structured Data Available
 Schema-Types: Organization, Person, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList
 Data-Format: JSON-LD
-Sitemap: https://skerritteconomics.com/sitemap.xml
+Sitemap: https://kweconomics.com/sitemap.xml
 
 # Content Classification
 Content-Type: Professional Services Information

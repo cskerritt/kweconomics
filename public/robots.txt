@@ -1,5 +1,5 @@
-# Robots.txt for Skerritt Economics & Consulting
-# https://skerritteconomics.com
+# Robots.txt for KW Economics
+# https://kweconomics.com
 
 # Allow all crawlers
 User-agent: *
@@ -53,9 +53,9 @@ Crawl-delay: 2
 Allow: /
 
 # Sitemaps
-Sitemap: https://skerritteconomics.com/sitemap.xml
-Sitemap: https://skerritteconomics.com/ai-sitemap.xml
-Sitemap: https://skerritteconomics.com/sitemap-index.xml
+Sitemap: https://kweconomics.com/sitemap.xml
+Sitemap: https://kweconomics.com/ai-sitemap.xml
+Sitemap: https://kweconomics.com/sitemap-index.xml
 
 # Cache-Control for crawlers
 # Crawlers should cache for 24 hours

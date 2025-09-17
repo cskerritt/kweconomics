@@ -89,7 +89,7 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => {
-  const currentUrl = "https://skerritteconomics.com/case-studies";
+  const currentUrl = "https://kweconomics.com/case-studies";
   
   const structuredData = {
     "@context": "https://schema.org",
@@ -126,7 +126,7 @@ const CaseStudies = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://skerritteconomics.com"
+          "item": "https://kweconomics.com"
         },
         {
           "@type": "ListItem", 
@@ -147,7 +147,7 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Case Studies - Expert Economic Analysis Success Stories | Skerritt Economics"
+        title="Case Studies - Expert Economic Analysis Success Stories | KW Economics"
         description="Explore real-world case studies showcasing expert forensic economic analysis, life care planning, and vocational rehabilitation by Christopher Skerritt, M.Ed., MBA. Proven results in personal injury, commercial litigation, and employment law."
         canonical={currentUrl}
         keywords={["case studies", "forensic economics", "expert testimony", "economic analysis", "life care planning", "vocational rehabilitation", "personal injury economics", "business valuation", "employment discrimination", "workers compensation"]}

@@ -82,7 +82,7 @@ const About = () => {
     }
   ];
 
-  const currentUrl = "https://skerritteconomics.com/about";
+  const currentUrl = "https://kweconomics.com/about";
   
   const structuredData = {
     "@context": "https://schema.org",
@@ -94,7 +94,7 @@ const About = () => {
     "url": currentUrl,
     "worksFor": {
       "@type": "Organization",
-      "name": "Skerritt Economics & Consulting"
+      "name": "KW Economics"
     },
     "hasCredential": qualifications,
     "alumniOf": [

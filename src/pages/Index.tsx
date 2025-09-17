@@ -15,17 +15,17 @@ import FloatingNavigation from "@/components/FloatingNavigation";
 import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
-  const currentUrl = "https://skerritteconomics.com";
+  const currentUrl = "https://kweconomics.com";
   
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Skerritt Economics & Consulting",
+    "name": "KW Economics",
     "alternateName": "Expert Economics",
     "description": "Expert forensic economic analysis, vocational rehabilitation, and life care planning services. 25+ years experience providing litigation support and expert testimony.",
     "url": currentUrl,
     "telephone": "(203) 605-2814",
-    "email": "chris@skerritteconomics.com",
+    "email": "chris@kweconomics.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "400 Putnam Pike Ste J",

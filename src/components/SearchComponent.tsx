@@ -192,10 +192,10 @@ const SearchComponent = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "url": "https://skerritteconomics.com",
+            "url": "https://kweconomics.com",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://skerritteconomics.com/search?q={search_term_string}",
+              "target": "https://kweconomics.com/search?q={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           })

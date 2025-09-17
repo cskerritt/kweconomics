@@ -91,7 +91,7 @@ const FloatingNavigation = () => {
     },
     {
       label: 'Email',
-      href: 'mailto:chris@skerritteconomics.com',
+      href: 'mailto:chris@kweconomics.com',
       icon: Mail,
       color: 'bg-blue-600 hover:bg-blue-700',
       text: 'Send Email'

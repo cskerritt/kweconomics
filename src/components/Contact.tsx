@@ -56,7 +56,7 @@ const Contact = () => {
                 <div className="flex items-start">
                   <Mail className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <div className="font-medium text-foreground">chris@skerritteconomics.com</div>
+                    <div className="font-medium text-foreground">chris@kweconomics.com</div>
                     <div className="text-sm text-muted-foreground">Primary Email</div>
                   </div>
                 </div>

@@ -73,7 +73,7 @@ const CaseTypePage = () => {
     "description": seoDescription,
     "provider": {
       "@type": "Organization",
-      "name": "Skerritt Economics & Consulting",
+      "name": "KW Economics",
       "url": window.location.origin
     },
     "serviceType": caseType.name,

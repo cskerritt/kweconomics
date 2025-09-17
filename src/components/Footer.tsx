@@ -22,7 +22,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Skerritt Economics & Consulting</h3>
+            <h3 className="text-2xl font-bold mb-4">KW Economics</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Christopher Skerritt provides expert forensic economic analysis, vocational rehabilitation, 
               and life care planning services. Comprehensive expertise in economic loss assessment 
@@ -88,7 +88,7 @@ const Footer = () => {
               </PhoneClickTracker>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
-                <span>chris@skerritteconomics.com</span>
+                <span>chris@kweconomics.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 flex-shrink-0" />
@@ -118,7 +118,7 @@ const Footer = () => {
           <div className="flex items-center space-x-6 text-sm text-primary-foreground/60">
             <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a>
-            <span>© 2025 Skerritt Economics & Consulting. All rights reserved.</span>
+            <span>© 2025 KW Economics. All rights reserved.</span>
           </div>
         </div>
       </div>

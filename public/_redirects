@@ -2,21 +2,21 @@
 # https://docs.netlify.com/routing/redirects/
 
 # Force HTTPS and normalize domain for all traffic
-http://skerritteconomics.com/* https://skerritteconomics.com/:splat 301!
-http://www.skerritteconomics.com/* https://skerritteconomics.com/:splat 301!
-https://www.skerritteconomics.com/* https://skerritteconomics.com/:splat 301!
+http://kweconomics.com/* https://kweconomics.com/:splat 301!
+http://www.kweconomics.com/* https://kweconomics.com/:splat 301!
+https://www.kweconomics.com/* https://kweconomics.com/:splat 301!
 
 # Redirects from old domain (skerritt-economics.com)
-http://skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
-http://www.skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
-https://skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
-https://www.skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
+http://skerritt-economics.com/* https://kweconomics.com/:splat 301!
+http://www.skerritt-economics.com/* https://kweconomics.com/:splat 301!
+https://skerritt-economics.com/* https://kweconomics.com/:splat 301!
+https://www.skerritt-economics.com/* https://kweconomics.com/:splat 301!
 
 # Alternative domain redirects
-http://econdetective.com/* https://skerritteconomics.com/:splat 301!
-http://www.econdetective.com/* https://skerritteconomics.com/:splat 301!
-https://econdetective.com/* https://skerritteconomics.com/:splat 301!
-https://www.econdetective.com/* https://skerritteconomics.com/:splat 301!
+http://econdetective.com/* https://kweconomics.com/:splat 301!
+http://www.econdetective.com/* https://kweconomics.com/:splat 301!
+https://econdetective.com/* https://kweconomics.com/:splat 301!
+https://www.econdetective.com/* https://kweconomics.com/:splat 301!
 
 # Block vendor/bundle paths (return 404 with noindex)
 /vendor/bundle/* /404 404

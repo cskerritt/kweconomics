@@ -25,11 +25,11 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
   const generateLocalBusinessSchema = () => ({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": `Skerritt Economics & Consulting${cityName ? ` - ${cityName}` : ''}`,
+    "name": `KW Economics${cityName ? ` - ${cityName}` : ''}`,
     "description": `Professional forensic economic analysis and expert witness services ${cityName ? `serving ${cityName}, ${stateAbbr}` : 'nationwide'}. Specializing in economic loss assessments, vocational evaluations, and litigation support.`,
-    "url": "https://skerritteconomics.com",
+    "url": "https://kweconomics.com",
     "telephone": "(203) 605-2814",
-    "email": "chris@skerritteconomics.com",
+    "email": "chris@kweconomics.com",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -164,7 +164,7 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
         "addressCountry": "US"
       },
       "population": population,
-      "description": `${cityName} is served by professional economic analysis and expert witness services from Skerritt Economics & Consulting.`,
+      "description": `${cityName} is served by professional economic analysis and expert witness services from KW Economics.`,
       ...(metro && { "isPartOf": metro })
     };
   };

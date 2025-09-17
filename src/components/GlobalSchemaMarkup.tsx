@@ -6,10 +6,10 @@ const GlobalSchemaMarkup = () => {
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Skerritt Economics & Consulting",
-      "alternateName": ["Expert Economics", "Skerritt Economics"],
-      "url": "https://skerritteconomics.com",
-      "logo": "https://skerritteconomics.com/favicon.ico",
+      "name": "KW Economics",
+      "alternateName": ["Expert Economics", "KW Economics"],
+      "url": "https://kweconomics.com",
+      "logo": "https://kweconomics.com/favicon.ico",
       "description": "Expert forensic economic analysis, vocational rehabilitation, and life care planning services for litigation support and expert testimony.",
       "foundingDate": "2015",
       "founder": {
@@ -36,7 +36,7 @@ const GlobalSchemaMarkup = () => {
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-203-605-2814",
-        "email": "chris@skerritteconomics.com",
+        "email": "chris@kweconomics.com",
         "contactType": "customer service",
         "availableLanguage": "en",
         "hoursAvailable": {
@@ -85,24 +85,24 @@ const GlobalSchemaMarkup = () => {
     const websiteSchema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Skerritt Economics & Consulting",
+      "name": "KW Economics",
       "alternateName": "Expert Economics",
-      "url": "https://skerritteconomics.com",
+      "url": "https://kweconomics.com",
       "description": "Expert forensic economic analysis and litigation support services",
       "inLanguage": "en-US",
       "copyrightYear": "2025",
       "copyrightHolder": {
         "@type": "Organization",
-        "name": "Skerritt Economics & Consulting"
+        "name": "KW Economics"
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://skerritteconomics.com/search?q={search_term_string}",
+        "target": "https://kweconomics.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       },
       "mainEntity": {
         "@type": "Organization",
-        "@id": "https://skerritteconomics.com/#organization"
+        "@id": "https://kweconomics.com/#organization"
       }
     };
 
@@ -112,11 +112,11 @@ const GlobalSchemaMarkup = () => {
       "@type": "ProfessionalService",
       "name": "Forensic Economic Analysis Services",
       "description": "Expert forensic economic analysis, vocational rehabilitation, and life care planning for litigation support",
-      "url": "https://skerritteconomics.com",
+      "url": "https://kweconomics.com",
       "serviceType": "Forensic Economics",
       "provider": {
         "@type": "Organization",
-        "name": "Skerritt Economics & Consulting"
+        "name": "KW Economics"
       },
       "areaServed": {
         "@type": "Country", 
@@ -175,11 +175,11 @@ const GlobalSchemaMarkup = () => {
     const localBusinessSchema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Skerritt Economics & Consulting",
+      "name": "KW Economics",
       "description": "Expert forensic economic analysis and litigation support services",
-      "url": "https://skerritteconomics.com",
+      "url": "https://kweconomics.com",
       "telephone": "+1-203-605-2814",
-      "email": "chris@skerritteconomics.com",
+      "email": "chris@kweconomics.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "400 Putnam Pike Ste J",
