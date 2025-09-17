@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ORIGIN = 'https://skerritteconomics.com';
+const ORIGIN = 'https://kweconomics.com';
 
 // Helpers to extract data from TS files without a TS runtime
 function extractServices() {
@@ -57,26 +57,26 @@ function build() {
 
   // Static pages
   writeJson('index.json', {
-    title: 'Expert Economics - Forensic Economic Analysis & Expert Testimony',
+    title: 'Kincaid Wolstein Economics | Forensic Economic Analysis & Expert Testimony',
     description: 'Professional forensic economic analysis and expert testimony for litigation support. Serving attorneys nationwide.',
     canonical: `${ORIGIN}/`,
     updatedAt: now
   });
   const staticPages = [
-    { path: 'services', title: 'Economic Analysis Services - Expert Forensic Economics | Skerritt Economics', desc: 'Comprehensive forensic economic analysis and advisory services.' },
-    { path: 'advisory', title: 'Advisory Services | Skerritt Economics', desc: 'Business & industry, public policy, health/education, finance, international and data science advisory services.' },
-    { path: 'about', title: 'About Skerritt Economics', desc: 'Experience, credentials, and methodology.' },
-    { path: 'experience', title: 'Experience - Skerritt Economics', desc: 'Court and industry experience.' },
-    { path: 'contact', title: 'Contact - Skerritt Economics', desc: 'Get in touch for consultation.' },
-    { path: 'case-studies', title: 'Case Studies - Skerritt Economics', desc: 'Selected case studies and examples.' },
-    { path: 'schedule-consultation', title: 'Schedule Consultation - Skerritt Economics', desc: 'Book a consultation.' },
-    { path: 'locations', title: 'Locations - Skerritt Economics', desc: 'State and city coverage.' }
+    { path: 'services', title: 'Economic Analysis Services - Expert Forensic Economics | Kincaid Wolstein Economics', desc: 'Comprehensive forensic economic analysis and advisory services.' },
+    { path: 'advisory', title: 'Advisory Services | Kincaid Wolstein Economics', desc: 'Business & industry, public policy, health/education, finance, international and data science advisory services.' },
+    { path: 'about', title: 'About Kincaid Wolstein Economics', desc: 'Experience, credentials, and methodology.' },
+    { path: 'experience', title: 'Experience - Kincaid Wolstein Economics', desc: 'Court and industry experience.' },
+    { path: 'contact', title: 'Contact - Kincaid Wolstein Economics', desc: 'Get in touch for consultation.' },
+    { path: 'case-studies', title: 'Case Studies - Kincaid Wolstein Economics', desc: 'Selected case studies and examples.' },
+    { path: 'schedule-consultation', title: 'Schedule Consultation - Kincaid Wolstein Economics', desc: 'Book a consultation.' },
+    { path: 'locations', title: 'Locations - Kincaid Wolstein Economics', desc: 'State and city coverage.' }
   ];
   staticPages.forEach(p => writeJson(`${p.path}.json`, { title: p.title, description: p.desc, canonical: `${ORIGIN}/${p.path}`, updatedAt: now }));
 
   // Service hubs
   services.forEach(s => {
-    const title = `${s.title} Services Across the United States | Skerritt Economics`;
+    const title = `${s.title} Services Across the United States | Kincaid Wolstein Economics`;
     const description = `Professional ${s.title.toLowerCase()} services available nationwide. Find expert economic consulting in your state and city.`;
     writeJson(`services/${s.slug}.json`, {
       title, description,
@@ -89,7 +89,7 @@ function build() {
   // States and sample cities
   states.forEach(st => {
     writeJson(`${st.slug}.json`, {
-      title: `Economic Analysis Services in ${st.name} | Skerritt Economics`,
+      title: `Economic Analysis Services in ${st.name} | Kincaid Wolstein Economics`,
       description: `Professional economic analysis, forensic economics, and expert witness services throughout ${st.name}.`,
       canonical: `${ORIGIN}/${st.slug}`,
       state: { slug: st.slug, name: st.name, abbr: st.abbr },
@@ -97,7 +97,7 @@ function build() {
     });
     st.cities.forEach(city => {
       writeJson(`${st.slug}/${city.slug}.json`, {
-        title: `Economic Analysis Services in ${city.name}, ${st.abbr} | Skerritt Economics`,
+        title: `Economic Analysis Services in ${city.name}, ${st.abbr} | Kincaid Wolstein Economics`,
         description: `Professional economic analysis, forensic economics, and expert witness services in ${city.name}, ${st.name}.`,
         canonical: `${ORIGIN}/${st.slug}/${city.slug}`,
         state: { slug: st.slug, name: st.name, abbr: st.abbr },
@@ -111,7 +111,7 @@ function build() {
     svcList.forEach(svc => {
       cityList.forEach(city => {
         writeJson(`services/${svc.slug}/${st.slug}/${city.slug}.json`, {
-          title: `${svc.title} in ${city.name}, ${st.abbr} | Skerritt Economics`,
+          title: `${svc.title} in ${city.name}, ${st.abbr} | Kincaid Wolstein Economics`,
           description: `Expert ${svc.title.toLowerCase()} services in ${city.name}, ${st.name}. ${svc.meta || ''}`.trim(),
           canonical: `${ORIGIN}/services/${svc.slug}/${st.slug}/${city.slug}`,
           service: { slug: svc.slug, title: svc.title },

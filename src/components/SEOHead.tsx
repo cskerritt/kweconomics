@@ -36,7 +36,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, keywor
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {canonical && <meta property="og:url" content={canonical} />}
-        <meta property="og:site_name" content="KW Economics — in association with Kincaid Wolstein VRS" />
+        <meta property="og:site_name" content="Kincaid Wolstein Economics — in association with Kincaid Wolstein VRS" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

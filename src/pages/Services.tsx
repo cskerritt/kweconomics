@@ -46,7 +46,7 @@ const Services = () => {
     }
   ];
 
-  const currentUrl = "https://skerritteconomics.com/services";
+  const currentUrl = "https://kweconomics.com/services";
   
   const structuredData = {
     "@context": "https://schema.org",
@@ -65,7 +65,7 @@ const Services = () => {
         "description": service.description,
         "provider": {
           "@type": "Organization",
-          "name": "Skerritt Economics & Consulting"
+          "name": "Kincaid Wolstein Economics"
         }
       }))
     },
@@ -76,7 +76,7 @@ const Services = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://skerritteconomics.com"
+          "item": "https://kweconomics.com"
         },
         {
           "@type": "ListItem",
@@ -91,7 +91,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Economic Analysis Services - Expert Forensic Economics | Skerritt Economics"
+        title="Economic Analysis Services - Expert Forensic Economics | Kincaid Wolstein Economics"
         description="Comprehensive forensic economic analysis services including economic loss assessment, vocational evaluation, life care planning, and expert testimony. Daubert-compliant analysis for litigation support."
         canonical={currentUrl}
         keywords={["economic analysis services", "forensic economics", "economic loss assessment", "vocational evaluation", "life care planning", "expert testimony", "business valuation", "disability evaluation", "litigation support", "Daubert compliance"]}

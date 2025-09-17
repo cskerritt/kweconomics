@@ -9,7 +9,7 @@ export interface SitemapEntry {
 }
 
 export const generateSitemap = (): SitemapEntry[] => {
-  const baseUrl = 'https://skerritteconomics.com';
+  const baseUrl = 'https://kweconomics.com';
   const currentDate = new Date().toISOString();
   const sitemap: SitemapEntry[] = [];
 
@@ -104,7 +104,7 @@ ${sitemap.map(entry => `  <url>
 };
 
 export const generateRobotsTxt = (): string => {
-  const baseUrl = 'https://skerritteconomics.com';
+  const baseUrl = 'https://kweconomics.com';
   
   return `User-agent: *
 Allow: /

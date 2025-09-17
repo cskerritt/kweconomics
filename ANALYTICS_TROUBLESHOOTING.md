@@ -106,7 +106,7 @@ window.dataLayer.forEach(item => console.log(item));
 
 ## Production Deployment:
 
-Once deployed to production (skerritteconomics.com), you should definitely see data because:
+Once deployed to production (kweconomics.com), you should definitely see data because:
 - No localhost filtering
 - Real domain matches GA property
 - Most users won't have ad blockers

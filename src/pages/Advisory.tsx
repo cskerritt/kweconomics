@@ -32,7 +32,7 @@ const Advisory = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Advisory Services - KW Economics",
+    "name": "Advisory Services - Kincaid Wolstein Economics",
     "description": "Business & industry, public policy, health/education, finance, international and data science advisory services.",
     "url": currentUrl,
     "mainEntity": {
@@ -51,7 +51,7 @@ const Advisory = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Advisory Services | KW Economics"
+        title="Advisory Services | Kincaid Wolstein Economics"
         description="Advisory offerings across business & industry, government & public policy, healthcare & education, finance & investment, international & development, and econometrics/data science."
         canonical={currentUrl}
         keywords={["advisory services", "market analysis", "pricing strategy", "cost benefit", "labor economics", "economic impact", "RIA", "program evaluation", "health economics", "education economics", "finance economics", "international economics", "econometrics", "data science"]}

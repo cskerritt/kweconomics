@@ -8,7 +8,7 @@ interface SitemapURL {
   priority: number;
 }
 
-const DOMAIN = 'https://skerritteconomics.com';
+const DOMAIN = 'https://kweconomics.com';
 
 export const generateSitemapURLs = (): SitemapURL[] => {
   const urls: SitemapURL[] = [];

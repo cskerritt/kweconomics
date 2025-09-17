@@ -30,9 +30,9 @@ const ServiceHubPage: React.FC = () => {
   const states = getAllStates();
   const breadcrumbs = generateBreadcrumbs(service.title, undefined, undefined, serviceSlug);
 
-  const seoTitle = `${service.title} Services Across the United States | Skerritt Economics`;
+  const seoTitle = `${service.title} Services Across the United States | Kincaid Wolstein Economics`;
   const seoDescription = `Professional ${service.title.toLowerCase()} services available nationwide. Find expert economic consulting in your state and city.`;
-  const canonical = `https://skerritteconomics.com/services/${serviceSlug}`;
+  const canonical = `https://kweconomics.com/services/${serviceSlug}`;
 
   const keywords = [
     service.title.toLowerCase(),
@@ -50,8 +50,8 @@ const ServiceHubPage: React.FC = () => {
     "description": service.description,
     "provider": {
       "@type": "Organization",
-      "name": "Skerritt Economics",
-      "url": "https://skerritteconomics.com"
+      "name": "Kincaid Wolstein Economics",
+      "url": "https://kweconomics.com"
     },
     "areaServed": "United States",
     "serviceType": "Economic Consulting"

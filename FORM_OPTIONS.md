@@ -1,4 +1,4 @@
-# Form Submission Options for Skerritt Economics
+# Form Submission Options for Kincaid Wolstein Economics
 
 ## Current Implementation
 - **Service**: Formspree
@@ -12,7 +12,7 @@
 #### FormSubmit.co (FREE)
 ```javascript
 // No registration needed - just use your email
-const formAction = "https://formsubmit.co/chris@skerritteconomics.com"
+const formAction = "https://formsubmit.co/chris@kweconomics.com"
 ```
 **Pros**: Completely free, no signup, instant setup
 **Cons**: Less control, basic features

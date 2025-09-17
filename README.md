@@ -1,4 +1,4 @@
-# Skerritt Economics — Location Pages (Quality-Gated Rollout)
+# Kincaid Wolstein Economics — Location Pages (Quality-Gated Rollout)
 
 This repository powers high‑quality, location‑specific pages for services (e.g., Economic Loss Assessment, Business Valuation, Vocational Evaluation, Life Care Planning).
 

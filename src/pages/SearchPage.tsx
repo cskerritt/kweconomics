@@ -84,8 +84,8 @@ const SearchPage = () => {
   };
 
   const seoTitle = query 
-    ? `Search Results for "${query}" | Skerritt Economics`
-    : 'Search Economic Services | Skerritt Economics';
+    ? `Search Results for "${query}" | Kincaid Wolstein Economics`
+    : 'Search Economic Services | Kincaid Wolstein Economics';
   
   const seoDescription = query
     ? `Find economic analysis and expert witness services related to "${query}". Professional consultation nationwide.`

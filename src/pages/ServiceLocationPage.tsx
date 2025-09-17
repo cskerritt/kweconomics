@@ -66,7 +66,7 @@ const ServiceLocationPage = () => {
   
   const seoTitle = generateSEOTitle(service.title, city.name, state.abbreviation);
   const seoDescription = generateSEODescription(service.title, city.name, state.abbreviation, service.metaDescription);
-  const canonical = `https://skerritteconomics.com${createServiceLocationUrl(service.slug, state.slug, city.slug)}`;
+  const canonical = `https://kweconomics.com${createServiceLocationUrl(service.slug, state.slug, city.slug)}`;
   
   const breadcrumbs = generateBreadcrumbs(
     service.title,
@@ -93,7 +93,7 @@ const ServiceLocationPage = () => {
     "description": seoDescription,
     "provider": {
       "@type": "Organization",
-      "name": "Skerritt Economics",
+      "name": "Kincaid Wolstein Economics",
       "url": window.location.origin
     },
     "areaServed": {
@@ -317,11 +317,11 @@ const ServiceLocationPage = () => {
                     <span className="text-muted-foreground group-hover:text-primary transition-colors">(203) 605-2814</span>
                   </Link>
                   <Link 
-                    to="mailto:chris@skerritteconomics.com"
+                    to="mailto:chris@kweconomics.com"
                     className="flex items-center hover:text-primary transition-colors cursor-pointer group"
                   >
                     <Mail className="h-5 w-5 text-primary mr-3 group-hover:scale-110 transition-transform" />
-                    <span className="text-muted-foreground group-hover:text-primary transition-colors">chris@skerritteconomics.com</span>
+                    <span className="text-muted-foreground group-hover:text-primary transition-colors">chris@kweconomics.com</span>
                   </Link>
                   <Link 
                     to={`/${state.slug}/${city.slug}`}

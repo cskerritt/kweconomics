@@ -33,7 +33,7 @@ const Locations = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="All Service Locations | Skerritt Economics"
+        title="All Service Locations | Kincaid Wolstein Economics"
         description="Browse all our service locations across the United States. Expert economic analysis available in all 50 states and major cities."
         keywords={["locations", "service areas", "economic consulting locations", "expert witness locations"]}
       />

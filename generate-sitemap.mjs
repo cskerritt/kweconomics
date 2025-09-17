@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DOMAIN = 'https://skerritteconomics.com';
+const DOMAIN = 'https://kweconomics.com';
 const lastmod = new Date().toISOString().split('T')[0];
 
 function extractServiceSlugs() {
