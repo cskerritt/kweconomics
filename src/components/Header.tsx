@@ -45,9 +45,6 @@ const Header = () => {
                 alt="KW Economics Logo" 
                 className="h-12 w-auto"
               />
-              <h1 className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors cursor-pointer hidden lg:block">
-                KW Economics
-              </h1>
             </Link>
           </div>
           
