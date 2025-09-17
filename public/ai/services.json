@@ -1,0 +1,208 @@
+{
+  "generatedAt": "2025-09-13",
+  "organization": "Skerritt Economics & Consulting",
+  "baseUrl": "https://skerritteconomics.com",
+  "services": [
+    {
+      "id": "economic-loss-assessment",
+      "title": "Economic Loss Assessment",
+      "slug": "economic-loss-assessment",
+      "category": "Forensic/Litigation",
+      "deliverables": ["Lost earnings calculations", "Economic damages assessment", "Expert testimony", "Life care cost analysis"],
+      "methods": ["Present value calculations", "Labor market analysis"],
+      "standards": ["Daubert", "Federal Rules of Evidence"],
+      "url": "/services/economic-loss-assessment"
+    },
+    {
+      "id": "vocational-evaluation",
+      "title": "Vocational Evaluation",
+      "slug": "vocational-evaluation",
+      "category": "Forensic/Litigation",
+      "deliverables": ["Transferable skills analysis", "Labor market surveys", "Vocational testing", "Return-to-work planning"],
+      "methods": ["Occupational profiling", "Labor market sampling"],
+      "standards": ["ABVE", "CRC"],
+      "url": "/services/vocational-evaluation"
+    },
+    {
+      "id": "life-care-planning",
+      "title": "Life Care Planning",
+      "slug": "life-care-planning",
+      "category": "Forensic/Litigation",
+      "deliverables": ["Medical cost projections", "Equipment and supply needs", "Home modifications", "Attendant care planning"],
+      "methods": ["Medical record synthesis", "Long-horizon cost estimation"],
+      "standards": ["CLCP"],
+      "url": "/services/life-care-planning"
+    },
+    {
+      "id": "business-valuation",
+      "title": "Business Valuation",
+      "slug": "business-valuation",
+      "category": "Forensic & Advisory",
+      "deliverables": ["Fair market value", "DCF/guideline methods", "Quality of earnings flags", "Fairness/solvency notes"],
+      "methods": ["DCF", "Guideline companies", "Guideline transactions"],
+      "standards": ["AICPA SSVS", "IVS 2024", "ASA BV"],
+      "url": "/services/business-valuation"
+    },
+    {
+      "id": "disability-evaluation",
+      "title": "Disability Evaluation",
+      "slug": "disability-evaluation",
+      "category": "Disability/Administrative",
+      "deliverables": ["OWCP evaluations", "SSA testimony", "Functional capacity assessment", "Medical record analysis"],
+      "methods": ["Functional assessment", "Vocational analysis"],
+      "standards": ["OWCP", "SSA"],
+      "url": "/services/disability-evaluation"
+    },
+    {
+      "id": "expert-testimony",
+      "title": "Expert Testimony",
+      "slug": "expert-testimony",
+      "category": "Forensic/Litigation",
+      "deliverables": ["Daubert-compliant reports", "Deposition testimony", "Trial presentation", "Cross-examination support"],
+      "methods": ["Expert witness practice", "Demonstrative exhibits"],
+      "standards": ["Daubert"],
+      "url": "/services/expert-testimony"
+    },
+    {
+      "id": "business-consulting",
+      "title": "Business Consulting",
+      "slug": "business-consulting",
+      "category": "Advisory",
+      "deliverables": ["Financial analysis", "Market research", "Strategic planning", "Risk assessment"],
+      "methods": ["Scenario analysis", "Benchmarking"],
+      "url": "/services/business-consulting"
+    },
+    {
+      "id": "market-analysis-forecasting",
+      "title": "Market Analysis & Forecasting",
+      "slug": "market-analysis-forecasting",
+      "category": "Advisory - Business & Industry",
+      "deliverables": ["Market sizing", "Demand projections", "Competitor landscape", "Scenario dashboards"],
+      "methods": ["Time-series models (ARIMA/VAR)", "Structural drivers", "Scenario design vs Fed SEP / CBO / IMF / SPF"],
+      "data": ["BEA", "BLS", "Census", "IMF WEO cross-check"],
+      "references": ["Federal Reserve (2025)", "CBO (2025)", "IMF (2025)", "FRB-Philadelphia SPF (2025)"],
+      "url": "/services/market-analysis-forecasting"
+    },
+    {
+      "id": "pricing-strategy",
+      "title": "Pricing Strategy (Elasticity-Grounded)",
+      "slug": "pricing-strategy",
+      "category": "Advisory - Business & Industry",
+      "deliverables": ["WTP analysis", "SSNIP / critical-loss tests", "Elasticity estimates"],
+      "methods": ["Hypothetical monopolist tests", "Elasticity estimation"],
+      "references": ["DOJ & FTC Merger Guidelines (2023)", "OECD competition toolkits (2019)", "DOJ note on critical loss (2023)"],
+      "url": "/services/pricing-strategy"
+    },
+    {
+      "id": "cost-benefit-roi-analysis",
+      "title": "Cost-Benefit & ROI Analysis",
+      "slug": "cost-benefit-roi-analysis",
+      "category": "Advisory - Business & Industry",
+      "deliverables": ["ROI & NPV models", "Monte Carlo risk tables", "Assumptions log"],
+      "standards": ["OMB Circular A-94", "USDOT BCA (as applicable)"],
+      "references": ["OMB (2023/2024)", "USDOT (2024/2025)"],
+      "url": "/services/cost-benefit-roi-analysis"
+    },
+    {
+      "id": "labor-economics-consulting",
+      "title": "Labor Economics Consulting",
+      "slug": "labor-economics-consulting",
+      "category": "Advisory - Business & Industry",
+      "deliverables": ["Wage structure & pay bands", "ECEC/ECI benchmarks", "Geographic differentials", "Job architecture"],
+      "data": ["BLS OEWS", "ECI", "ECEC", "Area wages"],
+      "references": ["BLS (2025a)", "BLS (2025b)", "BLS (2025c)", "BLS (2024)"]
+    },
+    {
+      "id": "economic-impact-studies",
+      "title": "Economic Impact Studies",
+      "slug": "economic-impact-studies",
+      "category": "Government & Public Policy",
+      "deliverables": ["Input–output multipliers", "Distributional tables", "Fiscal impacts", "Uncertainty analysis"],
+      "standards": ["OMB A-94 discounting", "USDOT BCA (transport)"]
+    },
+    {
+      "id": "public-policy-analysis",
+      "title": "Public Policy Analysis",
+      "slug": "public-policy-analysis",
+      "category": "Government & Public Policy",
+      "deliverables": ["Problem framing", "Options analysis", "Costs/benefits", "Equity impacts", "Implementation risks"],
+      "references": ["GAO Designing Evaluations (2012/2021)"]
+    },
+    {
+      "id": "regulatory-impact-assessments",
+      "title": "Regulatory Impact Assessments (RIA)",
+      "slug": "regulatory-impact-assessments",
+      "category": "Government & Public Policy",
+      "deliverables": ["Baseline definition", "Alternatives", "Benefit–costs per A-94", "Sensitivity & distributional analysis"],
+      "notes": "As of 2025-01-31, Administration reinstated 2003 A-4; agencies should follow 2003 A-4 unless superseded.",
+      "references": ["The White House (2025)", "OMB (n.d.)"]
+    },
+    {
+      "id": "labor-market-employment-studies",
+      "title": "Labor Market & Employment Studies",
+      "slug": "labor-market-employment-studies",
+      "category": "Government & Public Policy",
+      "deliverables": ["Unemployment diagnostics", "Job training ROI", "Workforce development targeting"],
+      "data": ["BLS CPS/LAUS", "ECI/ECEC", "State LMI"]
+    },
+    {
+      "id": "health-economics",
+      "title": "Health Economics",
+      "slug": "health-economics",
+      "category": "Healthcare & Education",
+      "deliverables": ["CEA/CUA (ICERs)", "Budget impact", "Impact inventories", "Payer/provider briefs"],
+      "standards": ["Second Panel on Cost-Effectiveness (2016)", "CHEERS 2022"],
+      "references": ["Sanders et al. (2016)", "Husereau et al. (2022)"]
+    },
+    {
+      "id": "education-economics",
+      "title": "Education Economics",
+      "slug": "education-economics",
+      "category": "Healthcare & Education",
+      "deliverables": ["Program ROI", "Funding allocation models", "Longitudinal outcome projections"],
+      "standards": ["WWC procedures"],
+      "data": ["BLS Education Pays", "OECD Education at a Glance"],
+      "references": ["WWC (2022)", "BLS (2025e)", "OECD (2024)"]
+    },
+    {
+      "id": "program-evaluation",
+      "title": "Program Evaluation (Health/Education/Welfare)",
+      "slug": "program-evaluation",
+      "category": "Healthcare & Education",
+      "deliverables": ["Evaluation design", "Causal identification", "Survey design & analysis", "Implementation checks"],
+      "references": ["GAO (2012/2021)", "AAPOR (2023)"]
+    },
+    {
+      "id": "finance-investment-economics",
+      "title": "Finance & Investment Economics",
+      "slug": "finance-investment-economics",
+      "category": "Finance & Investment",
+      "deliverables": ["Macro/rates outlook", "Risk scenario matrices", "Stress testing narratives", "Capital appraisals"],
+      "references": ["Federal Reserve (2025)", "IMF (2025)", "USDOT (2024/2025)"]
+    },
+    {
+      "id": "international-development-economics",
+      "title": "International & Development Economics",
+      "slug": "international-development-economics",
+      "category": "International & Development",
+      "deliverables": ["Trade policy memos", "Market-entry risk", "Development program evaluation"],
+      "data": ["WTO tariffs", "UNCTAD FDI & WIR", "World Bank WDI"],
+      "references": ["WTO (n.d.)", "UNCTAD (2025)", "World Bank/IMF (2025)"]
+    },
+    {
+      "id": "econometrics-data-science",
+      "title": "Econometrics & Data Science",
+      "slug": "econometrics-data-science",
+      "category": "Data Science & Quantitative",
+      "deliverables": ["Econometric forecasting", "Causal inference (DiD/RD/synth)", "Survey design/analysis", "Data pipelines"],
+      "references": [
+        "Angrist & Pischke (2008)",
+        "Bertrand-Duflo-Mullainathan (2004/2002)",
+        "Abadie et al. (2003/2010)",
+        "Varian (2014)",
+        "Mullainathan & Spiess (2017)",
+        "Athey (2018)"
+      ]
+    }
+  ]
+}

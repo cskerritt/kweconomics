@@ -1,0 +1,83 @@
+# Robots.txt for Skerritt Economics & Consulting
+# https://skerritteconomics.com
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.map$
+Disallow: /vendor/
+Disallow: /locations/cities/
+Disallow: /locations/states/
+
+# Explicitly allow machine-readable AI JSON endpoints
+Allow: /ai/
+Allow: /ai/pages/
+
+# Specific crawler rules
+User-agent: Googlebot
+Crawl-delay: 0
+Allow: /
+
+User-agent: Bingbot
+Crawl-delay: 1
+Allow: /
+
+User-agent: Slurp
+Crawl-delay: 1
+Allow: /
+
+User-agent: DuckDuckBot
+Crawl-delay: 1
+Allow: /
+
+# Allow SEO analysis bots (important for SEO visibility)
+User-agent: AhrefsBot
+Crawl-delay: 2
+Allow: /
+
+User-agent: SemrushBot
+Crawl-delay: 2
+Allow: /
+
+User-agent: DotBot
+Crawl-delay: 2
+Allow: /
+
+User-agent: MJ12bot
+Crawl-delay: 2
+Allow: /
+
+# Sitemaps
+Sitemap: https://skerritteconomics.com/sitemap.xml
+Sitemap: https://skerritteconomics.com/ai-sitemap.xml
+Sitemap: https://skerritteconomics.com/sitemap-index.xml
+
+# Cache-Control for crawlers
+# Crawlers should cache for 24 hours
+Cache-Control: public, max-age=86400
+
+# AI/Research crawlers
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 0

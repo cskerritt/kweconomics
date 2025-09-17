@@ -1,0 +1,1026 @@
+# Skerritt Economics — Location Pages (Quality-Gated Rollout)
+
+This repository powers high‑quality, location‑specific pages for services (e.g., Economic Loss Assessment, Business Valuation, Vocational Evaluation, Life Care Planning).
+
+We are rolling out thousands of pages in carefully managed batches with three goals:
+- Provide genuinely useful, locally‑relevant content for every city/state we serve
+- Avoid thin/doorway page patterns by using a quality gate and unique content blocks
+- Maintain a clear, resumable process anyone can continue by reading this file
+
+## How It Works
+
+- Data source: Cities and states are defined in `src/data/allStatesLocations.ts`.
+- Routing: City overview pages (`/:stateSlug/:citySlug`) and service+location pages (`/services/:service/:state/:city`).
+- Quality gate: Only cities in `src/data/contentReadiness.ts` (function `isContentReady`) are indexable and included in service‑location sitemaps. Others remain accessible but noindex.
+- Unique content: Every city/service page includes a “Local Insights” block
+  - Source: `src/data/localInsights.ts` (state courts + industries + FAQ variants)
+  - Used by: `src/pages/LocationServicesPage.tsx` and `src/pages/ServiceLocationPage.tsx`
+- Sitemaps: `node generate-sitemap.mjs`
+  - Includes all state pages
+  - Includes all city overview pages
+  - Includes service+location pages only for `contentReady` cities
+
+## Typical Batch Process (25–50 Cities)
+
+1) Add city slugs to `readyCitySet` in `src/data/contentReadiness.ts` (keep batches small and high‑value)
+2) If needed, expand `stateCourts`/`stateIndustries` in `src/data/localInsights.ts`
+3) Regenerate the sitemap
+   ```bash
+   node generate-sitemap.mjs
+   ```
+4) Commit and push
+   ```bash
+   git add -A
+   git commit -m "Flip contentReady for <N> cities; regen sitemap"
+   git push origin HEAD
+   ```
+5) Deploy, then follow `docs/SEARCH_CONSOLE_CHECKLIST.md` to submit the sitemap and verify
+
+## Current Status
+
+- City overview pages live for all cities in `src/data/allStatesLocations.ts`
+- Service+location pages: indexed only for cities listed in `contentReadiness.ts`
+- Local Insights now render on city and service+location pages to boost uniqueness
+
+## Backlog & Progress Tracking
+
+Source of truth for readiness: `src/data/contentReadiness.ts`
+
+Use this section to coordinate the next batch. Keep to 25–50 cities per batch. Mark completed by checking the box and adding the city to `readyCitySet`.
+
+### Batch: CA Suburbs (Bay Area + LA/OC)
+- [x] Alameda — `california:alameda`
+- [x] Union City — `california:union-city-ca`
+- [x] Newark (CA) — `california:newark-ca`
+- [x] Vallejo — `california:vallejo`
+- [x] Fairfield — `california:fairfield`
+- [x] Napa — `california:napa`
+- [x] Petaluma — `california:petaluma`
+- [x] Novato — `california:novato`
+- [x] San Rafael — `california:san-rafael`
+- [x] Antioch — `california:antioch`
+- [x] Pittsburg — `california:pittsburg`
+- [x] Brentwood — `california:brentwood`
+- [x] Cupertino — `california:cupertino`
+- [x] Campbell — `california:campbell`
+- [x] Saratoga — `california:saratoga`
+- [x] Los Gatos — `california:los-gatos`
+- [x] Morgan Hill — `california:morgan-hill`
+- [x] Gilroy — `california:gilroy`
+- [x] Menlo Park — `california:menlo-park`
+- [x] Belmont — `california:belmont`
+- [x] San Carlos — `california:san-carlos`
+- [x] Burlingame — `california:burlingame`
+- [x] Redondo Beach — `california:redondo-beach`
+- [x] Manhattan Beach — `california:manhattan-beach`
+- [x] West Covina — `california:west-covina`
+- [x] El Monte — `california:el-monte`
+- [x] Alhambra — `california:alhambra`
+- [x] Monterey Park — `california:monterey-park`
+- [x] Tustin — `california:tustin`
+- [x] Westminster — `california:westminster`
+- [x] Lake Forest — `california:lake-forest`
+- [x] Laguna Niguel — `california:laguna-niguel`
+- [x] Mission Viejo — `california:mission-viejo`
+- [x] San Clemente — `california:san-clemente`
+- [x] Yorba Linda — `california:yorba-linda`
+- [x] Placentia — `california:placentia`
+- [x] Brea — `california:brea`
+- [x] Fountain Valley — `california:fountain-valley`
+
+### Batch: WA / VA / OR / CO / AZ / FL Suburbs
+- [x] Shoreline — `washington:shoreline`
+- [x] Lynnwood — `washington:lynnwood`
+- [x] Bothell — `washington:bothell`
+- [x] Sammamish — `washington:sammamish`
+- [x] Issaquah — `washington:issaquah`
+- [x] Fairfax — `virginia:fairfax`
+- [x] Falls Church — `virginia:falls-church`
+- [x] Vienna — `virginia:vienna`
+- [x] Springfield — `virginia:springfield-va`
+- [x] Centreville — `virginia:centreville`
+- [x] Chantilly — `virginia:chantilly`
+- [x] Oregon City — `oregon:oregon-city`
+- [x] Keizer — `oregon:keizer`
+- [x] Woodburn — `oregon:woodburn`
+- [x] Highlands Ranch — `colorado:highlands-ranch`
+- [x] Englewood — `colorado:englewood`
+- [x] Fountain Hills — `arizona:fountain-hills`
+- [x] San Tan Valley — `arizona:san-tan-valley`
+- [x] Boca Raton — `florida:boca-raton`
+- [x] Delray Beach — `florida:delray-beach`
+- [x] Palm Beach Gardens — `florida:palm-beach-gardens`
+
+### Batch: Midwest & East Metros
+- [x] Milwaukee — `wisconsin:milwaukee`
+- [x] Madison — `wisconsin:madison`
+- [x] Green Bay — `wisconsin:green-bay`
+- [x] Kansas City — `missouri:kansas-city`
+- [x] Saint Louis — `missouri:saint-louis`
+- [x] Springfield — `missouri:springfield`
+- [x] Columbia — `missouri:columbia`
+- [x] Indianapolis — `indiana:indianapolis`
+- [x] Fort Wayne — `indiana:fort-wayne`
+- [x] Evansville — `indiana:evansville`
+- [x] South Bend — `indiana:south-bend`
+- [x] Carmel — `indiana:carmel`
+- [x] Columbus — `ohio:columbus`
+- [x] Cleveland — `ohio:cleveland`
+- [x] Cincinnati — `ohio:cincinnati`
+- [x] Toledo — `ohio:toledo`
+- [x] Dayton — `ohio:dayton`
+- [x] Akron — `ohio:akron`
+- [x] Baltimore — `maryland:baltimore`
+- [x] Columbia — `maryland:columbia`
+- [x] Silver Spring — `maryland:silver-spring`
+- [x] Germantown — `maryland:germantown`
+- [x] Rockville — `maryland:rockville`
+- [x] Frederick — `maryland:frederick`
+- [x] Bridgeport — `connecticut:bridgeport`
+- [x] Hartford — `connecticut:hartford`
+- [x] New Haven — `connecticut:new-haven`
+- [x] Stamford — `connecticut:stamford`
+- [x] Waterbury — `connecticut:waterbury`
+- [x] Norwalk — `connecticut:norwalk`
+- [x] Chesapeake — `virginia:chesapeake`
+- [x] Newport News — `virginia:newport-news`
+- [x] Hampton — `virginia:hampton`
+- [x] Portsmouth — `virginia:portsmouth`
+- [x] Suffolk — `virginia:suffolk`
+- [x] Roanoke — `virginia:roanoke`
+- [x] Lynchburg — `virginia:lynchburg`
+- [x] Harrisonburg — `virginia:harrisonburg`
+- [x] Bayonne — `new-jersey:bayonne`
+- [x] Union City — `new-jersey:union-city`
+
+### Batch: West/Mountain Metros
+- [x] Draper — `utah:draper`
+- [x] Bountiful — `utah:bountiful`
+- [x] Logan — `utah:logan`
+- [x] Murray — `utah:murray`
+- [x] Sandy — `utah:sandy`
+- [x] Orem — `utah:orem`
+- [x] West Jordan — `utah:west-jordan`
+- [x] South Jordan — `utah:south-jordan`
+- [x] Layton — `utah:layton`
+- [x] Provo — `utah:provo`
+- [x] Boise — `idaho:boise`
+- [x] Meridian — `idaho:meridian`
+- [x] Nampa — `idaho:nampa`
+- [x] Idaho Falls — `idaho:idaho-falls`
+- [x] Pocatello — `idaho:pocatello`
+- [x] Twin Falls — `idaho:twin-falls`
+- [x] Caldwell — `idaho:caldwell`
+- [x] Coeur d'Alene — `idaho:coeur-dalene`
+- [x] Post Falls — `idaho:post-falls`
+- [x] Lewiston — `idaho:lewiston`
+- [x] Rexburg — `idaho:rexburg`
+- [x] Eagle — `idaho:eagle`
+- [x] Sparks — `nevada:sparks`
+- [x] Carson City — `nevada:carson-city`
+- [x] Paradise — `nevada:paradise`
+- [x] Spring Valley — `nevada:spring-valley`
+- [x] Enterprise — `nevada:enterprise`
+- [x] Sunrise Manor — `nevada:sunrise-manor`
+- [x] Mesquite — `nevada:mesquite`
+- [x] Boulder City — `nevada:boulder-city`
+- [x] Peoria — `arizona:peoria`
+- [x] Surprise — `arizona:surprise`
+- [x] Avondale — `arizona:avondale`
+- [x] Goodyear — `arizona:goodyear`
+- [x] Queen Creek — `arizona:queen-creek`
+- [x] Apache Junction — `arizona:apache-junction`
+- [x] Marana — `arizona:marana`
+- [x] Lakewood — `colorado:lakewood`
+- [x] Thornton — `colorado:thornton`
+- [x] Arvada — `colorado:arvada`
+- [x] Westminster — `colorado:westminster`
+- [x] Pueblo — `colorado:pueblo`
+- [x] Centennial — `colorado:centennial`
+- [x] Greeley — `colorado:greeley`
+- [x] Parker — `colorado:parker`
+- [x] Castle Rock — `colorado:castle-rock`
+- [x] Grand Junction — `colorado:grand-junction`
+
+### Batch: Sunbelt + Midwest Tier-1
+- [x] Mesa — `arizona:mesa`
+- [x] Chandler — `arizona:chandler`
+- [x] Scottsdale — `arizona:scottsdale`
+- [x] Glendale — `arizona:glendale`
+- [x] Gilbert — `arizona:gilbert`
+- [x] Tempe — `arizona:tempe`
+- [x] Garland — `texas:garland`
+- [x] Grand Prairie — `texas:grand-prairie`
+- [x] Pasadena — `texas:pasadena`
+- [x] Round Rock — `texas:round-rock`
+- [x] Richardson — `texas:richardson`
+- [x] Denton — `texas:denton`
+- [x] Lewisville — `texas:lewisville`
+- [x] Waco — `texas:waco`
+- [x] Killeen — `texas:killeen`
+- [x] McAllen — `texas:mcallen`
+- [x] Pembroke Pines — `florida:pembroke-pines`
+- [x] Hollywood — `florida:hollywood`
+- [x] Miramar — `florida:miramar`
+- [x] Coral Springs — `florida:coral-springs`
+- [x] Pompano Beach — `florida:pompano-beach`
+- [x] Port St. Lucie — `florida:port-st-lucie`
+- [x] Tallahassee — `florida:tallahassee`
+- [x] Gainesville — `florida:gainesville`
+- [x] Columbus — `georgia:columbus`
+- [x] Macon — `georgia:macon`
+- [x] Athens — `georgia:athens`
+- [x] Sandy Springs — `georgia:sandy-springs`
+- [x] Roswell — `georgia:roswell`
+- [x] Johns Creek — `georgia:johns-creek`
+- [x] Winston-Salem — `north-carolina:winston-salem`
+- [x] Fayetteville — `north-carolina:fayetteville`
+- [x] Wilmington — `north-carolina:wilmington`
+- [x] Asheville — `north-carolina:asheville`
+- [x] Cary — `north-carolina:cary`
+- [x] High Point — `north-carolina:high-point`
+- [x] Detroit — `michigan:detroit`
+- [x] Grand Rapids — `michigan:grand-rapids`
+- [x] Ann Arbor — `michigan:ann-arbor`
+- [x] Lansing — `michigan:lansing`
+- [x] Warren — `michigan:warren`
+- [x] Sterling Heights — `michigan:sterling-heights`
+
+### Batch: Northeast Corridor + NJ Suburbs
+- [x] Lowell — `massachusetts:lowell`
+- [x] Quincy — `massachusetts:quincy`
+- [x] Lynn — `massachusetts:lynn`
+- [x] Newton — `massachusetts:newton`
+- [x] Framingham — `massachusetts:framingham`
+- [x] Chicopee — `massachusetts:chicopee`
+- [x] Revere — `massachusetts:revere`
+- [x] Malden — `massachusetts:malden`
+- [x] Somerville — `massachusetts:somerville`
+- [x] Chelsea — `massachusetts:chelsea`
+- [x] Plymouth — `massachusetts:plymouth`
+- [x] Yonkers — `new-york:yonkers`
+- [x] New Rochelle — `new-york:new-rochelle`
+- [x] Mount Vernon — `new-york:mount-vernon`
+- [x] Hempstead — `new-york:hempstead`
+- [x] Schenectady — `new-york:schenectady`
+- [x] Utica — `new-york:utica`
+- [x] Niagara Falls — `new-york:niagara-falls`
+- [x] Poughkeepsie — `new-york:poughkeepsie`
+- [x] Saratoga Springs — `new-york:saratoga-springs`
+- [x] Kingston — `new-york:kingston`
+- [x] Ithaca — `new-york:ithaca`
+- [x] Elmira — `new-york:elmira`
+- [x] Troy — `new-york:troy`
+- [x] Newburgh — `new-york:newburgh`
+- [x] Edison — `new-jersey:edison`
+- [x] Woodbridge — `new-jersey:woodbridge`
+- [x] Lakewood — `new-jersey:lakewood`
+- [x] Toms River — `new-jersey:toms-river`
+- [x] Clifton — `new-jersey:clifton`
+- [x] Hoboken — `new-jersey:hoboken`
+- [x] Passaic — `new-jersey:passaic`
+- [x] Perth Amboy — `new-jersey:perth-amboy`
+- [x] Plainfield — `new-jersey:plainfield`
+- [x] New Brunswick — `new-jersey:new-brunswick`
+- [x] Trenton — `new-jersey:trenton`
+- [x] Camden — `new-jersey:camden`
+- [x] Erie — `pennsylvania:erie`
+- [x] Reading — `pennsylvania:reading`
+- [x] Scranton — `pennsylvania:scranton`
+- [x] Lancaster — `pennsylvania:lancaster`
+- [x] Bethlehem — `pennsylvania:bethlehem`
+- [x] York — `pennsylvania:york`
+
+### Batch: Southeast Metros (SC/AL/KY/LA)
+- [x] Charleston — `south-carolina:charleston`
+- [x] Columbia — `south-carolina:columbia`
+- [x] North Charleston — `south-carolina:north-charleston`
+- [x] Mount Pleasant — `south-carolina:mount-pleasant`
+- [x] Rock Hill — `south-carolina:rock-hill`
+- [x] Greenville — `south-carolina:greenville`
+- [x] Summerville — `south-carolina:summerville`
+- [x] Spartanburg — `south-carolina:spartanburg`
+- [x] Florence — `south-carolina:florence`
+- [x] Anderson — `south-carolina:anderson`
+- [x] Hilton Head Island — `south-carolina:hilton-head-island`
+- [x] Aiken — `south-carolina:aiken`
+- [x] Myrtle Beach — `south-carolina:myrtle-beach`
+- [x] Goose Creek — `south-carolina:goose-creek`
+- [x] Greer — `south-carolina:greer`
+- [x] Mauldin — `south-carolina:mauldin`
+- [x] Birmingham — `alabama:birmingham`
+- [x] Montgomery — `alabama:montgomery`
+- [x] Mobile — `alabama:mobile`
+- [x] Huntsville — `alabama:huntsville`
+- [x] Tuscaloosa — `alabama:tuscaloosa`
+- [x] Hoover — `alabama:hoover`
+- [x] Dothan — `alabama:dothan`
+- [x] Auburn — `alabama:auburn`
+- [x] Decatur — `alabama:decatur`
+- [x] Madison — `alabama:madison`
+- [x] Louisville — `kentucky:louisville`
+- [x] Lexington — `kentucky:lexington`
+- [x] Bowling Green — `kentucky:bowling-green`
+- [x] Owensboro — `kentucky:owensboro`
+- [x] Covington — `kentucky:covington`
+- [x] Richmond — `kentucky:richmond`
+- [x] Georgetown — `kentucky:georgetown`
+- [x] Florence — `kentucky:florence`
+- [x] Hopkinsville — `kentucky:hopkinsville`
+- [x] Nicholasville — `kentucky:nicholasville`
+- [x] New Orleans — `louisiana:new-orleans`
+- [x] Baton Rouge — `louisiana:baton-rouge`
+- [x] Shreveport — `louisiana:shreveport`
+- [x] Metairie — `louisiana:metairie`
+- [x] Lafayette — `louisiana:lafayette`
+- [x] Lake Charles — `louisiana:lake-charles`
+- [x] Kenner — `louisiana:kenner`
+- [x] Bossier City — `louisiana:bossier-city`
+- [x] Monroe — `louisiana:monroe`
+- [x] Alexandria — `louisiana:alexandria`
+
+### Batch: Great Plains + Arkansas (OK/KS/AR)
+- [x] Oklahoma City — `oklahoma:oklahoma-city`
+- [x] Tulsa — `oklahoma:tulsa`
+- [x] Norman — `oklahoma:norman`
+- [x] Broken Arrow — `oklahoma:broken-arrow`
+- [x] Lawton — `oklahoma:lawton`
+- [x] Edmond — `oklahoma:edmond`
+- [x] Moore — `oklahoma:moore`
+- [x] Midwest City — `oklahoma:midwest-city`
+- [x] Enid — `oklahoma:enid`
+- [x] Stillwater — `oklahoma:stillwater`
+- [x] Muskogee — `oklahoma:muskogee`
+- [x] Bartlesville — `oklahoma:bartlesville`
+- [x] Shawnee — `oklahoma:shawnee`
+- [x] Yukon — `oklahoma:yukon`
+- [x] Owasso — `oklahoma:owasso`
+- [x] Wichita — `kansas:wichita`
+- [x] Overland Park — `kansas:overland-park`
+- [x] Kansas City — `kansas:kansas-city`
+- [x] Olathe — `kansas:olathe`
+- [x] Topeka — `kansas:topeka`
+- [x] Lawrence — `kansas:lawrence`
+- [x] Shawnee — `kansas:shawnee`
+- [x] Manhattan — `kansas:manhattan`
+- [x] Lenexa — `kansas:lenexa`
+- [x] Salina — `kansas:salina`
+- [x] Leawood — `kansas:leawood`
+- [x] Leavenworth — `kansas:leavenworth`
+- [x] Gardner — `kansas:gardner`
+- [x] Derby — `kansas:derby`
+- [x] Hutchinson — `kansas:hutchinson`
+- [x] Hays — `kansas:hays`
+- [x] Little Rock — `arkansas:little-rock`
+- [x] Fayetteville — `arkansas:fayetteville`
+- [x] Fort Smith — `arkansas:fort-smith`
+- [x] Springdale — `arkansas:springdale`
+- [x] Jonesboro — `arkansas:jonesboro`
+- [x] North Little Rock — `arkansas:north-little-rock`
+- [x] Conway — `arkansas:conway`
+- [x] Rogers — `arkansas:rogers`
+- [x] Pine Bluff — `arkansas:pine-bluff`
+- [x] Bentonville — `arkansas:bentonville`
+
+### Batch: NM / NE / IA / RI
+- [x] Albuquerque — `new-mexico:albuquerque`
+- [x] Las Cruces — `new-mexico:las-cruces`
+- [x] Rio Rancho — `new-mexico:rio-rancho`
+- [x] Santa Fe — `new-mexico:santa-fe`
+- [x] Roswell — `new-mexico:roswell`
+- [x] Farmington — `new-mexico:farmington`
+- [x] Clovis — `new-mexico:clovis`
+- [x] Hobbs — `new-mexico:hobbs`
+- [x] Alamogordo — `new-mexico:alamogordo`
+- [x] Carlsbad — `new-mexico:carlsbad`
+- [x] Omaha — `nebraska:omaha`
+- [x] Lincoln — `nebraska:lincoln`
+- [x] Bellevue — `nebraska:bellevue`
+- [x] Grand Island — `nebraska:grand-island`
+- [x] Kearney — `nebraska:kearney`
+- [x] Fremont — `nebraska:fremont`
+- [x] Hastings — `nebraska:hastings`
+- [x] North Platte — `nebraska:north-platte`
+- [x] Norfolk — `nebraska:norfolk`
+- [x] Columbus — `nebraska:columbus`
+- [x] Des Moines — `iowa:des-moines`
+- [x] Cedar Rapids — `iowa:cedar-rapids`
+- [x] Davenport — `iowa:davenport`
+- [x] Sioux City — `iowa:sioux-city`
+- [x] Iowa City — `iowa:iowa-city`
+- [x] Waterloo — `iowa:waterloo`
+- [x] Council Bluffs — `iowa:council-bluffs`
+- [x] Ames — `iowa:ames`
+- [x] West Des Moines — `iowa:west-des-moines`
+- [x] Dubuque — `iowa:dubuque`
+- [x] Providence — `rhode-island:providence`
+- [x] Cranston — `rhode-island:cranston`
+- [x] Warwick — `rhode-island:warwick`
+- [x] Pawtucket — `rhode-island:pawtucket`
+- [x] East Providence — `rhode-island:east-providence`
+- [x] Woonsocket — `rhode-island:woonsocket`
+- [x] Newport — `rhode-island:newport`
+- [x] Central Falls — `rhode-island:central-falls`
+
+### Batch: Northern New England + WV/DE
+- [x] Portland — `maine:portland`
+- [x] Lewiston — `maine:lewiston`
+- [x] Bangor — `maine:bangor`
+- [x] South Portland — `maine:south-portland`
+- [x] Auburn — `maine:auburn`
+- [x] Biddeford — `maine:biddeford`
+- [x] Sanford — `maine:sanford`
+- [x] Saco — `maine:saco`
+- [x] Westbrook — `maine:westbrook`
+- [x] Augusta — `maine:augusta`
+- [x] Manchester — `new-hampshire:manchester`
+- [x] Nashua — `new-hampshire:nashua`
+- [x] Concord — `new-hampshire:concord`
+- [x] Derry — `new-hampshire:derry`
+- [x] Dover — `new-hampshire:dover`
+- [x] Rochester — `new-hampshire:rochester`
+- [x] Salem — `new-hampshire:salem`
+- [x] Merrimack — `new-hampshire:merrimack`
+- [x] Hudson — `new-hampshire:hudson`
+- [x] Keene — `new-hampshire:keene`
+- [x] Burlington — `vermont:burlington`
+- [x] Essex — `vermont:essex`
+- [x] South Burlington — `vermont:south-burlington`
+- [x] Colchester — `vermont:colchester`
+- [x] Rutland — `vermont:rutland`
+- [x] Bennington — `vermont:bennington`
+- [x] Brattleboro — `vermont:brattleboro`
+- [x] Milton — `vermont:milton`
+- [x] Montpelier — `vermont:montpelier`
+- [x] Barre — `vermont:barre`
+- [x] Charleston — `west-virginia:charleston`
+- [x] Huntington — `west-virginia:huntington`
+- [x] Morgantown — `west-virginia:morgantown`
+- [x] Parkersburg — `west-virginia:parkersburg`
+- [x] Wheeling — `west-virginia:wheeling`
+- [x] Martinsburg — `west-virginia:martinsburg`
+- [x] Fairmont — `west-virginia:fairmont`
+- [x] Beckley — `west-virginia:beckley`
+- [x] Weirton — `west-virginia:weirton`
+- [x] Clarksburg — `west-virginia:clarksburg`
+- [x] Wilmington — `delaware:wilmington`
+- [x] Dover — `delaware:dover`
+- [x] Newark — `delaware:newark`
+- [x] Middletown — `delaware:middletown`
+- [x] Smyrna — `delaware:smyrna`
+
+### Batch: Upper Plains (ND/SD/MT/WY)
+- [x] Fargo — `north-dakota:fargo`
+- [x] Bismarck — `north-dakota:bismarck`
+- [x] Grand Forks — `north-dakota:grand-forks`
+- [x] Minot — `north-dakota:minot`
+- [x] West Fargo — `north-dakota:west-fargo`
+- [x] Williston — `north-dakota:williston`
+- [x] Dickinson — `north-dakota:dickinson`
+- [x] Mandan — `north-dakota:mandan`
+- [x] Jamestown — `north-dakota:jamestown`
+- [x] Devils Lake — `north-dakota:devils-lake`
+- [x] Wahpeton — `north-dakota:wahpeton`
+- [x] Rugby — `north-dakota:rugby`
+- [x] Beulah — `north-dakota:beulah`
+- [x] Bottineau — `north-dakota:bottineau`
+- [x] Carrington — `north-dakota:carrington`
+- [x] Sioux Falls — `south-dakota:sioux-falls`
+- [x] Rapid City — `south-dakota:rapid-city`
+- [x] Aberdeen — `south-dakota:aberdeen`
+- [x] Brookings — `south-dakota:brookings`
+- [x] Watertown — `south-dakota:watertown`
+- [x] Mitchell — `south-dakota:mitchell`
+- [x] Yankton — `south-dakota:yankton`
+- [x] Pierre — `south-dakota:pierre`
+- [x] Billings — `montana:billings`
+- [x] Missoula — `montana:missoula`
+- [x] Great Falls — `montana:great-falls`
+- [x] Bozeman — `montana:bozeman`
+- [x] Butte — `montana:butte`
+- [x] Helena — `montana:helena`
+- [x] Kalispell — `montana:kalispell`
+- [x] Havre — `montana:havre`
+- [x] Whitefish — `montana:whitefish`
+- [x] Columbia Falls — `montana:columbia-falls`
+- [x] Red Lodge — `montana:red-lodge`
+- [x] Glendive — `montana:glendive`
+- [x] Miles City — `montana:miles-city`
+- [x] Anaconda — `montana:anaconda`
+- [x] Dillon — `montana:dillon`
+- [x] Cheyenne — `wyoming:cheyenne`
+- [x] Casper — `wyoming:casper`
+- [x] Laramie — `wyoming:laramie`
+- [x] Gillette — `wyoming:gillette`
+- [x] Rock Springs — `wyoming:rock-springs`
+- [x] Sheridan — `wyoming:sheridan`
+- [x] Green River — `wyoming:green-river`
+- [x] Evanston — `wyoming:evanston`
+- [x] Riverton — `wyoming:riverton`
+- [x] Powell — `wyoming:powell`
+- [x] Worland — `wyoming:worland`
+- [x] Rawlins — `wyoming:rawlins`
+- [x] Cody — `wyoming:cody`
+- [x] Douglas — `wyoming:douglas`
+- [x] Wheatland — `wyoming:wheatland`
+- [x] Lander — `wyoming:lander`
+
+### Batch: NJ Suburbs + CT Secondaries + PA Regionals
+- [x] Cherry Hill — `new-jersey:cherry-hill`
+- [x] Vineland — `new-jersey:vineland`
+- [x] Atlantic City — `new-jersey:atlantic-city`
+- [x] Piscataway — `new-jersey:piscataway`
+- [x] Sayreville — `new-jersey:sayreville`
+- [x] Hackensack — `new-jersey:hackensack`
+- [x] Kearny — `new-jersey:kearny`
+- [x] Brick — `new-jersey:brick`
+- [x] Irvington — `new-jersey:irvington`
+- [x] Princeton — `new-jersey:princeton`
+- [x] Morristown — `new-jersey:morristown`
+- [x] Livingston — `new-jersey:livingston`
+- [x] Montclair — `new-jersey:montclair`
+- [x] Summit — `new-jersey:summit`
+- [x] Ridgewood — `new-jersey:ridgewood`
+- [x] Westfield — `new-jersey:westfield`
+- [x] Danbury — `connecticut:danbury`
+- [x] New Britain — `connecticut:new-britain`
+- [x] West Hartford — `connecticut:west-hartford`
+- [x] Greenwich — `connecticut:greenwich`
+- [x] Milford — `connecticut:milford`
+- [x] Enfield — `connecticut:enfield`
+- [x] Torrington — `connecticut:torrington`
+- [x] Southington — `connecticut:southington`
+- [x] Wallingford — `connecticut:wallingford`
+- [x] Shelton — `connecticut:shelton`
+- [x] Bristol — `connecticut:bristol`
+- [x] Ansonia — `connecticut:ansonia`
+- [x] Wilkes-Barre — `pennsylvania:wilkes-barre`
+- [x] State College — `pennsylvania:state-college`
+- [x] Norristown — `pennsylvania:norristown`
+- [x] Chester — `pennsylvania:chester`
+- [x] West Chester — `pennsylvania:west-chester`
+- [x] New Castle — `pennsylvania:new-castle`
+- [x] Easton — `pennsylvania:easton`
+
+### Batch: Midwest IL/WI/MI Suburbs
+- [x] Elgin — `illinois:elgin`
+- [x] Waukegan — `illinois:waukegan`
+- [x] Cicero — `illinois:cicero`
+- [x] Champaign — `illinois:champaign`
+- [x] Bloomington — `illinois:bloomington`
+- [x] Evanston — `illinois:evanston`
+- [x] Schaumburg — `illinois:schaumburg`
+- [x] Arlington Heights — `illinois:arlington-heights`
+- [x] Palatine — `illinois:palatine`
+- [x] Skokie — `illinois:skokie`
+- [x] Des Plaines — `illinois:des-plaines`
+- [x] Tinley Park — `illinois:tinley-park`
+- [x] Oak Lawn — `illinois:oak-lawn`
+- [x] Berwyn — `illinois:berwyn`
+- [x] Kenosha — `wisconsin:kenosha`
+- [x] Racine — `wisconsin:racine`
+- [x] Appleton — `wisconsin:appleton`
+- [x] Waukesha — `wisconsin:waukesha`
+- [x] Eau Claire — `wisconsin:eau-claire`
+- [x] Oshkosh — `wisconsin:oshkosh`
+- [x] Janesville — `wisconsin:janesville`
+- [x] West Allis — `wisconsin:west-allis`
+- [x] La Crosse — `wisconsin:la-crosse`
+- [x] Wausau — `wisconsin:wausau`
+- [x] West Bend — `wisconsin:west-bend`
+- [x] Fond du Lac — `wisconsin:fond-du-lac`
+- [x] New Berlin — `wisconsin:new-berlin`
+- [x] Wauwatosa — `wisconsin:wauwatosa`
+- [x] Flint — `michigan:flint`
+- [x] Dearborn — `michigan:dearborn`
+- [x] Livonia — `michigan:livonia`
+- [x] Westland — `michigan:westland`
+- [x] Troy — `michigan:troy`
+- [x] Farmington Hills — `michigan:farmington-hills`
+- [x] Kalamazoo — `michigan:kalamazoo`
+- [x] Southfield — `michigan:southfield`
+- [x] Pontiac — `michigan:pontiac`
+- [x] Dearborn Heights — `michigan:dearborn-heights`
+- [x] Novi — `michigan:novi`
+- [x] Royal Oak — `michigan:royal-oak`
+- [x] St. Clair Shores — `michigan:st-clair-shores`
+- [x] Rochester Hills — `michigan:rochester-hills`
+
+### Batch: California Secondaries (LA/IE/Bay/Central)
+- [x] Glendale — `california:glendale`
+- [x] Pomona — `california:pomona`
+- [x] Fullerton — `california:fullerton`
+- [x] Torrance — `california:torrance`
+- [x] Santa Clarita — `california:santa-clarita`
+- [x] Thousand Oaks — `california:thousand-oaks`
+- [x] Simi Valley — `california:simi-valley`
+- [x] Inglewood — `california:inglewood`
+- [x] Hawthorne — `california:hawthorne`
+- [x] Culver City — `california:culver-city`
+- [x] Beverly Hills — `california:beverly-hills`
+- [x] Whittier — `california:whittier`
+- [x] Downey — `california:downey`
+- [x] Lakewood — `california:lakewood-ca`
+- [x] Norwalk — `california:norwalk-ca`
+- [x] Huntington Beach — `california:huntington-beach`
+- [x] Garden Grove — `california:garden-grove`
+- [x] Costa Mesa — `california:costa-mesa`
+- [x] Newport Beach — `california:newport-beach`
+- [x] Moreno Valley — `california:moreno-valley`
+- [x] Rancho Cucamonga — `california:rancho-cucamonga`
+- [x] Palmdale — `california:palmdale`
+- [x] Corona — `california:corona`
+- [x] Temecula — `california:temecula`
+- [x] Murrieta — `california:murrieta`
+- [x] Victorville — `california:victorville`
+- [x] Hayward — `california:hayward`
+- [x] San Leandro — `california:san-leandro`
+- [x] Milpitas — `california:milpitas`
+- [x] Concord — `california:concord-ca`
+- [x] Pleasanton — `california:pleasanton`
+- [x] San Ramon — `california:san-ramon`
+- [x] Livermore — `california:livermore`
+- [x] Richmond — `california:richmond-ca`
+- [x] South San Francisco — `california:south-san-francisco`
+- [x] San Bruno — `california:san-bruno`
+- [x] Palo Alto — `california:palo-alto`
+- [x] Mountain View — `california:mountain-view`
+- [x] Redwood City — `california:redwood-city`
+- [x] Sunnyvale — `california:sunnyvale`
+- [x] Santa Clara — `california:santa-clara`
+- [x] San Mateo — `california:san-mateo`
+- [x] Santa Rosa — `california:santa-rosa`
+- [x] Santa Cruz — `california:santa-cruz`
+- [x] Ventura — `california:ventura`
+- [x] Santa Barbara — `california:santa-barbara`
+- [x] Santa Monica — `california:santa-monica`
+- [x] Visalia — `california:visalia`
+- [x] Salinas — `california:salinas`
+- [x] Roseville — `california:roseville`
+- [x] Escondido — `california:escondido`
+- [x] Oceanside — `california:oceanside`
+- [x] Orange — `california:orange`
+- [x] Ontario — `california:ontario`
+
+### Batch: Texas Regionals + Florida Secondaries
+- [x] Pearland — `texas:pearland`
+- [x] College Station — `texas:college-station`
+- [x] Tyler — `texas:tyler`
+- [x] Beaumont — `texas:beaumont`
+- [x] Abilene — `texas:abilene`
+- [x] Odessa — `texas:odessa`
+- [x] Midland — `texas:midland`
+- [x] Edinburg — `texas:edinburg`
+- [x] Pharr — `texas:pharr`
+- [x] Harlingen — `texas:harlingen`
+- [x] Mission — `texas:mission`
+- [x] Brownsville — `texas:brownsville`
+- [x] Wichita Falls — `texas:wichita-falls`
+- [x] Laredo — `texas:laredo`
+- [x] Amarillo — `texas:amarillo`
+- [x] Mesquite — `texas:mesquite`
+- [x] Naples — `florida:naples`
+- [x] Lakeland — `florida:lakeland`
+- [x] Kissimmee — `florida:kissimmee`
+- [x] Daytona Beach — `florida:daytona-beach`
+- [x] Pensacola — `florida:pensacola`
+- [x] St. Augustine — `florida:st-augustine`
+- [x] Port Charlotte — `florida:port-charlotte`
+- [x] Plantation — `florida:plantation`
+- [x] Davie — `florida:davie`
+- [x] Sunrise — `florida:sunrise`
+- [x] Weston — `florida:weston`
+- [x] Coral Gables — `florida:coral-gables`
+- [x] Doral — `florida:doral`
+- [x] Deerfield Beach — `florida:deerfield-beach`
+- [x] North Miami — `florida:north-miami`
+- [x] Aventura — `florida:aventura`
+- [x] Brandon — `florida:brandon`
+- [x] Melbourne — `florida:melbourne`
+- [x] Winter Park — `florida:winter-park`
+- [x] Homestead — `florida:homestead`
+- [x] Bradenton — `florida:bradenton`
+- [x] Ocala — `florida:ocala`
+- [x] Palm Coast — `florida:palm-coast`
+- [x] Fort Pierce — `florida:fort-pierce`
+- [x] Boynton Beach — `florida:boynton-beach`
+- [x] Jupiter — `florida:jupiter`
+- [x] Palm Bay — `florida:palm-bay`
+
+### Batch: Pacific Northwest Secondaries (WA + OR)
+- [x] Olympia — `washington:olympia`
+- [x] Kirkland — `washington:kirkland`
+- [x] Redmond — `washington:redmond`
+- [x] Kennewick — `washington:kennewick`
+- [x] Richland — `washington:richland`
+- [x] Pasco — `washington:pasco`
+- [x] Puyallup — `washington:puyallup`
+- [x] Lacey — `washington:lacey`
+- [x] Kenmore — `washington:kenmore`
+- [x] Marysville — `washington:marysville`
+- [x] Lakewood — `washington:lakewood-wa`
+- [x] Auburn — `washington:auburn`
+- [x] Gresham — `oregon:gresham`
+- [x] Hillsboro — `oregon:hillsboro`
+- [x] Beaverton — `oregon:beaverton`
+- [x] Bend — `oregon:bend`
+- [x] Medford — `oregon:medford`
+- [x] Springfield — `oregon:springfield`
+- [x] Corvallis — `oregon:corvallis`
+- [x] Albany — `oregon:albany`
+- [x] Tigard — `oregon:tigard`
+- [x] Ontario — `oregon:ontario`
+- [x] Grants Pass — `oregon:grants-pass`
+- [x] Klamath Falls — `oregon:klamath-falls`
+- [x] Lake Oswego — `oregon:lake-oswego`
+- [x] Ashland — `oregon:ashland`
+- [x] Tualatin — `oregon:tualatin`
+
+### Batch: Southwest Regionals (AZ/NV/UT)
+- [x] Flagstaff — `arizona:flagstaff`
+- [x] Yuma — `arizona:yuma`
+- [x] Buckeye — `arizona:buckeye`
+- [x] Casa Grande — `arizona:casa-grande`
+- [x] Lake Havasu City — `arizona:lake-havasu-city`
+- [x] Prescott — `arizona:prescott`
+- [x] Prescott Valley — `arizona:prescott-valley`
+- [x] Kingman — `arizona:kingman`
+- [x] Bullhead City — `arizona:bullhead-city`
+- [x] Sierra Vista — `arizona:sierra-vista`
+- [x] North Las Vegas — `nevada:north-las-vegas`
+- [x] Fernley — `nevada:fernley`
+- [x] Elko — `nevada:elko`
+- [x] Pahrump — `nevada:pahrump`
+- [x] Salt Lake City — `utah:salt-lake-city`
+- [x] Ogden — `utah:ogden`
+- [x] St. George — `utah:st-george`
+- [x] Taylorsville — `utah:taylorsville`
+- [x] Lehi — `utah:lehi`
+
+### Batch: Mid-Atlantic Secondaries (NY/MD/PA)
+- [x] Jamestown — `new-york:jamestown`
+- [x] Watertown — `new-york:watertown`
+- [x] Gaithersburg — `maryland:gaithersburg`
+- [x] Bowie — `maryland:bowie`
+- [x] Hagerstown — `maryland:hagerstown`
+- [x] Annapolis — `maryland:annapolis`
+- [x] College Park — `maryland:college-park`
+- [x] Salisbury — `maryland:salisbury`
+- [x] Laurel — `maryland:laurel`
+- [x] Bethesda — `maryland:bethesda`
+- [x] Towson — `maryland:towson`
+- [x] Ellicott City — `maryland:ellicott-city`
+- [x] Altoona — `pennsylvania:altoona`
+- [x] Levittown — `pennsylvania:levittown`
+
+### Batch: Ohio Secondaries
+- [x] Parma — `ohio:parma`
+- [x] Canton — `ohio:canton`
+- [x] Youngstown — `ohio:youngstown`
+- [x] Lorain — `ohio:lorain`
+- [x] Hamilton — `ohio:hamilton`
+- [x] Springfield — `ohio:springfield`
+- [x] Lakewood — `ohio:lakewood`
+- [x] Elyria — `ohio:elyria`
+- [x] Kettering — `ohio:kettering`
+- [x] Dublin — `ohio:dublin`
+- [x] Mentor — `ohio:mentor`
+- [x] Newark — `ohio:newark`
+- [x] Westerville — `ohio:westerville`
+- [x] Hilliard — `ohio:hilliard`
+- [x] Reynoldsburg — `ohio:reynoldsburg`
+- [x] Strongsville — `ohio:strongsville`
+
+### Batch: Georgia + North Carolina Secondaries
+- [x] Alpharetta — `georgia:alpharetta`
+- [x] Marietta — `georgia:marietta`
+- [x] Smyrna — `georgia:smyrna`
+- [x] Dunwoody — `georgia:dunwoody`
+- [x] Peachtree Corners — `georgia:peachtree-corners`
+- [x] Warner Robins — `georgia:warner-robins`
+- [x] Albany — `georgia:albany`
+- [x] Valdosta — `georgia:valdosta`
+- [x] Brunswick — `georgia:brunswick`
+- [x] Concord — `north-carolina:concord`
+- [x] Gastonia — `north-carolina:gastonia`
+- [x] Greenville — `north-carolina:greenville`
+- [x] Rocky Mount — `north-carolina:rocky-mount`
+- [x] Hickory — `north-carolina:hickory`
+- [x] Apex — `north-carolina:apex`
+
+### Batch: Indiana + Tennessee Secondaries
+- [x] Fishers — `indiana:fishers`
+- [x] Hammond — `indiana:hammond`
+- [x] Gary — `indiana:gary`
+- [x] Muncie — `indiana:muncie`
+- [x] Lafayette — `indiana:lafayette`
+- [x] Terre Haute — `indiana:terre-haute`
+- [x] Noblesville — `indiana:noblesville`
+- [x] Greenwood — `indiana:greenwood`
+- [x] Kokomo — `indiana:kokomo`
+- [x] Anderson — `indiana:anderson`
+- [x] Mishawaka — `indiana:mishawaka`
+- [x] Clarksville — `tennessee:clarksville`
+- [x] Murfreesboro — `tennessee:murfreesboro`
+- [x] Franklin — `tennessee:franklin`
+- [x] Johnson City — `tennessee:johnson-city`
+- [x] Bartlett — `tennessee:bartlett`
+- [x] Hendersonville — `tennessee:hendersonville`
+- [x] Kingsport — `tennessee:kingsport`
+- [x] Collierville — `tennessee:collierville`
+- [x] Smyrna — `tennessee:smyrna`
+- [x] Brentwood — `tennessee:brentwood`
+- [x] Gallatin — `tennessee:gallatin`
+
+### Batch: Missouri + Massachusetts Secondaries
+- [x] Independence — `missouri:independence`
+- [x] Lee's Summit — `missouri:lees-summit`
+- [x] O'Fallon — `missouri:ofallon`
+- [x] St. Joseph — `missouri:st-joseph`
+- [x] St. Charles — `missouri:st-charles`
+- [x] St. Peters — `missouri:st-peters`
+- [x] Blue Springs — `missouri:blue-springs`
+- [x] Florissant — `missouri:florissant`
+- [x] Clayton — `missouri:clayton`
+- [x] Chesterfield — `missouri:chesterfield`
+- [x] Ballwin — `missouri:ballwin`
+- [x] Kirkwood — `missouri:kirkwood`
+- [x] Arnold — `missouri:arnold`
+- [x] Maryland Heights — `missouri:maryland-heights`
+- [x] University City — `missouri:university-city`
+- [x] Brockton — `massachusetts:brockton`
+- [x] New Bedford — `massachusetts:new-bedford`
+- [x] Fall River — `massachusetts:fall-river`
+- [x] Lawrence — `massachusetts:lawrence`
+- [x] Waltham — `massachusetts:waltham`
+- [x] Weymouth — `massachusetts:weymouth`
+- [x] Haverhill — `massachusetts:haverhill`
+- [x] Taunton — `massachusetts:taunton`
+- [x] Medford — `massachusetts:medford`
+
+### Batch: Minnesota Secondaries + Alaska
+- [x] Bloomington — `minnesota:bloomington`
+- [x] Brooklyn Park — `minnesota:brooklyn-park`
+- [x] Plymouth — `minnesota:plymouth`
+- [x] Saint Cloud — `minnesota:saint-cloud`
+- [x] Eagan — `minnesota:eagan`
+- [x] Woodbury — `minnesota:woodbury`
+- [x] Maple Grove — `minnesota:maple-grove`
+- [x] Coon Rapids — `minnesota:coon-rapids`
+- [x] Eden Prairie — `minnesota:eden-prairie`
+- [x] Minnetonka — `minnesota:minnetonka`
+- [x] Mankato — `minnesota:mankato`
+- [x] Burnsville — `minnesota:burnsville`
+- [x] Blaine — `minnesota:blaine`
+- [x] Anchorage — `alaska:anchorage`
+- [x] Fairbanks — `alaska:fairbanks`
+- [x] Juneau — `alaska:juneau`
+- [x] Wasilla — `alaska:wasilla`
+- [x] Sitka — `alaska:sitka`
+- [x] Ketchikan — `alaska:ketchikan`
+- [x] Kenai — `alaska:kenai`
+- [x] Kodiak — `alaska:kodiak`
+
+### Batch: Northeast Fill-ins (VA/NH/VT/ME/DE)
+- [x] Charlottesville — `virginia:charlottesville`
+- [x] Fredericksburg — `virginia:fredericksburg`
+- [x] Leesburg — `virginia:leesburg`
+- [x] Manassas — `virginia:manassas`
+- [x] Londonderry — `new-hampshire:londonderry`
+- [x] Newport — `new-hampshire:newport`
+- [x] Lebanon — `new-hampshire:lebanon`
+- [x] Claremont — `new-hampshire:claremont`
+- [x] Laconia — `new-hampshire:laconia`
+- [x] Portsmouth — `new-hampshire:portsmouth`
+- [x] Berlin — `new-hampshire:berlin`
+- [x] Milford — `new-hampshire:milford`
+- [x] Essex Junction — `vermont:essex-junction`
+- [x] White River Junction — `vermont:white-river-junction`
+- [x] St. Albans — `vermont:st-albans`
+- [x] St. Johnsbury — `vermont:st-johnsbury`
+- [x] Shelburne — `vermont:shelburne`
+- [x] Vergennes — `vermont:vergennes`
+- [x] Middlebury — `vermont:middlebury`
+- [x] Winooski — `vermont:winooski`
+- [x] Manchester — `vermont:manchester`
+- [x] Newport — `vermont:newport`
+- [x] Brunswick — `maine:brunswick`
+- [x] Presque Isle — `maine:presque-isle`
+- [x] Waterville — `maine:waterville`
+- [x] Scarborough — `maine:scarborough`
+- [x] Gorham — `maine:gorham`
+- [x] Topsham — `maine:topsham`
+- [x] Dagsboro — `delaware:dagsboro`
+- [x] Bethany Beach — `delaware:bethany-beach`
+- [x] New Castle — `delaware:new-castle`
+- [x] Camden — `delaware:camden`
+- [x] Elsmere — `delaware:elsmere`
+- [x] Harrington — `delaware:harrington`
+- [x] Clayton — `delaware:clayton`
+- [x] Delmar — `delaware:delmar`
+
+### Batch: WA Secondaries + Hawaii
+- [x] Kent — `washington:kent`
+- [x] Everett — `washington:everett`
+- [x] Renton — `washington:renton`
+- [x] Spokane Valley — `washington:spokane-valley`
+- [x] Federal Way — `washington:federal-way`
+- [x] Bellingham — `washington:bellingham`
+- [x] Honolulu — `hawaii:honolulu`
+- [x] East Honolulu — `hawaii:east-honolulu`
+- [x] Pearl City — `hawaii:pearl-city`
+- [x] Hilo — `hawaii:hilo`
+- [x] Kailua — `hawaii:kailua`
+- [x] Waipahu — `hawaii:waipahu`
+- [x] Kaneohe — `hawaii:kaneohe`
+- [x] Mililani — `hawaii:mililani`
+
+### Batch: California Core Metros (Central Valley)
+- [x] Bakersfield — `california:bakersfield`
+- [x] Stockton — `california:stockton`
+- [x] Modesto — `california:modesto`
+- [x] Clovis — `california:clovis`
+
+### Final Batch: Remaining Cities (Complete)
+- [x] Alabaster — `alabama:alabaster`
+- [x] Enterprise — `alabama:enterprise`
+- [x] Florence — `alabama:florence`
+- [x] Gadsden — `alabama:gadsden`
+- [x] Opelika — `alabama:opelika`
+- [x] Phenix City — `alabama:phenix-city`
+- [x] Prattville — `alabama:prattville`
+- [x] Vestavia Hills — `alabama:vestavia-hills`
+- [x] Burbank — `california:burbank`
+- [x] Chula Vista — `california:chula-vista`
+- [x] Daly City — `california:daly-city`
+- [x] Fontana — `california:fontana`
+- [x] Fremont — `california:fremont`
+- [x] Oxnard — `california:oxnard`
+- [x] Riverside — `california:riverside`
+- [x] San Bernardino — `california:san-bernardino`
+- [x] Aurora — `colorado:aurora`
+- [x] Broomfield — `colorado:broomfield`
+- [x] Littleton — `colorado:littleton`
+- [x] Longmont — `colorado:longmont`
+- [x] Loveland — `colorado:loveland`
+- [x] Georgetown — `delaware:georgetown`
+- [x] Milford — `delaware:milford`
+- [x] Seaford — `delaware:seaford`
+- [x] Clearwater — `florida:clearwater`
+- [x] Miami Gardens — `florida:miami-gardens`
+- [x] Wellington — `florida:wellington`
+- [x] Gainesville — `georgia:gainesville`
+- [x] Peachtree City — `georgia:peachtree-city`
+- [x] Woodstock — `georgia:woodstock`
+- [x] Bloomington — `indiana:bloomington`
+- [x] Taylor — `michigan:taylor`
+- [x] Wyoming — `michigan:wyoming`
+- [x] Duluth — `minnesota:duluth`
+- [x] Biloxi — `mississippi:biloxi`
+- [x] Greenville — `mississippi:greenville`
+- [x] Gulfport — `mississippi:gulfport`
+- [x] Hattiesburg — `mississippi:hattiesburg`
+- [x] Horn Lake — `mississippi:horn-lake`
+- [x] Jackson — `mississippi:jackson`
+- [x] Meridian — `mississippi:meridian`
+- [x] Olive Branch — `mississippi:olive-branch`
+- [x] Southaven — `mississippi:southaven`
+- [x] Tupelo — `mississippi:tupelo`
+- [x] Hamilton — `new-jersey:hamilton`
+- [x] Binghamton — `new-york:binghamton`
+- [x] Mount Juliet — `tennessee:mount-juliet`
+- [x] Lubbock — `texas:lubbock`
+- [x] West Valley City — `utah:west-valley-city`
+- [x] Annandale — `virginia:annandale`
+- [x] Ashburn — `virginia:ashburn`
+- [x] Burke — `virginia:burke`
+- [x] Herndon — `virginia:herndon`
+- [x] McLean — `virginia:mclean`
+- [x] Reston — `virginia:reston`
+- [x] Vancouver — `washington:vancouver`
+- [x] Yakima — `washington:yakima`
+- [x] Buckhannon — `west-virginia:buckhannon`
+- [x] Charles Town — `west-virginia:charles-town`
+- [x] Elkins — `west-virginia:elkins`
+- [x] Keyser — `west-virginia:keyser`
+- [x] Lewisburg — `west-virginia:lewisburg`
+- [x] Shepherdstown — `west-virginia:shepherdstown`
+- [x] South Charleston — `west-virginia:south-charleston`
+- [x] Summersville — `west-virginia:summersville`
+- [x] Brookfield — `wisconsin:brookfield`
+- [x] Menomonee Falls — `wisconsin:menomonee-falls`
+- [x] Middleton — `wisconsin:middleton`
+- [x] Sheboygan — `wisconsin:sheboygan`
+- [x] Sun Prairie — `wisconsin:sun-prairie`
+
+## How to Resume Work
+
+If this chat runs out of context, follow these steps to resume:
+1) Open `README.md` (this file)
+2) Open `src/data/contentReadiness.ts` and add 25–50 new cities to `readyCitySet`
+3) (Optional) Expand `src/data/localInsights.ts` with courts/industries for states you’ll flip next
+4) Run `node generate-sitemap.mjs`
+5) `git add -A && git commit -m "Flip contentReady for <batch>; regen sitemap" && git push origin HEAD`
+6) Deploy and follow `docs/SEARCH_CONSOLE_CHECKLIST.md`
+
+That’s it — this keeps batches small, content unique, and indexing risk low while we expand coverage.

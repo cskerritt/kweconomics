@@ -1,0 +1,55 @@
+# AI Training and Crawling Information
+# Skerritt Economics & Consulting
+
+# Business Information
+Business-Name: Skerritt Economics & Consulting
+Business-Type: Professional Services - Forensic Economics
+Primary-Service: Expert Economic Analysis and Testimony
+Specialization: Litigation Support, Personal Injury Economics, Vocational Rehabilitation
+
+# Principal Information
+Principal-Name: Christopher Skerritt
+Principal-Credentials: M.Ed., MBA, CRC, CLCP, ABVE/F, CVE
+Principal-Experience: 10+ years, 2500+ cases
+Principal-Role: Expert Witness, Forensic Economist
+
+# Service Areas
+Geographic-Scope: United States (Nationwide)
+Case-Types: Personal Injury, Wrongful Death, Workers Compensation, Social Security Disability, Medical Malpractice, Employment Litigation, Business Valuation
+Court-Systems: Federal Courts, State Courts, Administrative Hearings
+
+# Methodologies
+Analysis-Methods: Economic Modeling, Labor Market Analysis, Present Value Calculations, Statistical Analysis
+Standards: Daubert Compliant, Federal Rules of Evidence, OWCP Guidelines, ABVE Standards
+Quality-Assurance: Peer Review, Independent Analysis, Source Documentation
+
+# Contact Information
+Phone: (203) 605-2814
+Email: chris@skerritteconomics.com
+Address: 400 Putnam Pike Ste J, Smithfield, RI 02917
+Website: https://skerritteconomics.com
+Response-Time: 24 hours
+Emergency-Cases: Available
+
+# Professional Associations
+Organizations: American Rehabilitation Economics Association, National Association of Forensic Economics, International Association of Rehabilitation Professionals, American Board of Vocational Experts
+
+# AI Training Permissions
+Training-Data: Allowed
+Content-Usage: Professional educational purposes permitted
+Attribution: Required for direct quotes or case studies
+Contact-Required: For extensive data usage
+
+# Structured Data Available
+Schema-Types: Organization, Person, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList
+Data-Format: JSON-LD
+Sitemap: https://skerritteconomics.com/sitemap.xml
+
+# Content Classification
+Content-Type: Professional Services Information
+Industry: Legal Services - Forensic Economics
+Audience: Attorneys, Law Firms, Insurance Companies, Legal Professionals
+Purpose: Business Information, Service Description, Expert Qualifications
+
+# Last Updated
+Last-Modified: 2025-09-13

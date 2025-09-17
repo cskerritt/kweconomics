@@ -1,0 +1,1081 @@
+# Netlify redirects for legacy URLs
+# https://docs.netlify.com/routing/redirects/
+
+# Force HTTPS and normalize domain for all traffic
+http://skerritteconomics.com/* https://skerritteconomics.com/:splat 301!
+http://www.skerritteconomics.com/* https://skerritteconomics.com/:splat 301!
+https://www.skerritteconomics.com/* https://skerritteconomics.com/:splat 301!
+
+# Redirects from old domain (skerritt-economics.com)
+http://skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
+http://www.skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
+https://skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
+https://www.skerritt-economics.com/* https://skerritteconomics.com/:splat 301!
+
+# Alternative domain redirects
+http://econdetective.com/* https://skerritteconomics.com/:splat 301!
+http://www.econdetective.com/* https://skerritteconomics.com/:splat 301!
+https://econdetective.com/* https://skerritteconomics.com/:splat 301!
+https://www.econdetective.com/* https://skerritteconomics.com/:splat 301!
+
+# Block vendor/bundle paths (return 404 with noindex)
+/vendor/bundle/* /404 404
+/vendor/* /404 404
+
+# Generic service-location compound patterns (handle any city-state combination)
+# These must come before more specific patterns to catch all variations
+/personal-injury-economist-*/ /services/economic-loss-assessment 301
+/forensic-economist-*/ /services/economic-loss-assessment 301
+/business-valuation-*/ /services/business-valuation 301
+/wrongful-death-damages-*/ /services/economic-loss-assessment 301
+/vocational-expert-*/ /services/vocational-evaluation 301
+/life-care-planner-*/ /services/life-care-planning 301
+/disability-evaluation-*/ /services/disability-evaluation 301
+/expert-witness-*/ /services/expert-testimony 301
+
+# Legacy service patterns - comprehensive metro areas (most specific)
+# Philadelphia Metro Area - all services
+/philadelphia-metro-economist /services/economic-loss-assessment/pennsylvania/philadelphia 301
+/philadelphia-metro-personal-injury-economist /services/economic-loss-assessment/pennsylvania/philadelphia 301
+/philadelphia-metro-business-valuation /services/business-valuation/pennsylvania/philadelphia 301
+/philadelphia-metro-wrongful-death-damages /services/economic-loss-assessment/pennsylvania/philadelphia 301
+/philadelphia-metro-vocational-expert /services/vocational-evaluation/pennsylvania/philadelphia 301
+/philadelphia-metro-life-care-planner /services/life-care-planning/pennsylvania/philadelphia 301
+/philadelphia-metro-disability-evaluation /services/disability-evaluation/pennsylvania/philadelphia 301
+/philadelphia-metro-expert-witness /services/expert-testimony/pennsylvania/philadelphia 301
+
+# Washington DC Metro Area - all services
+/washington-dc-metro-economist /services/economic-loss-assessment/district-of-columbia/washington 301
+/washington-dc-metro-personal-injury-economist /services/economic-loss-assessment/district-of-columbia/washington 301
+/washington-dc-metro-business-valuation /services/business-valuation/district-of-columbia/washington 301
+/washington-dc-metro-wrongful-death-damages /services/economic-loss-assessment/district-of-columbia/washington 301
+/washington-dc-metro-vocational-expert /services/vocational-evaluation/district-of-columbia/washington 301
+/washington-dc-metro-life-care-planner /services/life-care-planning/district-of-columbia/washington 301
+/washington-dc-metro-disability-evaluation /services/disability-evaluation/district-of-columbia/washington 301
+/washington-dc-metro-expert-witness /services/expert-testimony/district-of-columbia/washington 301
+
+# Dallas-Fort Worth Metro Area - all services
+/dallas-fort-worth-economist /services/economic-loss-assessment/texas/dallas 301
+/dallas-fort-worth-personal-injury-economist /services/economic-loss-assessment/texas/dallas 301
+/dallas-fort-worth-business-valuation /services/business-valuation/texas/dallas 301
+/dallas-fort-worth-wrongful-death-damages /services/economic-loss-assessment/texas/dallas 301
+/dallas-fort-worth-vocational-expert /services/vocational-evaluation/texas/dallas 301
+/dallas-fort-worth-life-care-planner /services/life-care-planning/texas/dallas 301
+/dallas-fort-worth-disability-evaluation /services/disability-evaluation/texas/dallas 301
+/dallas-fort-worth-expert-witness /services/expert-testimony/texas/dallas 301
+
+# Chicago Metro Area - all services
+/chicago-metro-economist /services/economic-loss-assessment/illinois/chicago 301
+/chicago-metro-personal-injury-economist /services/economic-loss-assessment/illinois/chicago 301
+/chicago-metro-business-valuation /services/business-valuation/illinois/chicago 301
+/chicago-metro-wrongful-death-damages /services/economic-loss-assessment/illinois/chicago 301
+/chicago-metro-vocational-expert /services/vocational-evaluation/illinois/chicago 301
+/chicago-metro-life-care-planner /services/life-care-planning/illinois/chicago 301
+/chicago-metro-disability-evaluation /services/disability-evaluation/illinois/chicago 301
+/chicago-metro-expert-witness /services/expert-testimony/illinois/chicago 301
+
+# New York Metro Area - all services
+/new-york-metro-economist /services/economic-loss-assessment/new-york/new-york-city 301
+/new-york-metro-personal-injury-economist /services/economic-loss-assessment/new-york/new-york-city 301
+/new-york-metro-business-valuation /services/business-valuation/new-york/new-york-city 301
+/new-york-metro-wrongful-death-damages /services/economic-loss-assessment/new-york/new-york-city 301
+/new-york-metro-vocational-expert /services/vocational-evaluation/new-york/new-york-city 301
+/new-york-metro-life-care-planner /services/life-care-planning/new-york/new-york-city 301
+/new-york-metro-disability-evaluation /services/disability-evaluation/new-york/new-york-city 301
+/new-york-metro-expert-witness /services/expert-testimony/new-york/new-york-city 301
+
+# Los Angeles Metro Area - all services
+/los-angeles-metro-economist /services/economic-loss-assessment/california/los-angeles 301
+/los-angeles-metro-personal-injury-economist /services/economic-loss-assessment/california/los-angeles 301
+/los-angeles-metro-business-valuation /services/business-valuation/california/los-angeles 301
+/los-angeles-metro-wrongful-death-damages /services/economic-loss-assessment/california/los-angeles 301
+/los-angeles-metro-vocational-expert /services/vocational-evaluation/california/los-angeles 301
+/los-angeles-metro-life-care-planner /services/life-care-planning/california/los-angeles 301
+/los-angeles-metro-disability-evaluation /services/disability-evaluation/california/los-angeles 301
+/los-angeles-metro-expert-witness /services/expert-testimony/california/los-angeles 301
+
+# Atlanta Metro Area - all services
+/atlanta-metro-economist /services/economic-loss-assessment/georgia/atlanta 301
+/atlanta-metro-personal-injury-economist /services/economic-loss-assessment/georgia/atlanta 301
+/atlanta-metro-business-valuation /services/business-valuation/georgia/atlanta 301
+/atlanta-metro-wrongful-death-damages /services/economic-loss-assessment/georgia/atlanta 301
+/atlanta-metro-vocational-expert /services/vocational-evaluation/georgia/atlanta 301
+/atlanta-metro-life-care-planner /services/life-care-planning/georgia/atlanta 301
+/atlanta-metro-disability-evaluation /services/disability-evaluation/georgia/atlanta 301
+/atlanta-metro-expert-witness /services/expert-testimony/georgia/atlanta 301
+
+# Miami Metro Area - all services
+/miami-metro-economist /services/economic-loss-assessment/florida/miami 301
+/miami-metro-personal-injury-economist /services/economic-loss-assessment/florida/miami 301
+/miami-metro-business-valuation /services/business-valuation/florida/miami 301
+/miami-metro-wrongful-death-damages /services/economic-loss-assessment/florida/miami 301
+/miami-metro-vocational-expert /services/vocational-evaluation/florida/miami 301
+/miami-metro-life-care-planner /services/life-care-planning/florida/miami 301
+/miami-metro-disability-evaluation /services/disability-evaluation/florida/miami 301
+/miami-metro-expert-witness /services/expert-testimony/florida/miami 301
+
+# San Francisco Bay Area - all services
+/san-francisco-bay-area-economist /services/economic-loss-assessment/california/san-francisco 301
+/san-francisco-bay-area-personal-injury-economist /services/economic-loss-assessment/california/san-francisco 301
+/san-francisco-bay-area-business-valuation /services/business-valuation/california/san-francisco 301
+/san-francisco-bay-area-wrongful-death-damages /services/economic-loss-assessment/california/san-francisco 301
+/san-francisco-bay-area-vocational-expert /services/vocational-evaluation/california/san-francisco 301
+/san-francisco-bay-area-life-care-planner /services/life-care-planning/california/san-francisco 301
+/san-francisco-bay-area-disability-evaluation /services/disability-evaluation/california/san-francisco 301
+/san-francisco-bay-area-expert-witness /services/expert-testimony/california/san-francisco 301
+
+# Greater Boston Area - all services
+/greater-boston-area-economist /services/economic-loss-assessment/massachusetts/boston 301
+/greater-boston-area-personal-injury-economist /services/economic-loss-assessment/massachusetts/boston 301
+/greater-boston-area-business-valuation /services/business-valuation/massachusetts/boston 301
+/greater-boston-area-wrongful-death-damages /services/economic-loss-assessment/massachusetts/boston 301
+/greater-boston-area-vocational-expert /services/vocational-evaluation/massachusetts/boston 301
+/greater-boston-area-life-care-planner /services/life-care-planning/massachusetts/boston 301
+/greater-boston-area-disability-evaluation /services/disability-evaluation/massachusetts/boston 301
+/greater-boston-area-expert-witness /services/expert-testimony/massachusetts/boston 301
+
+# Seattle Metro Area - all services
+/seattle-metro-economist /services/economic-loss-assessment/washington/seattle 301
+/seattle-metro-personal-injury-economist /services/economic-loss-assessment/washington/seattle 301
+/seattle-metro-business-valuation /services/business-valuation/washington/seattle 301
+/seattle-metro-wrongful-death-damages /services/economic-loss-assessment/washington/seattle 301
+/seattle-metro-vocational-expert /services/vocational-evaluation/washington/seattle 301
+/seattle-metro-life-care-planner /services/life-care-planning/washington/seattle 301
+/seattle-metro-disability-evaluation /services/disability-evaluation/washington/seattle 301
+/seattle-metro-expert-witness /services/expert-testimony/washington/seattle 301
+
+# Phoenix Metro Area - all services
+/phoenix-metro-economist /services/economic-loss-assessment/arizona/phoenix 301
+/phoenix-metro-personal-injury-economist /services/economic-loss-assessment/arizona/phoenix 301
+/phoenix-metro-business-valuation /services/business-valuation/arizona/phoenix 301
+/phoenix-metro-wrongful-death-damages /services/economic-loss-assessment/arizona/phoenix 301
+/phoenix-metro-vocational-expert /services/vocational-evaluation/arizona/phoenix 301
+/phoenix-metro-life-care-planner /services/life-care-planning/arizona/phoenix 301
+/phoenix-metro-disability-evaluation /services/disability-evaluation/arizona/phoenix 301
+/phoenix-metro-expert-witness /services/expert-testimony/arizona/phoenix 301
+
+# Denver Metro Area - all services
+/denver-metro-economist /services/economic-loss-assessment/colorado/denver 301
+/denver-metro-personal-injury-economist /services/economic-loss-assessment/colorado/denver 301
+/denver-metro-business-valuation /services/business-valuation/colorado/denver 301
+/denver-metro-wrongful-death-damages /services/economic-loss-assessment/colorado/denver 301
+/denver-metro-vocational-expert /services/vocational-evaluation/colorado/denver 301
+/denver-metro-life-care-planner /services/life-care-planning/colorado/denver 301
+/denver-metro-disability-evaluation /services/disability-evaluation/colorado/denver 301
+/denver-metro-expert-witness /services/expert-testimony/colorado/denver 301
+
+# Las Vegas Metro Area - all services
+/las-vegas-metro-economist /services/economic-loss-assessment/nevada/las-vegas 301
+/las-vegas-metro-personal-injury-economist /services/economic-loss-assessment/nevada/las-vegas 301
+/las-vegas-metro-business-valuation /services/business-valuation/nevada/las-vegas 301
+/las-vegas-metro-wrongful-death-damages /services/economic-loss-assessment/nevada/las-vegas 301
+/las-vegas-metro-vocational-expert /services/vocational-evaluation/nevada/las-vegas 301
+/las-vegas-metro-life-care-planner /services/life-care-planning/nevada/las-vegas 301
+/las-vegas-metro-disability-evaluation /services/disability-evaluation/nevada/las-vegas 301
+/las-vegas-metro-expert-witness /services/expert-testimony/nevada/las-vegas 301
+
+# Detroit Metro Area - all services
+/detroit-metro-economist /services/economic-loss-assessment/michigan/detroit 301
+/detroit-metro-personal-injury-economist /services/economic-loss-assessment/michigan/detroit 301
+/detroit-metro-business-valuation /services/business-valuation/michigan/detroit 301
+/detroit-metro-wrongful-death-damages /services/economic-loss-assessment/michigan/detroit 301
+/detroit-metro-vocational-expert /services/vocational-evaluation/michigan/detroit 301
+/detroit-metro-life-care-planner /services/life-care-planning/michigan/detroit 301
+/detroit-metro-disability-evaluation /services/disability-evaluation/michigan/detroit 301
+/detroit-metro-expert-witness /services/expert-testimony/michigan/detroit 301
+
+# Houston Metro Area - all services
+/houston-metro-economist /services/economic-loss-assessment/texas/houston 301
+/houston-metro-personal-injury-economist /services/economic-loss-assessment/texas/houston 301
+/houston-metro-business-valuation /services/business-valuation/texas/houston 301
+/houston-metro-wrongful-death-damages /services/economic-loss-assessment/texas/houston 301
+/houston-metro-vocational-expert /services/vocational-evaluation/texas/houston 301
+/houston-metro-life-care-planner /services/life-care-planning/texas/houston 301
+/houston-metro-disability-evaluation /services/disability-evaluation/texas/houston 301
+/houston-metro-expert-witness /services/expert-testimony/texas/houston 301
+
+# Minneapolis Metro Area - all services
+/minneapolis-metro-economist /services/economic-loss-assessment/minnesota/minneapolis 301
+/minneapolis-metro-personal-injury-economist /services/economic-loss-assessment/minnesota/minneapolis 301
+/minneapolis-metro-business-valuation /services/business-valuation/minnesota/minneapolis 301
+/minneapolis-metro-wrongful-death-damages /services/economic-loss-assessment/minnesota/minneapolis 301
+/minneapolis-metro-vocational-expert /services/vocational-evaluation/minnesota/minneapolis 301
+/minneapolis-metro-life-care-planner /services/life-care-planning/minnesota/minneapolis 301
+/minneapolis-metro-disability-evaluation /services/disability-evaluation/minnesota/minneapolis 301
+/minneapolis-metro-expert-witness /services/expert-testimony/minnesota/minneapolis 301
+
+# San Diego Metro Area - all services
+/san-diego-metro-economist /services/economic-loss-assessment/california/san-diego 301
+/san-diego-metro-personal-injury-economist /services/economic-loss-assessment/california/san-diego 301
+/san-diego-metro-business-valuation /services/business-valuation/california/san-diego 301
+/san-diego-metro-wrongful-death-damages /services/economic-loss-assessment/california/san-diego 301
+/san-diego-metro-vocational-expert /services/vocational-evaluation/california/san-diego 301
+/san-diego-metro-life-care-planner /services/life-care-planning/california/san-diego 301
+/san-diego-metro-disability-evaluation /services/disability-evaluation/california/san-diego 301
+/san-diego-metro-expert-witness /services/expert-testimony/california/san-diego 301
+
+# Tampa Metro Area - all services
+/tampa-metro-economist /services/economic-loss-assessment/florida/tampa 301
+/tampa-metro-personal-injury-economist /services/economic-loss-assessment/florida/tampa 301
+/tampa-metro-business-valuation /services/business-valuation/florida/tampa 301
+/tampa-metro-wrongful-death-damages /services/economic-loss-assessment/florida/tampa 301
+/tampa-metro-vocational-expert /services/vocational-evaluation/florida/tampa 301
+/tampa-metro-life-care-planner /services/life-care-planning/florida/tampa 301
+/tampa-metro-disability-evaluation /services/disability-evaluation/florida/tampa 301
+/tampa-metro-expert-witness /services/expert-testimony/florida/tampa 301
+
+# St. Louis Metro Area - all services
+/st-louis-metro-economist /services/economic-loss-assessment/missouri/saint-louis 301
+/st-louis-metro-personal-injury-economist /services/economic-loss-assessment/missouri/saint-louis 301
+/st-louis-metro-business-valuation /services/business-valuation/missouri/saint-louis 301
+/st-louis-metro-wrongful-death-damages /services/economic-loss-assessment/missouri/saint-louis 301
+/st-louis-metro-vocational-expert /services/vocational-evaluation/missouri/saint-louis 301
+/st-louis-metro-life-care-planner /services/life-care-planning/missouri/saint-louis 301
+/st-louis-metro-disability-evaluation /services/disability-evaluation/missouri/saint-louis 301
+/st-louis-metro-expert-witness /services/expert-testimony/missouri/saint-louis 301
+
+# County-specific redirects - all service types
+/cook-county-economist /services/economic-loss-assessment/illinois/chicago 301
+/cook-county-personal-injury-economist /services/economic-loss-assessment/illinois/chicago 301
+/cook-county-business-valuation /services/business-valuation/illinois/chicago 301
+/cook-county-wrongful-death-damages /services/economic-loss-assessment/illinois/chicago 301
+/cook-county-vocational-expert /services/vocational-evaluation/illinois/chicago 301
+/cook-county-life-care-planner /services/life-care-planning/illinois/chicago 301
+/cook-county-disability-evaluation /services/disability-evaluation/illinois/chicago 301
+/cook-county-expert-witness /services/expert-testimony/illinois/chicago 301
+
+/los-angeles-county-economist /services/economic-loss-assessment/california/los-angeles 301
+/los-angeles-county-personal-injury-economist /services/economic-loss-assessment/california/los-angeles 301
+/los-angeles-county-business-valuation /services/business-valuation/california/los-angeles 301
+/los-angeles-county-wrongful-death-damages /services/economic-loss-assessment/california/los-angeles 301
+/los-angeles-county-vocational-expert /services/vocational-evaluation/california/los-angeles 301
+/los-angeles-county-life-care-planner /services/life-care-planning/california/los-angeles 301
+/los-angeles-county-disability-evaluation /services/disability-evaluation/california/los-angeles 301
+/los-angeles-county-expert-witness /services/expert-testimony/california/los-angeles 301
+
+/harris-county-economist /services/economic-loss-assessment/texas/houston 301
+/harris-county-personal-injury-economist /services/economic-loss-assessment/texas/houston 301
+/harris-county-business-valuation /services/business-valuation/texas/houston 301
+/harris-county-wrongful-death-damages /services/economic-loss-assessment/texas/houston 301
+/harris-county-vocational-expert /services/vocational-evaluation/texas/houston 301
+/harris-county-life-care-planner /services/life-care-planning/texas/houston 301
+/harris-county-disability-evaluation /services/disability-evaluation/texas/houston 301
+/harris-county-expert-witness /services/expert-testimony/texas/houston 301
+
+/maricopa-county-economist /services/economic-loss-assessment/arizona/phoenix 301
+/maricopa-county-personal-injury-economist /services/economic-loss-assessment/arizona/phoenix 301
+/maricopa-county-business-valuation /services/business-valuation/arizona/phoenix 301
+/maricopa-county-wrongful-death-damages /services/economic-loss-assessment/arizona/phoenix 301
+/maricopa-county-vocational-expert /services/vocational-evaluation/arizona/phoenix 301
+/maricopa-county-life-care-planner /services/life-care-planning/arizona/phoenix 301
+/maricopa-county-disability-evaluation /services/disability-evaluation/arizona/phoenix 301
+/maricopa-county-expert-witness /services/expert-testimony/arizona/phoenix 301
+
+/orange-county-ca-economist /services/economic-loss-assessment/california/santa-ana 301
+/orange-county-ca-personal-injury-economist /services/economic-loss-assessment/california/santa-ana 301
+/orange-county-ca-business-valuation /services/business-valuation/california/santa-ana 301
+/orange-county-ca-wrongful-death-damages /services/economic-loss-assessment/california/santa-ana 301
+/orange-county-ca-vocational-expert /services/vocational-evaluation/california/santa-ana 301
+/orange-county-ca-life-care-planner /services/life-care-planning/california/santa-ana 301
+/orange-county-ca-disability-evaluation /services/disability-evaluation/california/santa-ana 301
+/orange-county-ca-expert-witness /services/expert-testimony/california/santa-ana 301
+
+/san-diego-county-economist /services/economic-loss-assessment/california/san-diego 301
+/san-diego-county-personal-injury-economist /services/economic-loss-assessment/california/san-diego 301
+/san-diego-county-business-valuation /services/business-valuation/california/san-diego 301
+/san-diego-county-wrongful-death-damages /services/economic-loss-assessment/california/san-diego 301
+/san-diego-county-vocational-expert /services/vocational-evaluation/california/san-diego 301
+/san-diego-county-life-care-planner /services/life-care-planning/california/san-diego 301
+/san-diego-county-disability-evaluation /services/disability-evaluation/california/san-diego 301
+/san-diego-county-expert-witness /services/expert-testimony/california/san-diego 301
+
+/clark-county-economist /services/economic-loss-assessment/nevada/las-vegas 301
+/clark-county-personal-injury-economist /services/economic-loss-assessment/nevada/las-vegas 301
+/clark-county-business-valuation /services/business-valuation/nevada/las-vegas 301
+/clark-county-wrongful-death-damages /services/economic-loss-assessment/nevada/las-vegas 301
+/clark-county-vocational-expert /services/vocational-evaluation/nevada/las-vegas 301
+/clark-county-life-care-planner /services/life-care-planning/nevada/las-vegas 301
+/clark-county-disability-evaluation /services/disability-evaluation/nevada/las-vegas 301
+/clark-county-expert-witness /services/expert-testimony/nevada/las-vegas 301
+
+/santa-clara-county-economist /services/economic-loss-assessment/california/san-jose 301
+/santa-clara-county-personal-injury-economist /services/economic-loss-assessment/california/san-jose 301
+/santa-clara-county-business-valuation /services/business-valuation/california/san-jose 301
+/santa-clara-county-wrongful-death-damages /services/economic-loss-assessment/california/san-jose 301
+/santa-clara-county-vocational-expert /services/vocational-evaluation/california/san-jose 301
+/santa-clara-county-life-care-planner /services/life-care-planning/california/san-jose 301
+/santa-clara-county-disability-evaluation /services/disability-evaluation/california/san-jose 301
+/santa-clara-county-expert-witness /services/expert-testimony/california/san-jose 301
+
+/wayne-county-economist /services/economic-loss-assessment/michigan/detroit 301
+/wayne-county-personal-injury-economist /services/economic-loss-assessment/michigan/detroit 301
+/wayne-county-business-valuation /services/business-valuation/michigan/detroit 301
+/wayne-county-wrongful-death-damages /services/economic-loss-assessment/michigan/detroit 301
+/wayne-county-vocational-expert /services/vocational-evaluation/michigan/detroit 301
+/wayne-county-life-care-planner /services/life-care-planning/michigan/detroit 301
+/wayne-county-disability-evaluation /services/disability-evaluation/michigan/detroit 301
+/wayne-county-expert-witness /services/expert-testimony/michigan/detroit 301
+
+/alameda-county-economist /services/economic-loss-assessment/california/oakland 301
+/alameda-county-personal-injury-economist /services/economic-loss-assessment/california/oakland 301
+/alameda-county-business-valuation /services/business-valuation/california/oakland 301
+/alameda-county-wrongful-death-damages /services/economic-loss-assessment/california/oakland 301
+/alameda-county-vocational-expert /services/vocational-evaluation/california/oakland 301
+/alameda-county-life-care-planner /services/life-care-planning/california/oakland 301
+/alameda-county-disability-evaluation /services/disability-evaluation/california/oakland 301
+/alameda-county-expert-witness /services/expert-testimony/california/oakland 301
+
+/riverside-county-economist /services/economic-loss-assessment/california/riverside 301
+/riverside-county-personal-injury-economist /services/economic-loss-assessment/california/riverside 301
+/riverside-county-business-valuation /services/business-valuation/california/riverside 301
+/riverside-county-wrongful-death-damages /services/economic-loss-assessment/california/riverside 301
+/riverside-county-vocational-expert /services/vocational-evaluation/california/riverside 301
+/riverside-county-life-care-planner /services/life-care-planning/california/riverside 301
+/riverside-county-disability-evaluation /services/disability-evaluation/california/riverside 301
+/riverside-county-expert-witness /services/expert-testimony/california/riverside 301
+
+/san-bernardino-county-economist /services/economic-loss-assessment/california/san-bernardino 301
+/san-bernardino-county-personal-injury-economist /services/economic-loss-assessment/california/san-bernardino 301
+/san-bernardino-county-business-valuation /services/business-valuation/california/san-bernardino 301
+/san-bernardino-county-wrongful-death-damages /services/economic-loss-assessment/california/san-bernardino 301
+/san-bernardino-county-vocational-expert /services/vocational-evaluation/california/san-bernardino 301
+/san-bernardino-county-life-care-planner /services/life-care-planning/california/san-bernardino 301
+/san-bernardino-county-disability-evaluation /services/disability-evaluation/california/san-bernardino 301
+/san-bernardino-county-expert-witness /services/expert-testimony/california/san-bernardino 301
+
+/dallas-county-economist /services/economic-loss-assessment/texas/dallas 301
+/dallas-county-personal-injury-economist /services/economic-loss-assessment/texas/dallas 301
+/dallas-county-business-valuation /services/business-valuation/texas/dallas 301
+/dallas-county-wrongful-death-damages /services/economic-loss-assessment/texas/dallas 301
+/dallas-county-vocational-expert /services/vocational-evaluation/texas/dallas 301
+/dallas-county-life-care-planner /services/life-care-planning/texas/dallas 301
+/dallas-county-disability-evaluation /services/disability-evaluation/texas/dallas 301
+/dallas-county-expert-witness /services/expert-testimony/texas/dallas 301
+
+/broward-county-economist /services/economic-loss-assessment/florida/fort-lauderdale 301
+/broward-county-personal-injury-economist /services/economic-loss-assessment/florida/fort-lauderdale 301
+/broward-county-business-valuation /services/business-valuation/florida/fort-lauderdale 301
+/broward-county-wrongful-death-damages /services/economic-loss-assessment/florida/fort-lauderdale 301
+/broward-county-vocational-expert /services/vocational-evaluation/florida/fort-lauderdale 301
+/broward-county-life-care-planner /services/life-care-planning/florida/fort-lauderdale 301
+/broward-county-disability-evaluation /services/disability-evaluation/florida/fort-lauderdale 301
+/broward-county-expert-witness /services/expert-testimony/florida/fort-lauderdale 301
+
+/middlesex-county-ma-economist /services/economic-loss-assessment/massachusetts/cambridge 301
+/middlesex-county-ma-personal-injury-economist /services/economic-loss-assessment/massachusetts/cambridge 301
+/middlesex-county-ma-business-valuation /services/business-valuation/massachusetts/cambridge 301
+/middlesex-county-ma-wrongful-death-damages /services/economic-loss-assessment/massachusetts/cambridge 301
+/middlesex-county-ma-vocational-expert /services/vocational-evaluation/massachusetts/cambridge 301
+/middlesex-county-ma-life-care-planner /services/life-care-planning/massachusetts/cambridge 301
+/middlesex-county-ma-disability-evaluation /services/disability-evaluation/massachusetts/cambridge 301
+/middlesex-county-ma-expert-witness /services/expert-testimony/massachusetts/cambridge 301
+
+# Additional major counties
+/kings-county-economist /services/economic-loss-assessment/new-york/brooklyn 301
+/kings-county-personal-injury-economist /services/economic-loss-assessment/new-york/brooklyn 301
+/kings-county-business-valuation /services/business-valuation/new-york/brooklyn 301
+/kings-county-wrongful-death-damages /services/economic-loss-assessment/new-york/brooklyn 301
+/kings-county-vocational-expert /services/vocational-evaluation/new-york/brooklyn 301
+/kings-county-life-care-planner /services/life-care-planning/new-york/brooklyn 301
+/kings-county-disability-evaluation /services/disability-evaluation/new-york/brooklyn 301
+/kings-county-expert-witness /services/expert-testimony/new-york/brooklyn 301
+
+/miami-dade-county-economist /services/economic-loss-assessment/florida/miami 301
+/miami-dade-county-personal-injury-economist /services/economic-loss-assessment/florida/miami 301
+/miami-dade-county-business-valuation /services/business-valuation/florida/miami 301
+/miami-dade-county-wrongful-death-damages /services/economic-loss-assessment/florida/miami 301
+/miami-dade-county-vocational-expert /services/vocational-evaluation/florida/miami 301
+/miami-dade-county-life-care-planner /services/life-care-planning/florida/miami 301
+/miami-dade-county-disability-evaluation /services/disability-evaluation/florida/miami 301
+/miami-dade-county-expert-witness /services/expert-testimony/florida/miami 301
+
+/queens-county-economist /services/economic-loss-assessment/new-york/queens 301
+/queens-county-personal-injury-economist /services/economic-loss-assessment/new-york/queens 301
+/queens-county-business-valuation /services/business-valuation/new-york/queens 301
+/queens-county-wrongful-death-damages /services/economic-loss-assessment/new-york/queens 301
+/queens-county-vocational-expert /services/vocational-evaluation/new-york/queens 301
+/queens-county-life-care-planner /services/life-care-planning/new-york/queens 301
+/queens-county-disability-evaluation /services/disability-evaluation/new-york/queens 301
+/queens-county-expert-witness /services/expert-testimony/new-york/queens 301
+
+/tarrant-county-economist /services/economic-loss-assessment/texas/fort-worth 301
+/tarrant-county-personal-injury-economist /services/economic-loss-assessment/texas/fort-worth 301
+/tarrant-county-business-valuation /services/business-valuation/texas/fort-worth 301
+/tarrant-county-wrongful-death-damages /services/economic-loss-assessment/texas/fort-worth 301
+/tarrant-county-vocational-expert /services/vocational-evaluation/texas/fort-worth 301
+/tarrant-county-life-care-planner /services/life-care-planning/texas/fort-worth 301
+/tarrant-county-disability-evaluation /services/disability-evaluation/texas/fort-worth 301
+/tarrant-county-expert-witness /services/expert-testimony/texas/fort-worth 301
+
+/new-york-county-economist /services/economic-loss-assessment/new-york/manhattan 301
+/new-york-county-personal-injury-economist /services/economic-loss-assessment/new-york/manhattan 301
+/new-york-county-business-valuation /services/business-valuation/new-york/manhattan 301
+/new-york-county-wrongful-death-damages /services/economic-loss-assessment/new-york/manhattan 301
+/new-york-county-vocational-expert /services/vocational-evaluation/new-york/manhattan 301
+/new-york-county-life-care-planner /services/life-care-planning/new-york/manhattan 301
+/new-york-county-disability-evaluation /services/disability-evaluation/new-york/manhattan 301
+/new-york-county-expert-witness /services/expert-testimony/new-york/manhattan 301
+
+# Practice areas redirects - comprehensive coverage
+/practice-areas/ /services 301
+/practice-areas/forensic-economist /services/economic-loss-assessment 301
+/practice-areas/personal-injury-economist /services/economic-loss-assessment 301
+/practice-areas/business-valuation /services/business-valuation 301
+/practice-areas/wrongful-death-damages /services/economic-loss-assessment 301
+/practice-areas/vocational-expert /services/vocational-evaluation 301
+/practice-areas/life-care-planner /services/life-care-planning 301
+/practice-areas/disability-evaluation /services/disability-evaluation 301
+/practice-areas/expert-witness /services/expert-testimony 301
+/practice-areas/economic-damages /services/economic-loss-assessment 301
+/practice-areas/lost-earnings /services/economic-loss-assessment 301
+/practice-areas/present-value /services/economic-loss-assessment 301
+/practice-areas/business-damages /services/business-valuation 301
+/practice-areas/commercial-damages /services/business-valuation 301
+/practice-areas/eminent-domain /services 301
+/practice-areas/personal-injury /services 301
+/practice-areas/wrongful-death /services 301
+/practice-areas/business-litigation /services 301
+/practice-areas/employment-law /services 301
+/practice-areas/medical-malpractice /services 301
+/practice-areas/product-liability /services 301
+/practice-areas/* /services 301
+
+# Legacy service directory patterns
+/forensic-economist/ /services/economic-loss-assessment 301
+/personal-injury-economist/ /services/economic-loss-assessment 301
+/business-valuation/ /services/business-valuation 301
+/wrongful-death-damages/ /services/economic-loss-assessment 301
+/vocational-expert/ /services/vocational-evaluation 301
+/life-care-planner/ /services/life-care-planning 301
+/disability-evaluation/ /services/disability-evaluation 301
+/expert-witness/ /services/expert-testimony 301
+/economic-damages/ /services/economic-loss-assessment 301
+/lost-earnings/ /services/economic-loss-assessment 301
+/present-value/ /services/economic-loss-assessment 301
+/business-damages/ /services/business-valuation 301
+/commercial-damages/ /services/business-valuation 301
+
+# State-level service patterns (forensic-economist-[state])
+/forensic-economist-alabama /alabama 301
+/forensic-economist-alaska /alaska 301
+/forensic-economist-arizona /arizona 301
+/forensic-economist-arkansas /arkansas 301
+/forensic-economist-california /california 301
+/forensic-economist-colorado /colorado 301
+/forensic-economist-connecticut /connecticut 301
+/forensic-economist-delaware /delaware 301
+/forensic-economist-florida /florida 301
+/forensic-economist-georgia /georgia 301
+/forensic-economist-hawaii /hawaii 301
+/forensic-economist-idaho /idaho 301
+/forensic-economist-illinois /illinois 301
+/forensic-economist-indiana /indiana 301
+/forensic-economist-iowa /iowa 301
+/forensic-economist-kansas /kansas 301
+/forensic-economist-kentucky /kentucky 301
+/forensic-economist-louisiana /louisiana 301
+/forensic-economist-maine /maine 301
+/forensic-economist-maryland /maryland 301
+/forensic-economist-massachusetts /massachusetts 301
+/forensic-economist-michigan /michigan 301
+/forensic-economist-minnesota /minnesota 301
+/forensic-economist-mississippi /mississippi 301
+/forensic-economist-missouri /missouri 301
+/forensic-economist-montana /montana 301
+/forensic-economist-nebraska /nebraska 301
+/forensic-economist-nevada /nevada 301
+/forensic-economist-new-hampshire /new-hampshire 301
+/forensic-economist-new-jersey /new-jersey 301
+/forensic-economist-new-mexico /new-mexico 301
+/forensic-economist-new-york /new-york 301
+/forensic-economist-north-carolina /north-carolina 301
+/forensic-economist-north-dakota /north-dakota 301
+/forensic-economist-ohio /ohio 301
+/forensic-economist-oklahoma /oklahoma 301
+/forensic-economist-oregon /oregon 301
+/forensic-economist-pennsylvania /pennsylvania 301
+/forensic-economist-rhode-island /rhode-island 301
+/forensic-economist-south-carolina /south-carolina 301
+/forensic-economist-south-dakota /south-dakota 301
+/forensic-economist-tennessee /tennessee 301
+/forensic-economist-texas /texas 301
+/forensic-economist-utah /utah 301
+/forensic-economist-vermont /vermont 301
+/forensic-economist-virginia /virginia 301
+/forensic-economist-washington /washington 301
+/forensic-economist-west-virginia /west-virginia 301
+/forensic-economist-wisconsin /wisconsin 301
+/forensic-economist-wyoming /wyoming 301
+
+# Personal injury economist state patterns
+/personal-injury-economist-alabama /alabama 301
+/personal-injury-economist-alaska /alaska 301
+/personal-injury-economist-arizona /arizona 301
+/personal-injury-economist-arkansas /arkansas 301
+/personal-injury-economist-california /california 301
+/personal-injury-economist-colorado /colorado 301
+/personal-injury-economist-connecticut /connecticut 301
+/personal-injury-economist-delaware /delaware 301
+/personal-injury-economist-florida /florida 301
+/personal-injury-economist-georgia /georgia 301
+/personal-injury-economist-hawaii /hawaii 301
+/personal-injury-economist-idaho /idaho 301
+/personal-injury-economist-illinois /illinois 301
+/personal-injury-economist-indiana /indiana 301
+/personal-injury-economist-iowa /iowa 301
+/personal-injury-economist-kansas /kansas 301
+/personal-injury-economist-kentucky /kentucky 301
+/personal-injury-economist-louisiana /louisiana 301
+/personal-injury-economist-maine /maine 301
+/personal-injury-economist-maryland /maryland 301
+/personal-injury-economist-massachusetts /massachusetts 301
+/personal-injury-economist-michigan /michigan 301
+/personal-injury-economist-minnesota /minnesota 301
+/personal-injury-economist-mississippi /mississippi 301
+/personal-injury-economist-missouri /missouri 301
+/personal-injury-economist-montana /montana 301
+/personal-injury-economist-nebraska /nebraska 301
+/personal-injury-economist-nevada /nevada 301
+/personal-injury-economist-new-hampshire /new-hampshire 301
+/personal-injury-economist-new-jersey /new-jersey 301
+/personal-injury-economist-new-mexico /new-mexico 301
+/personal-injury-economist-new-york /new-york 301
+/personal-injury-economist-north-carolina /north-carolina 301
+/personal-injury-economist-north-dakota /north-dakota 301
+/personal-injury-economist-ohio /ohio 301
+/personal-injury-economist-oklahoma /oklahoma 301
+/personal-injury-economist-oregon /oregon 301
+/personal-injury-economist-pennsylvania /pennsylvania 301
+/personal-injury-economist-rhode-island /rhode-island 301
+/personal-injury-economist-south-carolina /south-carolina 301
+/personal-injury-economist-south-dakota /south-dakota 301
+/personal-injury-economist-tennessee /tennessee 301
+/personal-injury-economist-texas /texas 301
+/personal-injury-economist-utah /utah 301
+/personal-injury-economist-vermont /vermont 301
+/personal-injury-economist-virginia /virginia 301
+/personal-injury-economist-washington /washington 301
+/personal-injury-economist-west-virginia /west-virginia 301
+/personal-injury-economist-wisconsin /wisconsin 301
+/personal-injury-economist-wyoming /wyoming 301
+
+# Business valuation state patterns
+/business-valuation-alabama /alabama 301
+/business-valuation-alaska /alaska 301
+/business-valuation-arizona /arizona 301
+/business-valuation-arkansas /arkansas 301
+/business-valuation-california /california 301
+/business-valuation-colorado /colorado 301
+/business-valuation-connecticut /connecticut 301
+/business-valuation-delaware /delaware 301
+/business-valuation-florida /florida 301
+/business-valuation-georgia /georgia 301
+/business-valuation-hawaii /hawaii 301
+/business-valuation-idaho /idaho 301
+/business-valuation-illinois /illinois 301
+/business-valuation-indiana /indiana 301
+/business-valuation-iowa /iowa 301
+/business-valuation-kansas /kansas 301
+/business-valuation-kentucky /kentucky 301
+/business-valuation-louisiana /louisiana 301
+/business-valuation-maine /maine 301
+/business-valuation-maryland /maryland 301
+/business-valuation-massachusetts /massachusetts 301
+/business-valuation-michigan /michigan 301
+/business-valuation-minnesota /minnesota 301
+/business-valuation-mississippi /mississippi 301
+/business-valuation-missouri /missouri 301
+/business-valuation-montana /montana 301
+/business-valuation-nebraska /nebraska 301
+/business-valuation-nevada /nevada 301
+/business-valuation-new-hampshire /new-hampshire 301
+/business-valuation-new-jersey /new-jersey 301
+/business-valuation-new-mexico /new-mexico 301
+/business-valuation-new-york /new-york 301
+/business-valuation-north-carolina /north-carolina 301
+/business-valuation-north-dakota /north-dakota 301
+/business-valuation-ohio /ohio 301
+/business-valuation-oklahoma /oklahoma 301
+/business-valuation-oregon /oregon 301
+/business-valuation-pennsylvania /pennsylvania 301
+/business-valuation-rhode-island /rhode-island 301
+/business-valuation-south-carolina /south-carolina 301
+/business-valuation-south-dakota /south-dakota 301
+/business-valuation-tennessee /tennessee 301
+/business-valuation-texas /texas 301
+/business-valuation-utah /utah 301
+/business-valuation-vermont /vermont 301
+/business-valuation-virginia /virginia 301
+/business-valuation-washington /washington 301
+/business-valuation-west-virginia /west-virginia 301
+/business-valuation-wisconsin /wisconsin 301
+/business-valuation-wyoming /wyoming 301
+
+# Wrongful death damages state patterns
+/wrongful-death-damages-alabama /alabama 301
+/wrongful-death-damages-alaska /alaska 301
+/wrongful-death-damages-arizona /arizona 301
+/wrongful-death-damages-arkansas /arkansas 301
+/wrongful-death-damages-california /california 301
+/wrongful-death-damages-colorado /colorado 301
+/wrongful-death-damages-connecticut /connecticut 301
+/wrongful-death-damages-delaware /delaware 301
+/wrongful-death-damages-florida /florida 301
+/wrongful-death-damages-georgia /georgia 301
+/wrongful-death-damages-hawaii /hawaii 301
+/wrongful-death-damages-idaho /idaho 301
+/wrongful-death-damages-illinois /illinois 301
+/wrongful-death-damages-indiana /indiana 301
+/wrongful-death-damages-iowa /iowa 301
+/wrongful-death-damages-kansas /kansas 301
+/wrongful-death-damages-kentucky /kentucky 301
+/wrongful-death-damages-louisiana /louisiana 301
+/wrongful-death-damages-maine /maine 301
+/wrongful-death-damages-maryland /maryland 301
+/wrongful-death-damages-massachusetts /massachusetts 301
+/wrongful-death-damages-michigan /michigan 301
+/wrongful-death-damages-minnesota /minnesota 301
+/wrongful-death-damages-mississippi /mississippi 301
+/wrongful-death-damages-missouri /missouri 301
+/wrongful-death-damages-montana /montana 301
+/wrongful-death-damages-nebraska /nebraska 301
+/wrongful-death-damages-nevada /nevada 301
+/wrongful-death-damages-new-hampshire /new-hampshire 301
+/wrongful-death-damages-new-jersey /new-jersey 301
+/wrongful-death-damages-new-mexico /new-mexico 301
+/wrongful-death-damages-new-york /new-york 301
+/wrongful-death-damages-north-carolina /north-carolina 301
+/wrongful-death-damages-north-dakota /north-dakota 301
+/wrongful-death-damages-ohio /ohio 301
+/wrongful-death-damages-oklahoma /oklahoma 301
+/wrongful-death-damages-oregon /oregon 301
+/wrongful-death-damages-pennsylvania /pennsylvania 301
+/wrongful-death-damages-rhode-island /rhode-island 301
+/wrongful-death-damages-south-carolina /south-carolina 301
+/wrongful-death-damages-south-dakota /south-dakota 301
+/wrongful-death-damages-tennessee /tennessee 301
+/wrongful-death-damages-texas /texas 301
+/wrongful-death-damages-utah /utah 301
+/wrongful-death-damages-vermont /vermont 301
+/wrongful-death-damages-virginia /virginia 301
+/wrongful-death-damages-washington /washington 301
+/wrongful-death-damages-west-virginia /west-virginia 301
+/wrongful-death-damages-wisconsin /wisconsin 301
+/wrongful-death-damages-wyoming /wyoming 301
+
+# Vocational expert state patterns
+/vocational-expert-alabama /alabama 301
+/vocational-expert-alaska /alaska 301
+/vocational-expert-arizona /arizona 301
+/vocational-expert-arkansas /arkansas 301
+/vocational-expert-california /california 301
+/vocational-expert-colorado /colorado 301
+/vocational-expert-connecticut /connecticut 301
+/vocational-expert-delaware /delaware 301
+/vocational-expert-florida /florida 301
+/vocational-expert-georgia /georgia 301
+/vocational-expert-hawaii /hawaii 301
+/vocational-expert-idaho /idaho 301
+/vocational-expert-illinois /illinois 301
+/vocational-expert-indiana /indiana 301
+/vocational-expert-iowa /iowa 301
+/vocational-expert-kansas /kansas 301
+/vocational-expert-kentucky /kentucky 301
+/vocational-expert-louisiana /louisiana 301
+/vocational-expert-maine /maine 301
+/vocational-expert-maryland /maryland 301
+/vocational-expert-massachusetts /massachusetts 301
+/vocational-expert-michigan /michigan 301
+/vocational-expert-minnesota /minnesota 301
+/vocational-expert-mississippi /mississippi 301
+/vocational-expert-missouri /missouri 301
+/vocational-expert-montana /montana 301
+/vocational-expert-nebraska /nebraska 301
+/vocational-expert-nevada /nevada 301
+/vocational-expert-new-hampshire /new-hampshire 301
+/vocational-expert-new-jersey /new-jersey 301
+/vocational-expert-new-mexico /new-mexico 301
+/vocational-expert-new-york /new-york 301
+/vocational-expert-north-carolina /north-carolina 301
+/vocational-expert-north-dakota /north-dakota 301
+/vocational-expert-ohio /ohio 301
+/vocational-expert-oklahoma /oklahoma 301
+/vocational-expert-oregon /oregon 301
+/vocational-expert-pennsylvania /pennsylvania 301
+/vocational-expert-rhode-island /rhode-island 301
+/vocational-expert-south-carolina /south-carolina 301
+/vocational-expert-south-dakota /south-dakota 301
+/vocational-expert-tennessee /tennessee 301
+/vocational-expert-texas /texas 301
+/vocational-expert-utah /utah 301
+/vocational-expert-vermont /vermont 301
+/vocational-expert-virginia /virginia 301
+/vocational-expert-washington /washington 301
+/vocational-expert-west-virginia /west-virginia 301
+/vocational-expert-wisconsin /wisconsin 301
+/vocational-expert-wyoming /wyoming 301
+
+# Life care planner state patterns
+/life-care-planner-alabama /alabama 301
+/life-care-planner-alaska /alaska 301
+/life-care-planner-arizona /arizona 301
+/life-care-planner-arkansas /arkansas 301
+/life-care-planner-california /california 301
+/life-care-planner-colorado /colorado 301
+/life-care-planner-connecticut /connecticut 301
+/life-care-planner-delaware /delaware 301
+/life-care-planner-florida /florida 301
+/life-care-planner-georgia /georgia 301
+/life-care-planner-hawaii /hawaii 301
+/life-care-planner-idaho /idaho 301
+/life-care-planner-illinois /illinois 301
+/life-care-planner-indiana /indiana 301
+/life-care-planner-iowa /iowa 301
+/life-care-planner-kansas /kansas 301
+/life-care-planner-kentucky /kentucky 301
+/life-care-planner-louisiana /louisiana 301
+/life-care-planner-maine /maine 301
+/life-care-planner-maryland /maryland 301
+/life-care-planner-massachusetts /massachusetts 301
+/life-care-planner-michigan /michigan 301
+/life-care-planner-minnesota /minnesota 301
+/life-care-planner-mississippi /mississippi 301
+/life-care-planner-missouri /missouri 301
+/life-care-planner-montana /montana 301
+/life-care-planner-nebraska /nebraska 301
+/life-care-planner-nevada /nevada 301
+/life-care-planner-new-hampshire /new-hampshire 301
+/life-care-planner-new-jersey /new-jersey 301
+/life-care-planner-new-mexico /new-mexico 301
+/life-care-planner-new-york /new-york 301
+/life-care-planner-north-carolina /north-carolina 301
+/life-care-planner-north-dakota /north-dakota 301
+/life-care-planner-ohio /ohio 301
+/life-care-planner-oklahoma /oklahoma 301
+/life-care-planner-oregon /oregon 301
+/life-care-planner-pennsylvania /pennsylvania 301
+/life-care-planner-rhode-island /rhode-island 301
+/life-care-planner-south-carolina /south-carolina 301
+/life-care-planner-south-dakota /south-dakota 301
+/life-care-planner-tennessee /tennessee 301
+/life-care-planner-texas /texas 301
+/life-care-planner-utah /utah 301
+/life-care-planner-vermont /vermont 301
+/life-care-planner-virginia /virginia 301
+/life-care-planner-washington /washington 301
+/life-care-planner-west-virginia /west-virginia 301
+/life-care-planner-wisconsin /wisconsin 301
+/life-care-planner-wyoming /wyoming 301
+
+# Disability evaluation state patterns
+/disability-evaluation-alabama /alabama 301
+/disability-evaluation-alaska /alaska 301
+/disability-evaluation-arizona /arizona 301
+/disability-evaluation-arkansas /arkansas 301
+/disability-evaluation-california /california 301
+/disability-evaluation-colorado /colorado 301
+/disability-evaluation-connecticut /connecticut 301
+/disability-evaluation-delaware /delaware 301
+/disability-evaluation-florida /florida 301
+/disability-evaluation-georgia /georgia 301
+/disability-evaluation-hawaii /hawaii 301
+/disability-evaluation-idaho /idaho 301
+/disability-evaluation-illinois /illinois 301
+/disability-evaluation-indiana /indiana 301
+/disability-evaluation-iowa /iowa 301
+/disability-evaluation-kansas /kansas 301
+/disability-evaluation-kentucky /kentucky 301
+/disability-evaluation-louisiana /louisiana 301
+/disability-evaluation-maine /maine 301
+/disability-evaluation-maryland /maryland 301
+/disability-evaluation-massachusetts /massachusetts 301
+/disability-evaluation-michigan /michigan 301
+/disability-evaluation-minnesota /minnesota 301
+/disability-evaluation-mississippi /mississippi 301
+/disability-evaluation-missouri /missouri 301
+/disability-evaluation-montana /montana 301
+/disability-evaluation-nebraska /nebraska 301
+/disability-evaluation-nevada /nevada 301
+/disability-evaluation-new-hampshire /new-hampshire 301
+/disability-evaluation-new-jersey /new-jersey 301
+/disability-evaluation-new-mexico /new-mexico 301
+/disability-evaluation-new-york /new-york 301
+/disability-evaluation-north-carolina /north-carolina 301
+/disability-evaluation-north-dakota /north-dakota 301
+/disability-evaluation-ohio /ohio 301
+/disability-evaluation-oklahoma /oklahoma 301
+/disability-evaluation-oregon /oregon 301
+/disability-evaluation-pennsylvania /pennsylvania 301
+/disability-evaluation-rhode-island /rhode-island 301
+/disability-evaluation-south-carolina /south-carolina 301
+/disability-evaluation-south-dakota /south-dakota 301
+/disability-evaluation-tennessee /tennessee 301
+/disability-evaluation-texas /texas 301
+/disability-evaluation-utah /utah 301
+/disability-evaluation-vermont /vermont 301
+/disability-evaluation-virginia /virginia 301
+/disability-evaluation-washington /washington 301
+/disability-evaluation-west-virginia /west-virginia 301
+/disability-evaluation-wisconsin /wisconsin 301
+/disability-evaluation-wyoming /wyoming 301
+
+# Expert witness state patterns
+/expert-witness-alabama /alabama 301
+/expert-witness-alaska /alaska 301
+/expert-witness-arizona /arizona 301
+/expert-witness-arkansas /arkansas 301
+/expert-witness-california /california 301
+/expert-witness-colorado /colorado 301
+/expert-witness-connecticut /connecticut 301
+/expert-witness-delaware /delaware 301
+/expert-witness-florida /florida 301
+/expert-witness-georgia /georgia 301
+/expert-witness-hawaii /hawaii 301
+/expert-witness-idaho /idaho 301
+/expert-witness-illinois /illinois 301
+/expert-witness-indiana /indiana 301
+/expert-witness-iowa /iowa 301
+/expert-witness-kansas /kansas 301
+/expert-witness-kentucky /kentucky 301
+/expert-witness-louisiana /louisiana 301
+/expert-witness-maine /maine 301
+/expert-witness-maryland /maryland 301
+/expert-witness-massachusetts /massachusetts 301
+/expert-witness-michigan /michigan 301
+/expert-witness-minnesota /minnesota 301
+/expert-witness-mississippi /mississippi 301
+/expert-witness-missouri /missouri 301
+/expert-witness-montana /montana 301
+/expert-witness-nebraska /nebraska 301
+/expert-witness-nevada /nevada 301
+/expert-witness-new-hampshire /new-hampshire 301
+/expert-witness-new-jersey /new-jersey 301
+/expert-witness-new-mexico /new-mexico 301
+/expert-witness-new-york /new-york 301
+/expert-witness-north-carolina /north-carolina 301
+/expert-witness-north-dakota /north-dakota 301
+/expert-witness-ohio /ohio 301
+/expert-witness-oklahoma /oklahoma 301
+/expert-witness-oregon /oregon 301
+/expert-witness-pennsylvania /pennsylvania 301
+/expert-witness-rhode-island /rhode-island 301
+/expert-witness-south-carolina /south-carolina 301
+/expert-witness-south-dakota /south-dakota 301
+/expert-witness-tennessee /tennessee 301
+/expert-witness-texas /texas 301
+/expert-witness-utah /utah 301
+/expert-witness-vermont /vermont 301
+/expert-witness-virginia /virginia 301
+/expert-witness-washington /washington 301
+/expert-witness-west-virginia /west-virginia 301
+/expert-witness-wisconsin /wisconsin 301
+/expert-witness-wyoming /wyoming 301
+
+# State abbreviation patterns for all services
+/forensic-economist-al /alabama 301
+/forensic-economist-ak /alaska 301
+/forensic-economist-az /arizona 301
+/forensic-economist-ar /arkansas 301
+/forensic-economist-ca /california 301
+/forensic-economist-co /colorado 301
+/forensic-economist-ct /connecticut 301
+/forensic-economist-de /delaware 301
+/forensic-economist-fl /florida 301
+/forensic-economist-ga /georgia 301
+/forensic-economist-hi /hawaii 301
+/forensic-economist-id /idaho 301
+/forensic-economist-il /illinois 301
+/forensic-economist-in /indiana 301
+/forensic-economist-ia /iowa 301
+/forensic-economist-ks /kansas 301
+/forensic-economist-ky /kentucky 301
+/forensic-economist-la /louisiana 301
+/forensic-economist-me /maine 301
+/forensic-economist-md /maryland 301
+/forensic-economist-ma /massachusetts 301
+/forensic-economist-mi /michigan 301
+/forensic-economist-mn /minnesota 301
+/forensic-economist-ms /mississippi 301
+/forensic-economist-mo /missouri 301
+/forensic-economist-mt /montana 301
+/forensic-economist-ne /nebraska 301
+/forensic-economist-nv /nevada 301
+/forensic-economist-nh /new-hampshire 301
+/forensic-economist-nj /new-jersey 301
+/forensic-economist-nm /new-mexico 301
+/forensic-economist-ny /new-york 301
+/forensic-economist-nc /north-carolina 301
+/forensic-economist-nd /north-dakota 301
+/forensic-economist-oh /ohio 301
+/forensic-economist-ok /oklahoma 301
+/forensic-economist-or /oregon 301
+/forensic-economist-pa /pennsylvania 301
+/forensic-economist-ri /rhode-island 301
+/forensic-economist-sc /south-carolina 301
+/forensic-economist-sd /south-dakota 301
+/forensic-economist-tn /tennessee 301
+/forensic-economist-tx /texas 301
+/forensic-economist-ut /utah 301
+/forensic-economist-vt /vermont 301
+/forensic-economist-va /virginia 301
+/forensic-economist-wa /washington 301
+/forensic-economist-wv /west-virginia 301
+/forensic-economist-wi /wisconsin 301
+/forensic-economist-wy /wyoming 301
+/forensic-economist-dc /district-of-columbia 301
+
+/personal-injury-economist-al /alabama 301
+/personal-injury-economist-ak /alaska 301
+/personal-injury-economist-az /arizona 301
+/personal-injury-economist-ar /arkansas 301
+/personal-injury-economist-ca /california 301
+/personal-injury-economist-co /colorado 301
+/personal-injury-economist-ct /connecticut 301
+/personal-injury-economist-de /delaware 301
+/personal-injury-economist-fl /florida 301
+/personal-injury-economist-ga /georgia 301
+/personal-injury-economist-hi /hawaii 301
+/personal-injury-economist-id /idaho 301
+/personal-injury-economist-il /illinois 301
+/personal-injury-economist-in /indiana 301
+/personal-injury-economist-ia /iowa 301
+/personal-injury-economist-ks /kansas 301
+/personal-injury-economist-ky /kentucky 301
+/personal-injury-economist-la /louisiana 301
+/personal-injury-economist-me /maine 301
+/personal-injury-economist-md /maryland 301
+/personal-injury-economist-ma /massachusetts 301
+/personal-injury-economist-mi /michigan 301
+/personal-injury-economist-mn /minnesota 301
+/personal-injury-economist-ms /mississippi 301
+/personal-injury-economist-mo /missouri 301
+/personal-injury-economist-mt /montana 301
+/personal-injury-economist-ne /nebraska 301
+/personal-injury-economist-nv /nevada 301
+/personal-injury-economist-nh /new-hampshire 301
+/personal-injury-economist-nj /new-jersey 301
+/personal-injury-economist-nm /new-mexico 301
+/personal-injury-economist-ny /new-york 301
+/personal-injury-economist-nc /north-carolina 301
+/personal-injury-economist-nd /north-dakota 301
+/personal-injury-economist-oh /ohio 301
+/personal-injury-economist-ok /oklahoma 301
+/personal-injury-economist-or /oregon 301
+/personal-injury-economist-pa /pennsylvania 301
+/personal-injury-economist-ri /rhode-island 301
+/personal-injury-economist-sc /south-carolina 301
+/personal-injury-economist-sd /south-dakota 301
+/personal-injury-economist-tn /tennessee 301
+/personal-injury-economist-tx /texas 301
+/personal-injury-economist-ut /utah 301
+/personal-injury-economist-vt /vermont 301
+/personal-injury-economist-va /virginia 301
+/personal-injury-economist-wa /washington 301
+/personal-injury-economist-wv /west-virginia 301
+/personal-injury-economist-wi /wisconsin 301
+/personal-injury-economist-wy /wyoming 301
+/personal-injury-economist-dc /district-of-columbia 301
+
+/business-valuation-al /alabama 301
+/business-valuation-ak /alaska 301
+/business-valuation-az /arizona 301
+/business-valuation-ar /arkansas 301
+/business-valuation-ca /california 301
+/business-valuation-co /colorado 301
+/business-valuation-ct /connecticut 301
+/business-valuation-de /delaware 301
+/business-valuation-fl /florida 301
+/business-valuation-ga /georgia 301
+/business-valuation-hi /hawaii 301
+/business-valuation-id /idaho 301
+/business-valuation-il /illinois 301
+/business-valuation-in /indiana 301
+/business-valuation-ia /iowa 301
+/business-valuation-ks /kansas 301
+/business-valuation-ky /kentucky 301
+/business-valuation-la /louisiana 301
+/business-valuation-me /maine 301
+/business-valuation-md /maryland 301
+/business-valuation-ma /massachusetts 301
+/business-valuation-mi /michigan 301
+/business-valuation-mn /minnesota 301
+/business-valuation-ms /mississippi 301
+/business-valuation-mo /missouri 301
+/business-valuation-mt /montana 301
+/business-valuation-ne /nebraska 301
+/business-valuation-nv /nevada 301
+/business-valuation-nh /new-hampshire 301
+/business-valuation-nj /new-jersey 301
+/business-valuation-nm /new-mexico 301
+/business-valuation-ny /new-york 301
+/business-valuation-nc /north-carolina 301
+/business-valuation-nd /north-dakota 301
+/business-valuation-oh /ohio 301
+/business-valuation-ok /oklahoma 301
+/business-valuation-or /oregon 301
+/business-valuation-pa /pennsylvania 301
+/business-valuation-ri /rhode-island 301
+/business-valuation-sc /south-carolina 301
+/business-valuation-sd /south-dakota 301
+/business-valuation-tn /tennessee 301
+/business-valuation-tx /texas 301
+/business-valuation-ut /utah 301
+/business-valuation-vt /vermont 301
+/business-valuation-va /virginia 301
+/business-valuation-wa /washington 301
+/business-valuation-wv /west-virginia 301
+/business-valuation-wi /wisconsin 301
+/business-valuation-wy /wyoming 301
+/business-valuation-dc /district-of-columbia 301
+
+# Service directory with city-only patterns (matches patterns like /forensic-economist/lancaster/)
+/forensic-economist/* /services/economic-loss-assessment 301
+/personal-injury-economist/* /services/economic-loss-assessment 301
+/business-valuation/* /services/business-valuation 301
+/wrongful-death-damages/* /services/economic-loss-assessment 301
+/vocational-expert/* /services/vocational-evaluation 301
+/life-care-planner/* /services/life-care-planning 301
+/disability-evaluation/* /services/disability-evaluation 301
+/expert-witness/* /services/expert-testimony 301
+/economic-damages/* /services/economic-loss-assessment 301
+/lost-earnings/* /services/economic-loss-assessment 301
+/present-value/* /services/economic-loss-assessment 301
+/business-damages/* /services/business-valuation 301
+/commercial-damages/* /services/business-valuation 301
+
+# Blog and RSS redirects
+/blog/rss/ / 301
+/blog/rss /blog/rss/ 301
+/blog/* / 301
+
+# Tools directory redirects
+/tools/ /services 301
+/tools/* /services 301
+
+# Business consulting redirects
+/services/business-consulting/ /services 301
+/services/business-consulting/* /services 301
+
+# Location cities pattern redirects (handles .html extensions)
+/locations/cities/* /locations 301
+
+# Location states pattern redirects
+/locations/states/:state /:state 301
+/locations/states/:state/ /:state 301
+
+# Legacy file extensions and common variations
+/*.html /
+/*.htm /
+/*.php /
+/*.asp /
+/*.aspx /
+
+# Remove trailing slashes from specific patterns (but allow SPA routing for others)
+/services/ /services 301
+/about/ /about 301
+/contact/ /contact 301
+/experience/ /experience 301
+/case-studies/ /case-studies 301
+
+# Catch-all for SPA routing - this should be last
+/* /index.html 200
