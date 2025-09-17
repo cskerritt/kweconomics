@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">KW Economics</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Christopher Skerritt provides expert forensic economic analysis, vocational rehabilitation, 
+              Kincaid Wolstein Economics provides expert forensic economic analysis, vocational rehabilitation, 
               and life care planning services. Comprehensive expertise in economic loss assessment 
               and expert testimony for litigation support.
             </p>
