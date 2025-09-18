@@ -31,6 +31,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import SearchComponent from "./SearchComponent";
 import PhoneClickTracker from "./PhoneClickTracker";
+import kwEconomicsLogo from "@/assets/kw-economics-logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -41,7 +42,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/src/assets/kw-economics-logo.png" 
+                src={kwEconomicsLogo} 
                 alt="KW Economics Logo" 
                 className="h-16 w-auto"
               />
