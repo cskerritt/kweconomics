@@ -26,7 +26,7 @@ const Experience = () => {
       title: "Principal Economist",
       company: "Kincaid Wolstein Economics",
       period: "August 2022 – Present",
-      location: "Smithfield, Rhode Island",
+      location: "Hackensack, New Jersey",
       description: "Lead forensic economist providing expert economic analysis and testimony for litigation matters.",
       responsibilities: [
         "Design and execute regression-based and time-series economic models to quantify lost earnings capacity",

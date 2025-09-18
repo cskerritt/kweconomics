@@ -63,8 +63,8 @@ const Contact = () => {
                 <div className="flex items-start">
                   <MapPin className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <div className="font-medium text-foreground">400 Putnam Pike Ste J</div>
-                    <div className="text-muted-foreground">Smithfield, RI 02917</div>
+                    <div className="font-medium text-foreground">1 University Plaza Dr</div>
+                    <div className="text-muted-foreground">Hackensack, NJ 07601</div>
                   </div>
                 </div>
                 <div className="flex items-start">

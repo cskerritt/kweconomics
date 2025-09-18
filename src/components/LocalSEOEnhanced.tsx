@@ -33,10 +33,10 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "400 Putnam Pike Ste J",
-      "addressLocality": "Smithfield",
-      "addressRegion": "RI",
-      "postalCode": "02917",
+      "streetAddress": "1 University Plaza Dr",
+      "addressLocality": "Hackensack",
+      "addressRegion": "NJ",
+      "postalCode": "07601",
       "addressCountry": "US"
     },
     "geo": coordinates ? {

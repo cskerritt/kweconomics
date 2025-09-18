@@ -93,8 +93,8 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 flex-shrink-0" />
                 <div>
-                  <div>400 Putnam Pike Ste J</div>
-                  <div>Smithfield, RI 02917</div>
+                  <div>1 University Plaza Dr</div>
+                  <div>Hackensack, NJ 07601</div>
                 </div>
               </div>
             </div>
