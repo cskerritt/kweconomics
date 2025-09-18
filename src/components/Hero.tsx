@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.webp";
 const Hero = () => {
   return <section className="relative min-h-[600px] bg-gradient-hero flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/75"></div>
       <img src={heroImage} alt="Economic consulting and forensic analysis background" className="absolute inset-0 w-full h-full object-cover opacity-20" loading="eager" />
       
       <div className="container mx-auto px-6 relative z-10">
