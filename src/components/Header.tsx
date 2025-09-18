@@ -165,15 +165,6 @@ const Header = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <PhoneClickTracker
-              phoneNumber="2036052814"
-              displayText="(203) 605-2814"
-              location="header-desktop"
-              className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
-            >
-              <Phone className="h-4 w-4" />
-              <span className="font-semibold">(203) 605-2814</span>
-            </PhoneClickTracker>
             <Button variant="default" size="sm" asChild>
               <Link to="/schedule-consultation">Get Free Quote</Link>
             </Button>
