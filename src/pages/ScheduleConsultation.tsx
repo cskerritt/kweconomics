@@ -238,7 +238,7 @@ const ScheduleConsultation = () => {
                   <CardContent className="space-y-4">
                     <div>
                       <div className="font-medium">Phone</div>
-                      <div className="text-muted-foreground">(203) 605-2814</div>
+                      <div className="text-muted-foreground">(201) 343-0700</div>
                     </div>
                     <div>
                       <div className="font-medium">Email</div>

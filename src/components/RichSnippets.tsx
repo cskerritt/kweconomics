@@ -93,7 +93,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
     "name": "Kincaid Wolstein Economics",
     "description": `Professional economic analysis and expert witness services ${cityName ? `in ${cityName}, ${stateAbbr}` : 'nationwide'}`,
     "url": "https://kweconomics.com",
-    "telephone": "(203) 605-2814",
+    "telephone": "(201) 343-0700",
     "email": "chris@kweconomics.com",
     "address": {
       "@type": "PostalAddress",
@@ -148,7 +148,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "(203) 605-2814",
+      "telephone": "(201) 343-0700",
       "contactType": "customer service",
       "email": "chris@kweconomics.com"
     },

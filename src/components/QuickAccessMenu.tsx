@@ -109,7 +109,7 @@ const QuickAccessMenu = ({ variant = 'header', className = '' }: QuickAccessMenu
     },
     { 
       title: 'Emergency Contact', 
-      href: 'tel:+12036052814', 
+      href: 'tel:+12013430700', 
       icon: Phone,
       color: 'text-red-700 bg-red-50 hover:bg-red-100',
       badge: '24/7'

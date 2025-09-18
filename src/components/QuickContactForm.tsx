@@ -112,9 +112,9 @@ const QuickContactForm: React.FC<QuickContactFormProps> = ({
         <div className="mt-4 text-center">
           <div className="text-sm text-muted-foreground mb-2">Prefer to call?</div>
           <Button variant="outline" size="lg" className="w-full" asChild>
-            <a href="tel:+12036052814">
+            <a href="tel:+12013430700">
               <Phone className="h-5 w-5 mr-2" />
-              (203) 605-2814
+              (201) 343-0700
             </a>
           </Button>
           <div className="text-xs text-muted-foreground mt-2">

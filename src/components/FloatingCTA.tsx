@@ -30,7 +30,7 @@ const FloatingCTA = () => {
   }, []);
 
   const handlePhoneClick = () => {
-    trackPhoneClick('2036052814', 'floating-cta');
+    trackPhoneClick('2013430700', 'floating-cta');
   };
 
   if (!isVisible) return null;
@@ -47,7 +47,7 @@ const FloatingCTA = () => {
             onClick={handlePhoneClick}
             asChild
           >
-            <a href="tel:+12036052814">
+            <a href="tel:+12013430700">
               <Phone className="h-5 w-5 mr-2" />
               Call Now
             </a>
@@ -89,9 +89,9 @@ const FloatingCTA = () => {
               onClick={handlePhoneClick}
               asChild
             >
-              <a href="tel:+12036052814">
+              <a href="tel:+12013430700">
                 <Phone className="h-5 w-5 mr-2" />
-                (203) 605-2814
+                (201) 343-0700
               </a>
             </Button>
             <Button 
@@ -148,8 +148,8 @@ const FloatingCTA = () => {
             
             <div className="mt-4 text-center text-sm text-muted-foreground">
               Or call directly: 
-              <a href="tel:+12036052814" className="text-primary font-semibold ml-1">
-                (203) 605-2814
+              <a href="tel:+12013430700" className="text-primary font-semibold ml-1">
+                (201) 343-0700
               </a>
             </div>
           </div>

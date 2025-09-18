@@ -78,13 +78,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3 text-primary-foreground/80">
               <PhoneClickTracker
-                phoneNumber="2036052814"
-                displayText="(203) 605-2814"
+                phoneNumber="2013430700"
+                displayText="(201) 343-0700"
                 location="footer"
                 className="flex items-center hover:text-primary-foreground transition-colors"
               >
                 <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                <span>(203) 605-2814</span>
+                <span>(201) 343-0700</span>
               </PhoneClickTracker>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 flex-shrink-0" />

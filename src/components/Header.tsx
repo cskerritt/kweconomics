@@ -233,14 +233,14 @@ const Header = () => {
                   </Link>
                 </Button>
               </div>
-              <PhoneClickTracker
-                phoneNumber="2036052814"
-                displayText="(203) 605-2814"
+                <PhoneClickTracker
+                  phoneNumber="2013430700"
+                  displayText="(201) 343-0700"
                 location="header-mobile"
                 className="flex items-center space-x-2 text-sm text-primary pt-2"
               >
                 <Phone className="h-4 w-4" />
-                <span className="font-semibold">(203) 605-2814</span>
+                <span className="font-semibold">(201) 343-0700</span>
               </PhoneClickTracker>
             </nav>
           </div>

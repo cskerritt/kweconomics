@@ -34,8 +34,8 @@ const Hero = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <a href="tel:+12036052814">
-                  Call Now: (203) 605-2814
+                <a href="tel:+12013430700">
+                  Call Now: (201) 343-0700
                 </a>
               </Button>
             </div>

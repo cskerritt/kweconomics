@@ -24,7 +24,7 @@ const Index = () => {
     "alternateName": ["KW Economics"],
     "description": "Expert forensic economic analysis, vocational rehabilitation, and life care planning services. 25+ years experience providing litigation support and expert testimony.",
     "url": currentUrl,
-    "telephone": "(203) 605-2814",
+    "telephone": "(201) 343-0700",
     "email": "chris@kweconomics.com",
     "address": {
       "@type": "PostalAddress",

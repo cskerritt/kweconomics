@@ -84,10 +84,10 @@ const FloatingNavigation = () => {
   const quickActions = [
     {
       label: 'Call Now',
-      href: 'tel:+12036052814',
+      href: 'tel:+12013430700',
       icon: Phone,
       color: 'bg-green-600 hover:bg-green-700',
-      text: '(203) 605-2814'
+      text: '(201) 343-0700'
     },
     {
       label: 'Email',
@@ -170,11 +170,11 @@ const FloatingNavigation = () => {
               <div className="border-t pt-4">
                 <div className="text-sm text-muted-foreground mb-2">Emergency? Call now:</div>
                 <a
-                  href="tel:+12036052814"
+                  href="tel:+12013430700"
                   className="flex items-center gap-2 p-2 bg-green-50 text-green-800 rounded-md hover:bg-green-100 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  <span className="font-medium">(203) 605-2814</span>
+                  <span className="font-medium">(201) 343-0700</span>
                 </a>
               </div>
             </div>

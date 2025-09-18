@@ -45,8 +45,8 @@ const Contact = () => {
                   <Phone className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <PhoneClickTracker
-                      phoneNumber="2036052814"
-                      displayText="(203) 605-2814"
+                      phoneNumber="2013430700"
+                      displayText="(201) 343-0700"
                       location="contact-component-sidebar"
                       className="font-medium text-foreground hover:text-primary transition-colors"
                     />

@@ -112,7 +112,7 @@ export const handleFormSubmission = async (
     console.error('Form submission error:', error);
     toast({
       title: "Submission Error",
-      description: "There was an error submitting your request. Please try again or call us directly at (203) 605-2814.",
+      description: "There was an error submitting your request. Please try again or call us directly at (201) 343-0700.",
       variant: "destructive",
     });
     return false;

@@ -35,7 +35,7 @@ const GlobalSchemaMarkup = () => {
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-203-605-2814",
+        "telephone": "+1-201-343-0700",
         "email": "chris@kweconomics.com",
         "contactType": "customer service",
         "availableLanguage": "en",
@@ -179,7 +179,7 @@ const GlobalSchemaMarkup = () => {
       "name": "Kincaid Wolstein Economics",
       "description": "Expert forensic economic analysis and litigation support services",
       "url": "https://kweconomics.com",
-      "telephone": "+1-203-605-2814",
+      "telephone": "+1-201-343-0700",
       "email": "chris@kweconomics.com",
       "address": {
         "@type": "PostalAddress",

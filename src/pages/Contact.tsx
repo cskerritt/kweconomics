@@ -72,7 +72,7 @@ const Contact = () => {
       icon: Phone,
       title: "Schedule Consultation Request",
       description: "Direct line for immediate consultation",
-      contact: "(203) 605-2814",
+      contact: "(201) 343-0700",
       availability: "Mon-Fri: 8AM-6PM EST"
     },
     {
@@ -132,7 +132,7 @@ const Contact = () => {
     "mainEntity": {
       "@type": "Organization",
       "name": "Kincaid Wolstein Economics",
-      "telephone": "(203) 605-2814",
+      "telephone": "(201) 343-0700",
       "email": "chris@kweconomics.com",
       "address": {
         "@type": "PostalAddress",
@@ -167,7 +167,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Contact Kincaid Wolstein Economics - Forensic Economic Analysis Consultation"
-        description="Contact Kincaid Wolstein Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation. Prompt response time. Rush cases welcome. Call (203) 605-2814."
+        description="Contact Kincaid Wolstein Economics for expert forensic economic analysis, vocational rehabilitation, and life care planning consultation. Prompt response time. Rush cases welcome. Call (201) 343-0700."
         canonical={currentUrl}
         keywords={["contact expert economist", "forensic economics consultation", "expert witness contact", "economic analysis consultation", "litigation support contact", "rush cases", "expert testimony", "economic damages"]}
         schema={structuredData}
@@ -216,8 +216,8 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4">{method.description}</p>
                 {method.contact.includes('203') ? (
                   <PhoneClickTracker
-                    phoneNumber="2036052814"
-                    displayText="(203) 605-2814"
+                    phoneNumber="2013430700"
+                    displayText="(201) 343-0700"
                     location="contact-method-card"
                     className="font-medium text-primary text-lg mb-2 hover:underline"
                   />
@@ -407,8 +407,8 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <PhoneClickTracker
-                        phoneNumber="2036052814"
-                        displayText="(203) 605-2814"
+                        phoneNumber="2013430700"
+                        displayText="(201) 343-0700"
                         location="contact-sidebar"
                         className="font-medium text-foreground hover:text-primary transition-colors"
                       />

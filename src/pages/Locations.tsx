@@ -263,7 +263,7 @@ const Locations = () => {
             </Button>
             <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <Users className="h-5 w-5 mr-2" />
-              Call (203) 605-2814
+              Call (201) 343-0700
             </Button>
           </div>
         </div>

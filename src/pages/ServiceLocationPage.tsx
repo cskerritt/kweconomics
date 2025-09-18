@@ -310,11 +310,11 @@ const ServiceLocationPage = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-4">Contact Us</h3>
                 <div className="space-y-4">
                   <Link 
-                    to="tel:+12036052814"
+                    to="tel:+12013430700"
                     className="flex items-center hover:text-primary transition-colors cursor-pointer group"
                   >
                     <Phone className="h-5 w-5 text-primary mr-3 group-hover:scale-110 transition-transform" />
-                    <span className="text-muted-foreground group-hover:text-primary transition-colors">(203) 605-2814</span>
+                    <span className="text-muted-foreground group-hover:text-primary transition-colors">(201) 343-0700</span>
                   </Link>
                   <Link 
                     to="mailto:chris@kweconomics.com"

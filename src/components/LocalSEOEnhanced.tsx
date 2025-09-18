@@ -28,7 +28,7 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
     "name": `KW Economics${cityName ? ` - ${cityName}` : ''}`,
     "description": `Professional forensic economic analysis and expert witness services ${cityName ? `serving ${cityName}, ${stateAbbr}` : 'nationwide'}. Specializing in economic loss assessments, vocational evaluations, and litigation support.`,
     "url": "https://kweconomics.com",
-    "telephone": "(203) 605-2814",
+    "telephone": "(201) 343-0700",
     "email": "chris@kweconomics.com",
     "priceRange": "$$",
     "address": {
