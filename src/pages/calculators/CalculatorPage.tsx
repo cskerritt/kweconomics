@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,27 +8,14 @@ import SliderField from "@/components/calculators/SliderField";
 import ResultsPanel from "@/components/calculators/ResultsPanel";
 import PVChart from "@/components/calculators/PVChart";
 import LeadCaptureDialog from "@/components/calculators/LeadCaptureDialog";
-import { getCalculator } from "@/data/calculatorRegistry";
+import { getCalculator, type CalcConfig } from "@/data/calculatorRegistry";
 
-const CalculatorPage = () => {
-  const { calcSlug } = useParams();
-  const config = calcSlug ? getCalculator(calcSlug) : undefined;
-
-  const initial = useMemo(() => {
+const CalculatorView = ({ config }: { config: CalcConfig }) => {
+  const [values, setValues] = useState<Record<string, number>>(() => {
     const v: Record<string, number> = {};
-    config?.fields.forEach((f) => (v[f.key] = f.default));
+    config.fields.forEach((f) => (v[f.key] = f.default));
     return v;
-  }, [config]);
-
-  const [values, setValues] = useState<Record<string, number>>(initial);
-
-  const [activeSlug, setActiveSlug] = useState(calcSlug);
-  if (calcSlug !== activeSlug) {
-    setActiveSlug(calcSlug);
-    setValues(initial);
-  }
-
-  if (!config) return <Navigate to="/calculators" replace />;
+  });
 
   const output = config.compute(values);
 
@@ -67,6 +54,13 @@ const CalculatorPage = () => {
       <Footer />
     </div>
   );
+};
+
+const CalculatorPage = () => {
+  const { calcSlug } = useParams();
+  const config = calcSlug ? getCalculator(calcSlug) : undefined;
+  if (!config) return <Navigate to="/calculators" replace />;
+  return <CalculatorView key={config.slug} config={config} />;
 };
 
 export default CalculatorPage;

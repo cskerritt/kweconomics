@@ -1,6 +1,5 @@
 import {
   pvSchedule,
-  presentValue,
   lostEarningsPV,
   lifeCarePV,
   householdServicesPV,
@@ -74,13 +73,7 @@ export const calculators: CalcConfig[] = [
         timing,
       });
       return {
-        totalPV: presentValue({
-          payment: v.payment,
-          years: v.years,
-          discountRate: v.discountRate,
-          growthRate: v.growthRate,
-          timing,
-        }),
+        totalPV: schedule.length ? schedule[schedule.length - 1].cumulativePV : 0,
         schedule,
       };
     },

@@ -24,9 +24,9 @@ const SliderField = ({ field, value, onChange }: Props) => {
   if (field.options) {
     return (
       <div className="space-y-2">
-        <Label>{field.label}</Label>
+        <Label htmlFor={field.key}>{field.label}</Label>
         <Select value={String(value)} onValueChange={(v) => onChange(Number(v))}>
-          <SelectTrigger>
+          <SelectTrigger id={field.key}>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -44,16 +44,20 @@ const SliderField = ({ field, value, onChange }: Props) => {
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <Label>{field.label}</Label>
+        <Label htmlFor={field.key}>{field.label}</Label>
         <div className="flex items-center gap-1 text-sm">
           <span className="text-muted-foreground">{prefix(field.unit)}</span>
           <Input
+            id={field.key}
             type="number"
             value={value}
             min={field.min}
             max={field.max}
             step={field.step}
-            onChange={(e) => onChange(Number(e.target.value))}
+            onChange={(e) => {
+              const parsed = Number(e.target.value);
+              if (!Number.isNaN(parsed)) onChange(parsed);
+            }}
             className="h-8 w-28 text-right"
           />
           <span className="text-muted-foreground">{suffix(field.unit)}</span>

@@ -17,7 +17,7 @@ const compact = (n: number) =>
 const PVChart = ({ schedule }: { schedule: PVScheduleRow[] }) => (
   <div className="w-full h-72">
     <ResponsiveContainer width="100%" height="100%">
-      <ComposedChart data={schedule} margin={{ top: 10, right: 10, bottom: 0, left: 0 }}>
+      <ComposedChart data={schedule} margin={{ top: 10, right: 10, bottom: 0, left: 8 }}>
         <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
         <XAxis dataKey="year" tick={{ fontSize: 12 }} />
         <YAxis tickFormatter={compact} tick={{ fontSize: 12 }} width={48} />

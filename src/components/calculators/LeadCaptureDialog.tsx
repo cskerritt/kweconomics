@@ -82,7 +82,7 @@ const LeadCaptureDialog = ({ calculatorTitle, calculatorSlug, inputs, totalPV }:
             Enter your details and we'll send a summary of this estimate. No spam.
           </DialogDescription>
         </DialogHeader>
-        <div className="space-y-4">
+        <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); submit(); }}>
           <div className="space-y-2">
             <Label htmlFor="lead-name">Name</Label>
             <Input id="lead-name" value={name} onChange={(e) => setName(e.target.value)} />
@@ -91,10 +91,10 @@ const LeadCaptureDialog = ({ calculatorTitle, calculatorSlug, inputs, totalPV }:
             <Label htmlFor="lead-email">Email</Label>
             <Input id="lead-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
           </div>
-          <Button className="w-full" onClick={submit} disabled={submitting}>
+          <Button type="submit" className="w-full" disabled={submitting}>
             {submitting ? "Sending..." : "Send my results"}
           </Button>
-        </div>
+        </form>
       </DialogContent>
     </Dialog>
   );
