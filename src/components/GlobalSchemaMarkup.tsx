@@ -191,8 +191,8 @@ const GlobalSchemaMarkup = () => {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "41.9211",
-        "longitude": "-71.5253"
+        "latitude": "40.8859",
+        "longitude": "-74.0435"
       },
       "openingHours": "Mo-Fr 08:00-18:00",
       "priceRange": "Contact for pricing",

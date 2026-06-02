@@ -36,8 +36,8 @@ const Index = () => {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "41.9211",
-      "longitude": "-71.5253"
+      "latitude": "40.8859",
+      "longitude": "-74.0435"
     },
     "founder": {
       "@type": "Person",

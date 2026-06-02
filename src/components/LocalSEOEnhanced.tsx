@@ -45,8 +45,8 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
       "longitude": coordinates.longitude
     } : {
       "@type": "GeoCoordinates",
-      "latitude": "41.9211",
-      "longitude": "-71.5253"
+      "latitude": "40.8859",
+      "longitude": "-74.0435"
     },
     "areaServed": cityName && stateName ? {
       "@type": "City",
@@ -143,8 +143,8 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
           "longitude": coordinates.longitude
         } : {
           "@type": "GeoCoordinates",
-          "latitude": "41.9211",
-          "longitude": "-71.5253"
+          "latitude": "40.8859",
+          "longitude": "-74.0435"
         },
         "geoRadius": "50 miles"
       }
