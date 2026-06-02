@@ -25,7 +25,7 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
   const generateLocalBusinessSchema = () => ({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": `KW Economics${cityName ? ` - ${cityName}` : ''}`,
+    "name": `Kincaid Wolstein Economics${cityName ? ` - ${cityName}` : ''}`,
     "description": `Professional forensic economic analysis and expert witness services ${cityName ? `serving ${cityName}, ${stateAbbr}` : 'nationwide'}. Specializing in economic loss assessments, vocational evaluations, and litigation support.`,
     "url": "https://kweconomics.com",
     "telephone": "(201) 343-0700",
@@ -164,7 +164,7 @@ const LocalSEOEnhanced: React.FC<LocalSEOEnhancedProps> = ({
         "addressCountry": "US"
       },
       "population": population,
-      "description": `${cityName} is served by professional economic analysis and expert witness services from KW Economics.`,
+      "description": `${cityName} is served by professional economic analysis and expert witness services from Kincaid Wolstein Economics.`,
       ...(metro && { "isPartOf": metro })
     };
   };
