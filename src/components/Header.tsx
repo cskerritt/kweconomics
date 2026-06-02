@@ -138,6 +138,12 @@ const Header = () => {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
+                    <Link to="/team" className="flex items-center gap-2 cursor-pointer">
+                      <Users className="h-4 w-4" />
+                      <span>Meet the Team</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
                     <Link to="/experience" className="flex items-center gap-2 cursor-pointer">
                       <TrendingUp className="h-4 w-4" />
                       <span>Experience & Cases</span>
@@ -198,14 +204,21 @@ const Header = () => {
               >
                 Case Types
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className="text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
-              <Link 
+              <Link
+                to="/team"
+                className="text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Meet the Team
+              </Link>
+              <Link
                 to="/experience" 
                 className="text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
