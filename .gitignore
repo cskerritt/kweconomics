@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Use npm (package-lock.json) only — a stale bun.lockb breaks Railpack deploys
+bun.lockb
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
