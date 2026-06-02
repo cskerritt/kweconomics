@@ -13,6 +13,7 @@ import AIBotMeta from "@/components/AIBotMeta";
 const Services = lazy(() => import("./pages/Services"));
 const Advisory = lazy(() => import("./pages/Advisory"));
 const About = lazy(() => import("./pages/About"));
+const Team = lazy(() => import("./pages/Team"));
 const Experience = lazy(() => import("./pages/Experience"));
 const Contact = lazy(() => import("./pages/Contact"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/advisory" element={<Advisory />} />
             <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/case-studies" element={<CaseStudies />} />
