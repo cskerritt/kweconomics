@@ -12,7 +12,6 @@ import CaseStudyPreviews from "@/components/CaseStudyPreviews";
 import TrustBadges from "@/components/TrustBadges";
 
 import FloatingNavigation from "@/components/FloatingNavigation";
-import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   const currentUrl = "https://kweconomics.com";
@@ -140,7 +139,6 @@ const Index = () => {
       <TrustBadges />
       <Services />
       <CaseStudyPreviews />
-      <Testimonials />
       <TestimonialsSection />
       <About />
       <FAQSection 
