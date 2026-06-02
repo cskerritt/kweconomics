@@ -6,14 +6,18 @@ import { CheckCircle, Mail } from "lucide-react";
 import { teamMembers, getInitials } from "@/data/team";
 
 const Team = () => {
-  const personSchema = teamMembers.map((m) => ({
+  const personSchema = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: m.name.replace(/,.*$/, ""),
-    jobTitle: m.title,
-    worksFor: { "@type": "Organization", name: "Kincaid Wolstein Economics" },
-    description: m.shortBio,
-  }));
+    "@graph": teamMembers.map((m) => ({
+      "@type": "Person",
+      name: m.name.replace(/,.*$/, ""),
+      jobTitle: m.title,
+      url: `https://kweconomics.com/team#${m.slug}`,
+      worksFor: { "@type": "Organization", name: "Kincaid Wolstein Economics" },
+      description: m.shortBio,
+      sameAs: m.links?.map((l) => l.href) ?? [],
+    })),
+  };
 
   return (
     <div className="min-h-screen">
@@ -21,7 +25,7 @@ const Team = () => {
         title="Meet the Team | Kincaid Wolstein Economics"
         description="Meet the economists of Kincaid Wolstein Economics — forensic economic analysis, vocational rehabilitation, and life care planning expertise."
         canonical="https://kweconomics.com/team"
-        schema={personSchema as unknown as object}
+        schema={personSchema}
       />
       <Header />
       <section className="py-20 bg-background">
@@ -41,7 +45,7 @@ const Team = () => {
                     {m.hasPhoto ? (
                       <img
                         src={m.photo}
-                        alt={m.name}
+                        alt={`${m.name.replace(/,.*$/, "")}, ${m.title}`}
                         className="w-48 h-48 object-cover object-top rounded-lg shadow-card mb-4"
                       />
                     ) : (

@@ -19,7 +19,7 @@ const TeamTeaser = () => (
             {m.hasPhoto ? (
               <img
                 src={m.photo}
-                alt={m.name}
+                alt={`${m.name.replace(/,.*$/, "")}, ${m.title}`}
                 className="w-28 h-28 object-cover object-top rounded-full mx-auto mb-4 shadow-soft"
               />
             ) : (
@@ -34,13 +34,13 @@ const TeamTeaser = () => (
         ))}
       </div>
       <div className="text-center mt-10">
-        <Link to="/team">
-          <Button variant="professional" size="lg" className="group">
+        <Button variant="professional" size="lg" className="group" asChild>
+          <Link to="/team">
             <Users2 className="h-5 w-5 mr-2" />
             Meet the Team
             <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
     </div>
   </section>
