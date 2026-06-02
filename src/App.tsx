@@ -28,6 +28,8 @@ const CaseTypeIndex = lazy(() => import("./pages/CaseTypeIndex"));
 const Locations = lazy(() => import("./pages/Locations"));
 const SearchPage = lazy(() => import("./pages/SearchPage"));
 const LegacyLocationRedirect = lazy(() => import("./pages/LegacyLocationRedirect"));
+const CalculatorsHub = lazy(() => import("./pages/calculators/CalculatorsHub"));
+const CalculatorPage = lazy(() => import("./pages/calculators/CalculatorPage"));
 
 // Simple loading component
 const PageLoader = () => (
@@ -62,7 +64,9 @@ const App = () => (
             <Route path="/emergency-consultation" element={<Navigate to="/contact" replace />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/search" element={<SearchPage />} />
-            
+            <Route path="/calculators" element={<CalculatorsHub />} />
+            <Route path="/calculators/:calcSlug" element={<CalculatorPage />} />
+
             {/* Service Hub Pages */}
             <Route path="/services/:serviceSlug" element={<ServiceHubPage />} />
             
