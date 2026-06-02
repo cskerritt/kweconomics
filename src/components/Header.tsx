@@ -95,6 +95,12 @@ const Header = () => {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
+                    <Link to="/calculators" className="flex items-center gap-2 cursor-pointer">
+                      <Calculator className="h-4 w-4" />
+                      <span>Calculators</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
                     <Link to="/services/economic-loss-assessment" className="flex items-center gap-2 cursor-pointer">
                       <Calculator className="h-4 w-4" />
                       <span>Economic Loss Assessment</span>
@@ -197,12 +203,19 @@ const Header = () => {
               >
                 Services
               </Link>
-              <Link 
-                to="/case-types" 
+              <Link
+                to="/case-types"
                 className="text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Case Types
+              </Link>
+              <Link
+                to="/calculators"
+                className="text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Calculators
               </Link>
               <Link
                 to="/about"

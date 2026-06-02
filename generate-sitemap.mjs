@@ -67,6 +67,11 @@ function generateSitemap() {
     { path: '/schedule-consultation', priority: 0.8, changefreq: 'monthly' },
     { path: '/emergency-consultation', priority: 0.8, changefreq: 'monthly' },
     { path: '/locations', priority: 0.9, changefreq: 'weekly' },
+    { path: '/calculators', priority: 0.8, changefreq: 'monthly' },
+    { path: '/calculators/present-value', priority: 0.7, changefreq: 'monthly' },
+    { path: '/calculators/lost-earnings', priority: 0.7, changefreq: 'monthly' },
+    { path: '/calculators/life-care', priority: 0.7, changefreq: 'monthly' },
+    { path: '/calculators/household-services', priority: 0.7, changefreq: 'monthly' },
   ];
 
   staticPages.forEach(page => {
