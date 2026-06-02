@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-primary-foreground">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              KW Economics
+              Kincaid Wolstein Economics
               <br />
               
             </h1>

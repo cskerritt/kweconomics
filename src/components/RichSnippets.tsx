@@ -105,8 +105,8 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "41.9211",
-      "longitude": "-71.5253"
+      "latitude": "40.8859",
+      "longitude": "-74.0435"
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

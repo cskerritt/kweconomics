@@ -22,7 +22,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">KW Economics</h3>
+            <h3 className="text-2xl font-bold mb-4">Kincaid Wolstein Economics</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Kincaid Wolstein Economics provides expert forensic economic analysis, vocational rehabilitation, 
               and life care planning services. Comprehensive expertise in economic loss assessment 
@@ -70,6 +70,7 @@ const Footer = () => {
               <li><Link to="/services" className="hover:text-primary-foreground transition-colors">Life Care Planning</Link></li>
               <li><Link to="/services" className="hover:text-primary-foreground transition-colors">Business Valuation</Link></li>
               <li><Link to="/services" className="hover:text-primary-foreground transition-colors">Expert Testimony</Link></li>
+              <li><Link to="/team" className="hover:text-primary-foreground transition-colors">Meet the Team</Link></li>
               <li><Link to="/locations" className="hover:text-primary-foreground transition-colors font-semibold">All Locations →</Link></li>
             </ul>
           </div>

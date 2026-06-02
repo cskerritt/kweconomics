@@ -13,6 +13,7 @@ import AIBotMeta from "@/components/AIBotMeta";
 const Services = lazy(() => import("./pages/Services"));
 const Advisory = lazy(() => import("./pages/Advisory"));
 const About = lazy(() => import("./pages/About"));
+const Team = lazy(() => import("./pages/Team"));
 const Experience = lazy(() => import("./pages/Experience"));
 const Contact = lazy(() => import("./pages/Contact"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
@@ -27,6 +28,8 @@ const CaseTypeIndex = lazy(() => import("./pages/CaseTypeIndex"));
 const Locations = lazy(() => import("./pages/Locations"));
 const SearchPage = lazy(() => import("./pages/SearchPage"));
 const LegacyLocationRedirect = lazy(() => import("./pages/LegacyLocationRedirect"));
+const CalculatorsHub = lazy(() => import("./pages/calculators/CalculatorsHub"));
+const CalculatorPage = lazy(() => import("./pages/calculators/CalculatorPage"));
 
 // Simple loading component
 const PageLoader = () => (
@@ -53,6 +56,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/advisory" element={<Advisory />} />
             <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/case-studies" element={<CaseStudies />} />
@@ -60,7 +64,9 @@ const App = () => (
             <Route path="/emergency-consultation" element={<Navigate to="/contact" replace />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/search" element={<SearchPage />} />
-            
+            <Route path="/calculators" element={<CalculatorsHub />} />
+            <Route path="/calculators/:calcSlug" element={<CalculatorPage />} />
+
             {/* Service Hub Pages */}
             <Route path="/services/:serviceSlug" element={<ServiceHubPage />} />
             

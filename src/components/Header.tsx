@@ -43,7 +43,7 @@ const Header = () => {
             <Link to="/" className="flex items-center space-x-3">
               <img 
                 src={kwEconomicsLogo} 
-                alt="KW Economics Logo" 
+                alt="Kincaid Wolstein Economics Logo"
                 className="h-16 w-auto"
               />
             </Link>
@@ -95,6 +95,12 @@ const Header = () => {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
+                    <Link to="/calculators" className="flex items-center gap-2 cursor-pointer">
+                      <Calculator className="h-4 w-4" />
+                      <span>Calculators</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
                     <Link to="/services/economic-loss-assessment" className="flex items-center gap-2 cursor-pointer">
                       <Calculator className="h-4 w-4" />
                       <span>Economic Loss Assessment</span>
@@ -135,6 +141,12 @@ const Header = () => {
                     <Link to="/about" className="flex items-center gap-2 cursor-pointer">
                       <Award className="h-4 w-4" />
                       <span>Our Expertise</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/team" className="flex items-center gap-2 cursor-pointer">
+                      <Users className="h-4 w-4" />
+                      <span>Meet the Team</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -191,21 +203,35 @@ const Header = () => {
               >
                 Services
               </Link>
-              <Link 
-                to="/case-types" 
+              <Link
+                to="/case-types"
                 className="text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Case Types
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/calculators"
+                className="text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Calculators
+              </Link>
+              <Link
+                to="/about"
                 className="text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
-              <Link 
+              <Link
+                to="/team"
+                className="text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Meet the Team
+              </Link>
+              <Link
                 to="/experience" 
                 className="text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}

@@ -60,12 +60,18 @@ function generateSitemap() {
     { path: '/services', priority: 0.9, changefreq: 'weekly' },
     { path: '/advisory', priority: 0.9, changefreq: 'weekly' },
     { path: '/about', priority: 0.8, changefreq: 'monthly' },
+    { path: '/team', priority: 0.8, changefreq: 'monthly' },
     { path: '/experience', priority: 0.8, changefreq: 'monthly' },
     { path: '/contact', priority: 0.9, changefreq: 'monthly' },
     { path: '/case-studies', priority: 0.7, changefreq: 'monthly' },
     { path: '/schedule-consultation', priority: 0.8, changefreq: 'monthly' },
     { path: '/emergency-consultation', priority: 0.8, changefreq: 'monthly' },
     { path: '/locations', priority: 0.9, changefreq: 'weekly' },
+    { path: '/calculators', priority: 0.8, changefreq: 'monthly' },
+    { path: '/calculators/present-value', priority: 0.7, changefreq: 'monthly' },
+    { path: '/calculators/lost-earnings', priority: 0.7, changefreq: 'monthly' },
+    { path: '/calculators/life-care', priority: 0.7, changefreq: 'monthly' },
+    { path: '/calculators/household-services', priority: 0.7, changefreq: 'monthly' },
   ];
 
   staticPages.forEach(page => {

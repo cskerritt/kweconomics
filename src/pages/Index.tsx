@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import About from "@/components/About";
+import TeamTeaser from "@/components/TeamTeaser";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -12,7 +12,6 @@ import CaseStudyPreviews from "@/components/CaseStudyPreviews";
 import TrustBadges from "@/components/TrustBadges";
 
 import FloatingNavigation from "@/components/FloatingNavigation";
-import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   const currentUrl = "https://kweconomics.com";
@@ -36,8 +35,8 @@ const Index = () => {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "41.9211",
-      "longitude": "-71.5253"
+      "latitude": "40.8859",
+      "longitude": "-74.0435"
     },
     "founder": {
       "@type": "Person",
@@ -140,9 +139,8 @@ const Index = () => {
       <TrustBadges />
       <Services />
       <CaseStudyPreviews />
-      <Testimonials />
       <TestimonialsSection />
-      <About />
+      <TeamTeaser />
       <FAQSection 
         title="Frequently Asked Questions" 
         faqs={homepageFAQs} 
