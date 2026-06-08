@@ -156,13 +156,15 @@ const CaseStudies = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-primary-foreground max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-20">
+        <div className="kw-aurora" aria-hidden="true" />
+        <div className="kw-grid" aria-hidden="true" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6 font-serif kw-enter kw-enter-1">
               Case Studies & Success Stories
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 kw-enter kw-enter-2">
               Real-world examples of expert economic analysis, forensic testimony, and comprehensive 
               consulting services that have made a difference in complex legal and regulatory matters.
             </p>

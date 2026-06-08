@@ -43,7 +43,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <Card key={index} className="border-l-4 border-l-primary">
+            <Card key={index} className="border-l-4 border-l-primary kw-lift">
               <CardHeader 
                 className="cursor-pointer hover:bg-muted/50 transition-colors"
                 onClick={() => toggleItem(index)}

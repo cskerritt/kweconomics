@@ -78,7 +78,7 @@ const Services = () => {
 
         {/* Strategic Advisory Services */}
         <div className="max-w-5xl mx-auto mb-8">
-          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card">
+          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card kw-lift">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
               <h3 className="text-xl font-semibold text-foreground">Strategic Advisory Services</h3>
               <Link to="/advisory" className="text-primary hover:underline">View all Advisory</Link>
@@ -156,7 +156,7 @@ const Services = () => {
 
         {/* Core Litigation Support Services */}
         <div className="max-w-5xl mx-auto mb-8">
-          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card">
+          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card kw-lift">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
               <h3 className="text-xl font-semibold text-foreground">Core Litigation Support Services</h3>
               <Link to="/services" className="text-primary hover:underline">View all Services</Link>
@@ -181,7 +181,7 @@ const Services = () => {
 
         {/* Specialized Evaluation Services */}
         <div className="max-w-5xl mx-auto mb-8">
-          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card">
+          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card kw-lift">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
               <h3 className="text-xl font-semibold text-foreground">Specialized Evaluation Services</h3>
               <Link to="/services" className="text-primary hover:underline">View all Services</Link>
@@ -206,7 +206,7 @@ const Services = () => {
 
         {/* Data Analytics Services */}
         <div className="max-w-5xl mx-auto">
-          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card">
+          <div className="rounded-lg border bg-card p-5 md:p-6 shadow-card kw-lift">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
               <h3 className="text-xl font-semibold text-foreground">Data Analytics & Research</h3>
               <Link to="/services/econometrics-data-science" className="text-primary hover:underline">Learn more</Link>

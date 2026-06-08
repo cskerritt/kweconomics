@@ -98,13 +98,15 @@ const CaseTypeIndex = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-20">
+        <div className="kw-aurora" aria-hidden="true" />
+        <div className="kw-grid" aria-hidden="true" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center text-primary-foreground">
-            <h1 className="text-5xl font-bold mb-6">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold mb-6 font-serif kw-enter kw-enter-1">
               Case Types & Practice Areas
             </h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto kw-enter kw-enter-2">
               Expert economic analysis and testimony across a comprehensive range of case types. 
               Our specialists provide professional consultation for litigation, disability evaluation, 
               business analysis, and more.

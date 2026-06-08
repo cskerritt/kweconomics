@@ -10,6 +10,7 @@ import RichSnippets from "@/components/RichSnippets";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CaseStudyPreviews from "@/components/CaseStudyPreviews";
 import TrustBadges from "@/components/TrustBadges";
+import Reveal from "@/components/Reveal";
 
 import FloatingNavigation from "@/components/FloatingNavigation";
 
@@ -136,17 +137,19 @@ const Index = () => {
       />
       <Header />
       <Hero />
-      <TrustBadges />
-      <Services />
-      <CaseStudyPreviews />
-      <TestimonialsSection />
-      <TeamTeaser />
-      <FAQSection 
-        title="Frequently Asked Questions" 
-        faqs={homepageFAQs} 
-        addStructuredData={true} 
-      />
-      <Contact />
+      <Reveal><TrustBadges /></Reveal>
+      <Reveal><Services /></Reveal>
+      <Reveal><CaseStudyPreviews /></Reveal>
+      <Reveal><TestimonialsSection /></Reveal>
+      <Reveal><TeamTeaser /></Reveal>
+      <Reveal>
+        <FAQSection
+          title="Frequently Asked Questions"
+          faqs={homepageFAQs}
+          addStructuredData={true}
+        />
+      </Reveal>
+      <Reveal><Contact /></Reveal>
       <RichSnippets type="organization" />
       <Footer />
       

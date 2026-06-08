@@ -121,26 +121,28 @@ const StatePage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-hero">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-16">
+        <div className="kw-aurora" aria-hidden="true" />
+        <div className="kw-grid" aria-hidden="true" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-primary-foreground">
-            <Breadcrumbs items={breadcrumbs} className="mb-6 text-primary-foreground/80" />
-            
+          <div>
+            <Breadcrumbs items={breadcrumbs} className="mb-6 text-white/80" />
+
             <div className="flex items-center mb-4">
-              <MapPin className="h-12 w-12 text-primary-foreground mr-4" />
+              <MapPin className="h-12 w-12 text-white mr-4" />
               <div>
-                <h1 className="text-4xl font-bold mb-2">
+                <h1 className="text-4xl font-bold mb-2 font-serif kw-enter kw-enter-1">
                   Economic Analysis Services in {state.name}
                 </h1>
-                <div className="text-primary-foreground/80">
+                <div className="text-white/80">
                   Serving {state.cities.length} major cities statewide
                 </div>
               </div>
             </div>
-            
-            <p className="text-xl mb-8 max-w-3xl">
-              Professional economic analysis, forensic economics, and expert witness services 
-              throughout {state.name}. Our team provides comprehensive litigation support and 
+
+            <p className="text-xl mb-8 max-w-3xl kw-enter kw-enter-2">
+              Professional economic analysis, forensic economics, and expert witness services
+              throughout {state.name}. Our team provides comprehensive litigation support and
               business consulting for legal professionals and organizations across the state.
             </p>
             
