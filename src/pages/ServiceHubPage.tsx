@@ -85,22 +85,24 @@ const ServiceHubPage: React.FC = () => {
         
         <main className="flex-1 pt-20">
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-16">
+            <div className="kw-aurora" aria-hidden="true" />
+            <div className="kw-grid" aria-hidden="true" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="mb-8">
                 <Breadcrumbs items={breadcrumbs} />
               </div>
-              
+
               <div className="text-center max-w-4xl mx-auto">
                 <div className="flex justify-center mb-6">
-                  <service.icon className="h-16 w-16 text-primary" />
+                  <service.icon className="h-16 w-16 text-white/90" />
                 </div>
-                
-                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif kw-enter kw-enter-1">
                   {service.title} Services
                 </h1>
-                
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+
+                <p className="text-xl text-white/90 mb-8 leading-relaxed kw-enter kw-enter-2">
                   {service.description}
                 </p>
                 

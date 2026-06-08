@@ -60,10 +60,12 @@ const Advisory = () => {
 
       <Header />
 
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-6 relative z-10 text-center text-primary-foreground">
-          <h1 className="text-5xl font-bold mb-6">Advisory Services</h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-20">
+        <div className="kw-aurora" aria-hidden="true" />
+        <div className="kw-grid" aria-hidden="true" />
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <h1 className="text-5xl font-bold mb-6 font-serif kw-enter kw-enter-1">Advisory Services</h1>
+          <p className="text-xl mb-8 max-w-3xl mx-auto kw-enter kw-enter-2">
             Evidence‑based advisory across markets, policy, health, education, finance, international, and data science — with documented methods and standards.
           </p>
           <Button variant="hero" size="lg" asChild>

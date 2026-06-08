@@ -123,28 +123,30 @@ const ServiceLocationPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-hero">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-16">
+        <div className="kw-aurora" aria-hidden="true" />
+        <div className="kw-grid" aria-hidden="true" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-primary-foreground">
-            <Breadcrumbs items={breadcrumbs} className="mb-6 text-primary-foreground/80" />
-            
+          <div>
+            <Breadcrumbs items={breadcrumbs} className="mb-6 text-white/80" />
+
             <div className="flex items-center mb-4">
-              <Link 
+              <Link
                 to={`/services/${service.slug}`}
                 className="hover:scale-110 transition-transform cursor-pointer"
               >
-                <service.icon className="h-12 w-12 text-primary-foreground mr-4 hover:text-accent transition-colors" />
+                <service.icon className="h-12 w-12 text-white mr-4 hover:text-accent transition-colors" />
               </Link>
               <div>
-                <Link 
+                <Link
                   to={`/services/${service.slug}`}
                   className="hover:text-accent transition-colors"
                 >
-                  <h1 className="text-4xl font-bold mb-2">
+                  <h1 className="text-4xl font-bold mb-2 font-serif kw-enter kw-enter-1">
                     {service.title} in {city.name}, {state.abbreviation}
                   </h1>
                 </Link>
-                <div className="flex items-center text-primary-foreground/80">
+                <div className="flex items-center text-white/80">
                   <Link 
                     to={`/${state.slug}/${city.slug}`}
                     className="flex items-center hover:text-primary-foreground transition-colors"
@@ -157,8 +159,8 @@ const ServiceLocationPage = () => {
               </div>
             </div>
             
-            <p className="text-xl mb-8 max-w-3xl">
-              Expert {service.title.toLowerCase()} services in {city.name}, {state.name}. 
+            <p className="text-xl mb-8 max-w-3xl kw-enter kw-enter-2">
+              Expert {service.title.toLowerCase()} services in {city.name}, {state.name}.
               {service.description} Professional consultation available for legal professionals and businesses.
             </p>
             
