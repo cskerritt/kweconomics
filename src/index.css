@@ -140,3 +140,178 @@ All colors MUST be HSL.
     @apply font-serif;
   }
 }
+
+/* ============================================================================
+   KWVRS motion system (ported). JS-gated + reduced-motion safe.
+   ========================================================================== */
+:root {
+  --kw-spring: cubic-bezier(0.34, 1.42, 0.5, 1);
+  --kw-ease:   cubic-bezier(0.16, 1, 0.3, 1);
+  --kw-gold:       #C4973B;
+  --kw-gold-light: #d6b063;
+  --kw-gold-dark:  #9c7426;
+  --kw-navy-light: #3c5da6;
+}
+
+:focus-visible {
+  outline: 2px solid var(--kw-gold-light);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.skip-link {
+  position: absolute; left: 0.5rem; top: 0.5rem; z-index: 100;
+  background: #14223d; color: #fff; font-weight: 600;
+  padding: 0.625rem 1rem; border-radius: 0.5rem;
+  transform: translateY(-160%);
+  transition: transform 0.15s var(--kw-ease);
+}
+.skip-link:focus { transform: translateY(0); }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@keyframes kw-fade-up {
+  from { opacity: 0; transform: translateY(28px) scale(0.985); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes kw-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kw-aurora-a {
+  0%   { transform: translate3d(-8%, -6%, 0) scale(1.05) rotate(0deg); }
+  50%  { transform: translate3d(8%, 6%, 0) scale(1.3) rotate(12deg); }
+  100% { transform: translate3d(-8%, -6%, 0) scale(1.05) rotate(0deg); }
+}
+@keyframes kw-aurora-b {
+  0%   { transform: translate3d(6%, 8%, 0) scale(1.2) rotate(0deg); }
+  50%  { transform: translate3d(-6%, -4%, 0) scale(1) rotate(-14deg); }
+  100% { transform: translate3d(6%, 8%, 0) scale(1.2) rotate(0deg); }
+}
+@keyframes kw-shimmer { to { background-position: 200% center; } }
+@keyframes kw-sheen {
+  0%   { transform: translateX(-160%) skewX(-20deg); }
+  100% { transform: translateX(260%) skewX(-20deg); }
+}
+@keyframes kw-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.kw-float { animation: kw-float 5s ease-in-out infinite; }
+
+.js .kw-page-enter { animation: kw-fade-up 0.5s var(--kw-ease) both; }
+.js .kw-enter      { animation: kw-fade-up 0.72s var(--kw-spring) both; }
+.js .kw-enter-slow { animation: kw-fade-up 0.95s var(--kw-spring) both; }
+.js .kw-enter-1 { animation-delay: 0.10s; }
+.js .kw-enter-2 { animation-delay: 0.20s; }
+.js .kw-enter-3 { animation-delay: 0.30s; }
+.js .kw-enter-4 { animation-delay: 0.40s; }
+
+.js .kw-reveal {
+  opacity: 0;
+  transform: translateY(34px) scale(0.965);
+  filter: blur(8px);
+  transition: opacity 0.7s var(--kw-ease),
+              transform 0.8s var(--kw-spring),
+              filter 0.6s var(--kw-ease);
+  transition-delay: var(--kw-reveal-delay, 0ms);
+}
+.js .kw-reveal.is-visible { opacity: 1; transform: none; filter: none; }
+.js .kw-reveal--left  { transform: translateX(-44px) scale(0.98); }
+.js .kw-reveal--right { transform: translateX(44px) scale(0.98); }
+.js .kw-reveal--scale { transform: translateY(0) scale(0.9); }
+
+@media (hover: none), (pointer: coarse) {
+  .js .kw-reveal,
+  .js .kw-reveal--left,
+  .js .kw-reveal--right,
+  .js .kw-reveal--scale {
+    transform: translateY(14px);
+    filter: none;
+    transition: opacity 0.45s var(--kw-ease), transform 0.45s var(--kw-ease);
+    transition-delay: min(var(--kw-reveal-delay, 0ms), 120ms);
+  }
+}
+
+.kw-lift {
+  transition: transform 0.25s var(--kw-ease),
+              box-shadow 0.3s var(--kw-ease),
+              border-color 0.25s ease;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .kw-lift:hover { transform: translateY(-4px); }
+}
+@media (hover: none) { .kw-lift:active { transform: scale(0.99); } }
+
+.kw-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px; background-position: 0 100%; background-repeat: no-repeat;
+  transition: background-size 0.3s var(--kw-ease);
+}
+.kw-underline:hover { background-size: 100% 2px; }
+
+.kw-aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.kw-aurora::before, .kw-aurora::after {
+  content: ""; position: absolute; border-radius: 50%;
+  filter: blur(70px); opacity: 0.55; will-change: transform;
+}
+.kw-aurora::before {
+  width: 60vw; height: 60vw; left: -12%; top: -34%;
+  background: radial-gradient(circle, var(--kw-gold-light) 0%, transparent 62%);
+  animation: kw-aurora-a 20s ease-in-out infinite;
+}
+.kw-aurora::after {
+  width: 55vw; height: 55vw; right: -12%; bottom: -38%;
+  background: radial-gradient(circle, var(--kw-navy-light) 0%, transparent 62%);
+  animation: kw-aurora-b 26s ease-in-out infinite;
+}
+.kw-grid {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, #000 30%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, #000 30%, transparent 78%);
+}
+
+.kw-gradient-text {
+  background: linear-gradient(100deg,
+    currentColor 0%, currentColor 38%,
+    var(--kw-gold-light) 50%,
+    currentColor 62%, currentColor 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: kw-shimmer 6.5s linear infinite;
+}
+
+.kw-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60;
+  transform: scaleX(var(--kw-progress, 0)); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--kw-gold-dark), var(--kw-gold-light));
+  box-shadow: 0 0 12px color-mix(in srgb, var(--kw-gold-light) 60%, transparent);
+}
+
+.kw-magnetic { position: relative; overflow: hidden; transition: transform 0.2s var(--kw-ease); }
+.kw-magnetic::after {
+  content: ""; position: absolute; top: 0; left: 0; height: 100%; width: 55%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: translateX(-160%) skewX(-20deg); pointer-events: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .kw-magnetic:hover::after { animation: kw-sheen 0.85s var(--kw-ease); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .kw-page-enter,
+  .js .kw-enter,
+  .js .kw-enter-slow,
+  .js .kw-reveal {
+    animation: none !important; transition: none !important;
+    opacity: 1 !important; transform: none !important; filter: none !important;
+  }
+  .kw-aurora, .kw-gradient-text, .kw-float { animation: none !important; }
+  .kw-gradient-text { -webkit-text-fill-color: currentColor; color: inherit; }
+  .kw-magnetic::after { display: none; }
+  html { scroll-behavior: auto; }
+}
