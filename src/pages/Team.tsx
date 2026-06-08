@@ -28,15 +28,18 @@ const Team = () => {
         schema={personSchema}
       />
       <Header />
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-20">
+        <div className="kw-aurora" aria-hidden="true" />
+        <div className="kw-grid" aria-hidden="true" />
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif kw-enter kw-enter-1">Meet the Team</h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto kw-enter kw-enter-2">
+            Experienced economists delivering trusted forensic analysis and expert testimony.
+          </p>
+        </div>
+      </section>
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Meet the Team</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Experienced economists delivering trusted forensic analysis and expert testimony.
-            </p>
-          </div>
-
           <div className="space-y-12 max-w-5xl mx-auto">
             {teamMembers.map((m) => (
               <Card key={m.slug} id={m.slug} className="p-8 shadow-card border-0 bg-card">

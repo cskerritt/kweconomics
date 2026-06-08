@@ -15,14 +15,18 @@ const CalculatorsHub = () => (
       canonical="https://kweconomics.com/calculators"
     />
     <Header />
+    <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-16">
+      <div className="kw-aurora" aria-hidden="true" />
+      <div className="kw-grid" aria-hidden="true" />
+      <div className="container mx-auto px-6 relative z-10 text-center max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4 font-serif kw-enter kw-enter-1">Economic Damages Calculators</h1>
+        <p className="text-lg text-white/90 kw-enter kw-enter-2">
+          Interactive tools to illustrate the present value of future economic losses.
+        </p>
+      </div>
+    </section>
     <section className="py-16 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Economic Damages Calculators</h1>
-          <p className="text-lg text-muted-foreground">
-            Interactive tools to illustrate the present value of future economic losses.
-          </p>
-        </div>
         <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {calculators.map((c) => (
             <Link key={c.slug} to={`/calculators/${c.slug}`}>
