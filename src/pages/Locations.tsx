@@ -41,14 +41,16 @@ const Locations = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-hero">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-16">
+        <div className="kw-aurora" aria-hidden="true" />
+        <div className="kw-grid" aria-hidden="true" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center text-primary-foreground">
+          <div className="text-center">
             <div className="flex items-center justify-center mb-4">
               <Navigation className="h-12 w-12 mr-3" />
-              <h1 className="text-5xl font-bold">All Service Locations</h1>
+              <h1 className="text-5xl font-bold font-serif kw-enter kw-enter-1">All Service Locations</h1>
             </div>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto kw-enter kw-enter-2">
               Expert economic analysis and consulting services available nationwide. 
               Browse our complete directory of service locations.
             </p>
