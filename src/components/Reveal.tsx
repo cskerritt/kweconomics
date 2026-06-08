@@ -29,7 +29,7 @@ export default function Reveal({
   return (
     <Tag
       ref={ref}
-      className={`kw-reveal ${VARIANT_CLASS[variant]} ${className}`.trim()}
+      className={["kw-reveal", VARIANT_CLASS[variant], className].filter(Boolean).join(" ")}
       style={delay ? { ["--kw-reveal-delay" as string]: `${delay}ms` } : undefined}
     >
       {children}
