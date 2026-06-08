@@ -90,7 +90,7 @@ const ServiceHubPage: React.FC = () => {
             <div className="kw-grid" aria-hidden="true" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="mb-8">
-                <Breadcrumbs items={breadcrumbs} />
+                <Breadcrumbs items={breadcrumbs} className="mb-6 text-white/80" />
               </div>
 
               <div className="text-center max-w-4xl mx-auto">

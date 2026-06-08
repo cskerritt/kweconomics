@@ -18,7 +18,7 @@ const CalculatorsHub = () => (
     <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy via-navy to-navy-dark text-white py-16">
       <div className="kw-aurora" aria-hidden="true" />
       <div className="kw-grid" aria-hidden="true" />
-      <div className="container mx-auto px-6 relative z-10 text-center max-w-2xl mx-auto">
+      <div className="container mx-auto px-6 relative z-10 text-center max-w-2xl">
         <h1 className="text-4xl font-bold mb-4 font-serif kw-enter kw-enter-1">Economic Damages Calculators</h1>
         <p className="text-lg text-white/90 kw-enter kw-enter-2">
           Interactive tools to illustrate the present value of future economic losses.
