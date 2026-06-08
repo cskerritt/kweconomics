@@ -48,7 +48,7 @@ const RelatedServices: React.FC<RelatedServicesProps> = ({
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {relatedServices.map((service) => (
-            <Card key={service.slug} className="hover:shadow-lg transition-all duration-300 group">
+            <Card key={service.slug} className="hover:shadow-lg transition-all duration-300 group kw-lift">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3 mb-2">
                   <service.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />

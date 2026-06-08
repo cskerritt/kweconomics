@@ -51,7 +51,7 @@ const CaseStudyPreviews = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
-            <Card key={study.id} className="shadow-card hover:shadow-elegant transition-all duration-300 group">
+            <Card key={study.id} className="shadow-card hover:shadow-elegant transition-all duration-300 group kw-lift">
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <Badge variant="secondary">{study.category}</Badge>

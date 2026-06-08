@@ -15,7 +15,7 @@ const TeamTeaser = () => (
       </div>
       <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
         {teamMembers.map((m) => (
-          <Card key={m.slug} className="p-8 shadow-card border-0 bg-gradient-subtle text-center">
+          <Card key={m.slug} className="p-8 shadow-card border-0 bg-gradient-subtle text-center kw-lift">
             {m.hasPhoto ? (
               <img
                 src={m.photo}
