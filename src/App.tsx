@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import { GoogleAnalytics } from "./components/analytics/GoogleAnalytics";
 import GlobalSchemaMarkup from "@/components/GlobalSchemaMarkup";
 import AIBotMeta from "@/components/AIBotMeta";
+import ScrollProgress from "@/components/ScrollProgress";
 
 // Lazy load non-critical pages
 const Services = lazy(() => import("./pages/Services"));
@@ -46,10 +47,12 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollProgress />
         <GoogleAnalytics measurementId="G-JNK2QCYSC7" />
         {/* Site-wide AI + Schema metadata for all routes */}
         <GlobalSchemaMarkup />
         <AIBotMeta />
+        <div className="kw-page-enter">
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -111,6 +114,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
